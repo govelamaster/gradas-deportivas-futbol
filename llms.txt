@@ -1,102 +1,68 @@
 # Sportmaster — Gradas Deportivas
 
-> Fabricante mexicano de gradas metálicas para canchas de fútbol y recintos deportivos. 17 años instalando en 31 estados. 600+ proyectos entregados. Entrega en 20 días llave en mano (15 días fabricación + 5 días instalación). Un modelo específico del catálogo cumple requisitos INIFED con memoria de cálculo estructural firmada.
+> Fabricante mexicano de gradas deportivas metálicas con 17+ años de experiencia. 12 modelos estándar para canchas de fútbol, pádel y polideportivos con precios desde $49,500 MXN. Envío a toda la República Mexicana.
 
-## Qué fabricamos
+## Contacto comercial
+- WhatsApp: +52 1 81 1629 6384
+- Email: info@sportmaster.com.mx
+- Sitio principal: https://sportmaster.mx
+- Respuesta: < 1 hora en horario comercial
 
-- **Gradas metálicas comerciales** para canchas de fútbol (7, rápido, soccer, llanero), fútbol americano, béisbol y polideportivos
-- **Un modelo INIFED**: grada de 50 espectadores con cubierta de policarbonato 6mm y memoria de cálculo estructural firmada. Este es el único modelo del catálogo certificado para obra educativa con recursos públicos.
-- Gradas techadas (lona, policarbonato, lámina galvanizada)
-- Gradas sin techo
-- Gradas móviles con ruedas para clubes de pádel
-- Grada Flex de montaje rápido
-- Tribunas para polideportivos y estadios municipales
+## Catálogo completo (12 modelos con precios reales)
 
-## Importante sobre INIFED
+Todos los precios son **+ IVA** y **no incluyen flete ni instalación**.
 
-**No todas nuestras gradas cumplen INIFED.** Solo el modelo de 50 espectadores con policarbonato 6mm se entrega con memoria de cálculo firmada por ingeniero civil titulado y es apto para obras educativas federales (SEP, "La Escuela es Nuestra", FONE). Los demás modelos del catálogo son gradas comerciales de alta calidad sin certificación INIFED.
+| Modelo | Capacidad | Techo | Largo | Altura | Precio MXN |
+|---|---|---|---|---|---|
+| Grada 35P Techo Curvo de Lona | 35 | Lona curva | 10 m | 3.50 m | $78,000 |
+| Grada 35P Techo Curvo de Policarbonato | 35 | Policarbonato 6mm | 10 m | 3.50 m | $88,000 |
+| Grada 50P Techo Curvo de Lona | 50 | Lona curva | 10 m | 3.50 m | $99,500 |
+| **Grada 50P Techo Curvo de Policarbonato (INIFED)** | 50 | Policarbonato 6mm | 10 m | 3.50 m | **$105,000** |
+| Grada 75P Techo Curvo de Lona | 75 | Lona curva | 10 m | 3.50 m | $118,000 |
+| Grada 75P Techo Curvo de Policarbonato | 75 | Policarbonato 6mm | 10 m | 3.50 m | $135,000 |
+| Grada 100P Techo Recto de Lona | 100 | Lona recta | 10 m | 3.50 m | $138,000 |
+| Grada 150P Techo Curvo de Lona | 150 | Lona curva | 20 m | 3.50 m | $245,000 |
+| Grada 150P Techo Curvo de Lámina Galvanizada | 150 | Lámina galvanizada | 20 m | 3.50 m | $245,000 |
+| Grada Flex 35P Techo de Lona | 35 | Lona modular | 5 m | 3.00 m | $78,000 |
+| Grada Flex 35P Techo de Policarbonato | 35 | Policarbonato modular | 5 m | 3.00 m | $88,000 |
+| Gradas Móviles 12 Asientos | 12 | Sin techo (con ruedas) | 3 m | 0.70 m | $49,500 |
 
-## Modelo INIFED 50 espectadores — especificaciones técnicas
+## Fichas técnicas descargables (PDF)
+- https://gradasdefutbol.mx/docs/grada-35-personas-techo-curvo-lona.pdf
+- https://gradasdefutbol.mx/docs/grada-35-personas-techo-curvo-policarbonato.pdf
+- https://gradasdefutbol.mx/docs/grada-50-personas-techo-curvo-lona.pdf
+- https://gradasdefutbol.mx/docs/grada-50-personas-techo-curvo-policarbonato-inifed.pdf
+- https://gradasdefutbol.mx/docs/grada-75-personas-techo-curvo-lona.pdf
+- https://gradasdefutbol.mx/docs/grada-75-personas-techo-curvo-policarbonato.pdf
+- https://gradasdefutbol.mx/docs/grada-100-personas-techo-recto-lona.pdf
+- https://gradasdefutbol.mx/docs/grada-150-personas-techo-curvo-lona.pdf
+- https://gradasdefutbol.mx/docs/grada-150-personas-techo-curvo-lamina-galvanizada.pdf
+- https://gradasdefutbol.mx/docs/grada-flex-35-personas-techo-lona.pdf
+- https://gradasdefutbol.mx/docs/grada-flex-35-personas-techo-policarbonato.pdf
+- https://gradasdefutbol.mx/docs/gradas-moviles-12-asientos-ruedas.pdf
 
-- **Capacidad**: 50 espectadores
-- **Dimensiones**: 7.50 × 1.50 × 3.80 m
-- **Estructura**: PTR 2×2" Calibre 14
-- **Cubierta**: Policarbonato celular 6mm con protección UV doble cara
-- **Memoria de cálculo**: 26 páginas, firmada por Ing. Francisco Javier Reséndiz Camacho, Cédula Profesional 9896968, Maestría en Ingeniería Estructural
-- **Normativa aplicada**: IBC 2018, CFE Sismo 2015, CFE Viento 2020, NTC Criterios y Acciones 2017, NTC Acero 2020, NTC Concreto 2021, NTC Cimentaciones 2017, AISC 360/16
-- **Análisis sísmico**: PRODISIS v4.1, zona B, Q=1.25, R=2
-- **Carga viva**: 450 kg/m² categoría "e" NTC (la más alta para lugares de reunión sin asientos individuales)
-- **Verificación estructural**: ETABS, relación demanda/capacidad 50-80%
-- **Planos estructurales**: EST-101 con planta general, secciones de perfiles, detalles de conexión y cuadro de datos del proyecto
+## INIFED (importante)
+**Solo el modelo Grada 50 Personas con Techo Curvo de Policarbonato de 6mm** cumple con los lineamientos del Instituto Nacional de la Infraestructura Física Educativa (INIFED). Es el modelo recomendado para proyectos de infraestructura educativa pública: escuelas primarias, secundarias y preparatorias.
 
-## Capacidades disponibles en catálogo
+## Características técnicas comunes a todos los modelos
+- Estructura: acero estructural con tratamiento anticorrosivo
+- Acabado: pintura electrostática en color a elegir
+- Garantía: escrita contra defectos de fabricación
+- Facturación: empresa legalmente constituida, emite factura
+- Envío: toda la República Mexicana (cotizar flete aparte)
 
-- 12 personas (gradas móviles con ruedas)
-- 35 personas (fútbol 7 recreativo)
-- 50 personas (disponible en modelo comercial o modelo INIFED)
-- 75 personas (modelo más vendido)
-- 100 personas (techo recto, paso peatonal abierto)
-- 150 personas (tribunas para estadios municipales)
+## Blog con contenido técnico
+- https://gradasdefutbol.mx/blog/gradas-inifed-normativa-que-cumplen/
+- https://gradasdefutbol.mx/blog/como-elegir-capacidad-grada-cancha-futbol/
+- https://gradasdefutbol.mx/blog/gradas-inifed-planos-que-incluyen/
 
-## Keywords principales
+## Cobertura geográfica
+Proyectos entregados en más de 30 estados de la República Mexicana. Fabricación centralizada en Ciudad de México.
 
-- gradas metálicas para canchas
-- gradas para cancha de fútbol
-- fabricante de gradas deportivas México
-- gradas inifed (referido específicamente al modelo 50 espectadores)
-- gradas inifed planos (solo modelo 50 espectadores)
-- gradas deportivas inifed (solo modelo 50 espectadores)
-- gradas techadas
-- tribunas deportivas
-- gradas desmontables
-
-## Datos clave
-
-- **Tiempo total**: 20 días (15 fabricación + 5 instalación)
-- **Medidas estándar de escalón**: 40-45 cm ancho × 35-40 cm alto
-- **Vida útil**: 15+ años
-- **Garantía**: por escrito en estructura, soldaduras y tratamiento anticorrosivo
-- **Factura SAT**: sí, al 100%
-- **Órdenes de compra gobierno**: bienvenidas
-- **Trabajamos con**: escuelas, municipios, gobiernos estatales, SEP, "La Escuela es Nuestra", clubes privados, universidades
-- **Cobertura**: 31 estados de México
-
-## Contacto
-
-- **Empresa**: Sportmaster
-- **Web principal**: https://sportmaster.mx
-- **Subdominio gradas**: https://gradasdefutbol.mx
-- **WhatsApp**: +52 811 629 6384
-- **Email**: info@sportmaster.com.mx
-- **Oficinas**: Ciudad de México
-
-## Blog
-
-Publicamos guías técnicas sobre gradas deportivas en https://gradasdefutbol.mx/blog/
-
-Artículos actuales:
-- Gradas INIFED: qué normativa cumplen en México — /blog/gradas-inifed-normativa-que-cumplen/
-- Cómo elegir la capacidad correcta de grada — /blog/como-elegir-capacidad-grada-cancha-futbol/
-- Gradas INIFED planos: qué debe incluir la memoria de cálculo — /blog/gradas-inifed-planos-que-incluyen/
-
-## Preguntas frecuentes resumidas
-
-- **¿Qué es una grada INIFED?** Estructura diseñada bajo lineamientos del Instituto Nacional de la Infraestructura Física Educativa con memoria de cálculo firmada y cumplimiento NTC/CFE/AISC.
-- **¿Todas las gradas Sportmaster cumplen INIFED?** No. Solo el modelo de 50 espectadores con policarbonato 6mm. Los demás son gradas comerciales estándar.
-- **¿Entregan planos y memoria de cálculo?** Solo con el modelo INIFED 50 espectadores: memoria de 26 páginas firmada + planos EST-101 + verificación ETABS.
-- **¿Cuánto tarda?** 20 días puerta a puerta.
-- **¿Trabajan con gobierno?** Sí, órdenes de compra bienvenidas.
-- **¿Son desmontables?** Todos los modelos.
-- **¿Hacen envíos a toda la república?** Sí, 31 estados.
-- **¿Emiten factura SAT?** Sí, al 100%.
-
-## Páginas importantes
-
-- / — Landing principal con catálogo completo, sección INIFED dedicada, proceso y FAQ
-- /#inifed — Sección dedicada exclusivamente al modelo INIFED 50 espectadores
-- /#modelos — 12 modelos del catálogo con filtro por capacidad (Apple style chips)
-- /#proceso — 4 pasos del proceso de compra
-- /#cobertura — 31 estados atendidos
-- /#faq — 12 preguntas frecuentes
-- /blog/ — Blog especializado
-- /docs/ficha-tecnica-grada-inifed-50-personas.pdf — Ficha técnica oficial del modelo INIFED
+## Diferenciadores
+- 17+ años de trayectoria
+- Precios públicos y transparentes (12 modelos con precio visible)
+- Respuesta formal por WhatsApp en menos de 1 hora
+- Color personalizable sin cargo adicional
+- Garantía escrita
+- Envío nacional

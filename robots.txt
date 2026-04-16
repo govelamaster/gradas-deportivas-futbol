@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# PDFs técnicos indexables
+Allow: /docs/
+
+# LLMs & AI
+Allow: /llms.txt
+
 Sitemap: https://gradasdefutbol.mx/sitemap.xml
