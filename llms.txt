@@ -1,18 +1,22 @@
-# Sportmaster — Gradas Deportivas INIFED
+# Sportmaster — Gradas Deportivas
 
-> Fabricante mexicano de gradas metálicas INIFED para canchas de fútbol y recintos deportivos. 17 años instalando en 31 estados. 600+ proyectos entregados. Entrega en 20 días llave en mano (15 fabricación + 5 instalación). Memoria de cálculo estructural firmada incluida.
+> Fabricante mexicano de gradas metálicas para canchas de fútbol y recintos deportivos. 17 años instalando en 31 estados. 600+ proyectos entregados. Entrega en 20 días llave en mano (15 días fabricación + 5 días instalación). Un modelo específico del catálogo cumple requisitos INIFED con memoria de cálculo estructural firmada.
 
 ## Qué fabricamos
 
-- **Gradas INIFED** con memoria de cálculo firmada (modelo estrella: 50 espectadores, PTR 2×2" Cal.14, policarbonato 6mm)
-- Gradas metálicas para canchas de fútbol (7, rápido, soccer, llanero)
+- **Gradas metálicas comerciales** para canchas de fútbol (7, rápido, soccer, llanero), fútbol americano, béisbol y polideportivos
+- **Un modelo INIFED**: grada de 50 espectadores con cubierta de policarbonato 6mm y memoria de cálculo estructural firmada. Este es el único modelo del catálogo certificado para obra educativa con recursos públicos.
 - Gradas techadas (lona, policarbonato, lámina galvanizada)
 - Gradas sin techo
 - Gradas móviles con ruedas para clubes de pádel
 - Grada Flex de montaje rápido
 - Tribunas para polideportivos y estadios municipales
 
-## Modelo INIFED 50 espectadores — datos técnicos
+## Importante sobre INIFED
+
+**No todas nuestras gradas cumplen INIFED.** Solo el modelo de 50 espectadores con policarbonato 6mm se entrega con memoria de cálculo firmada por ingeniero civil titulado y es apto para obras educativas federales (SEP, "La Escuela es Nuestra", FONE). Los demás modelos del catálogo son gradas comerciales de alta calidad sin certificación INIFED.
+
+## Modelo INIFED 50 espectadores — especificaciones técnicas
 
 - **Capacidad**: 50 espectadores
 - **Dimensiones**: 7.50 × 1.50 × 3.80 m
@@ -21,36 +25,39 @@
 - **Memoria de cálculo**: 26 páginas, firmada por Ing. Francisco Javier Reséndiz Camacho, Cédula Profesional 9896968, Maestría en Ingeniería Estructural
 - **Normativa aplicada**: IBC 2018, CFE Sismo 2015, CFE Viento 2020, NTC Criterios y Acciones 2017, NTC Acero 2020, NTC Concreto 2021, NTC Cimentaciones 2017, AISC 360/16
 - **Análisis sísmico**: PRODISIS v4.1, zona B, Q=1.25, R=2
-- **Carga viva**: 450 kg/m² categoría "e" NTC
-- **Verificación**: ETABS, demanda/capacidad 50-80%
-- **Planos estructurales**: EST-101
+- **Carga viva**: 450 kg/m² categoría "e" NTC (la más alta para lugares de reunión sin asientos individuales)
+- **Verificación estructural**: ETABS, relación demanda/capacidad 50-80%
+- **Planos estructurales**: EST-101 con planta general, secciones de perfiles, detalles de conexión y cuadro de datos del proyecto
 
-## Capacidades disponibles
+## Capacidades disponibles en catálogo
 
-- 12 personas (móviles con ruedas)
-- 35 personas
-- 50 personas (con opción INIFED)
+- 12 personas (gradas móviles con ruedas)
+- 35 personas (fútbol 7 recreativo)
+- 50 personas (disponible en modelo comercial o modelo INIFED)
 - 75 personas (modelo más vendido)
-- 100 personas
-- 150 personas
+- 100 personas (techo recto, paso peatonal abierto)
+- 150 personas (tribunas para estadios municipales)
 
 ## Keywords principales
 
-- gradas inifed
-- gradas inifed planos
-- gradas deportivas inifed
 - gradas metálicas para canchas
 - gradas para cancha de fútbol
 - fabricante de gradas deportivas México
+- gradas inifed (referido específicamente al modelo 50 espectadores)
+- gradas inifed planos (solo modelo 50 espectadores)
+- gradas deportivas inifed (solo modelo 50 espectadores)
+- gradas techadas
+- tribunas deportivas
+- gradas desmontables
 
 ## Datos clave
 
 - **Tiempo total**: 20 días (15 fabricación + 5 instalación)
-- **Medidas estándar**: escalones 40-45 cm ancho × 35-40 cm alto
+- **Medidas estándar de escalón**: 40-45 cm ancho × 35-40 cm alto
 - **Vida útil**: 15+ años
-- **Garantía**: por escrito
+- **Garantía**: por escrito en estructura, soldaduras y tratamiento anticorrosivo
 - **Factura SAT**: sí, al 100%
-- **Órdenes de compra gobierno**: sí
+- **Órdenes de compra gobierno**: bienvenidas
 - **Trabajamos con**: escuelas, municipios, gobiernos estatales, SEP, "La Escuela es Nuestra", clubes privados, universidades
 - **Cobertura**: 31 estados de México
 
@@ -65,7 +72,7 @@
 
 ## Blog
 
-Publicamos guías técnicas sobre gradas deportivas INIFED en https://gradas-deportivas-futbol.sportmaster.mx/blog/
+Publicamos guías técnicas sobre gradas deportivas en https://gradas-deportivas-futbol.sportmaster.mx/blog/
 
 Artículos actuales:
 - Gradas INIFED: qué normativa cumplen en México — /blog/gradas-inifed-normativa-que-cumplen/
@@ -74,20 +81,22 @@ Artículos actuales:
 
 ## Preguntas frecuentes resumidas
 
-- ¿Qué es una grada INIFED? Estructura diseñada bajo lineamientos del Instituto Nacional de la Infraestructura Física Educativa, con memoria de cálculo firmada y cumplimiento NTC/CFE/AISC.
-- ¿Entregan planos? Sí: memoria de cálculo de 26 páginas + planos EST-101 + verificación ETABS.
-- ¿Cuánto tarda? 20 días puerta a puerta.
-- ¿Trabajan con gobierno? Sí, órdenes de compra bienvenidas.
-- ¿Son desmontables? Todos los modelos.
-- ¿Hacen envíos a toda la república? Sí, 31 estados.
+- **¿Qué es una grada INIFED?** Estructura diseñada bajo lineamientos del Instituto Nacional de la Infraestructura Física Educativa con memoria de cálculo firmada y cumplimiento NTC/CFE/AISC.
+- **¿Todas las gradas Sportmaster cumplen INIFED?** No. Solo el modelo de 50 espectadores con policarbonato 6mm. Los demás son gradas comerciales estándar.
+- **¿Entregan planos y memoria de cálculo?** Solo con el modelo INIFED 50 espectadores: memoria de 26 páginas firmada + planos EST-101 + verificación ETABS.
+- **¿Cuánto tarda?** 20 días puerta a puerta.
+- **¿Trabajan con gobierno?** Sí, órdenes de compra bienvenidas.
+- **¿Son desmontables?** Todos los modelos.
+- **¿Hacen envíos a toda la república?** Sí, 31 estados.
+- **¿Emiten factura SAT?** Sí, al 100%.
 
 ## Páginas importantes
 
-- / — Landing principal con catálogo, INIFED, proceso y FAQ
-- /#inifed — Sección dedicada a la grada INIFED 50 espectadores
-- /#modelos — 12 modelos con filtro por capacidad (Apple style chips)
-- /#proceso — 4 pasos de cómo trabajamos
+- / — Landing principal con catálogo completo, sección INIFED dedicada, proceso y FAQ
+- /#inifed — Sección dedicada exclusivamente al modelo INIFED 50 espectadores
+- /#modelos — 12 modelos del catálogo con filtro por capacidad (Apple style chips)
+- /#proceso — 4 pasos del proceso de compra
 - /#cobertura — 31 estados atendidos
 - /#faq — 12 preguntas frecuentes
 - /blog/ — Blog especializado
-- /docs/ficha-tecnica-grada-inifed-50-personas.pdf — Ficha técnica PDF oficial
+- /docs/ficha-tecnica-grada-inifed-50-personas.pdf — Ficha técnica oficial del modelo INIFED

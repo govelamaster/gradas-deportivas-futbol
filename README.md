@@ -1,6 +1,6 @@
-# Sportmaster — Gradas Deportivas INIFED
+# Sportmaster — Gradas Deportivas
 
-Sitio premium optimizado para SEO, AEO y conversión. Rebuild completo del subdominio `gradas-deportivas-futbol.sportmaster.mx` con enfoque en **gradas INIFED con memoria de cálculo firmada**.
+Sitio premium optimizado para SEO, AEO y conversión. Rebuild completo del subdominio `gradas-deportivas-futbol.sportmaster.mx`. El modelo INIFED está posicionado como vertical especializado, sin comprometer afirmaciones sobre el resto del catálogo.
 
 ## Stack
 
@@ -8,45 +8,55 @@ Sitio premium optimizado para SEO, AEO y conversión. Rebuild completo del subdo
 - **Vanilla JS** (count-up animations + filter chips Apple-style)
 - **SEO/AEO**: 8 schemas JSON-LD, sitemap, robots, llms.txt, OG completo
 - **Performance**: lazy loading, font preload, hero con fetchpriority high
-- **Responsive**: mobile-first, breakpoints 640/768/1024/1280 con text-scaling y filter chips scrollable en móvil
+- **Responsive**: mobile-first, breakpoints 640/768/1024/1280
 
 ## Estructura
 
 ```
 .
-├── index.html                                        → Landing principal (INIFED + catálogo)
+├── index.html                                        → Landing principal
 ├── sitemap.xml                                       → 10 URLs (landing + blog)
 ├── robots.txt                                        → Allow all + sitemap
 ├── llms.txt                                          → Resumen para AI crawlers
 ├── assets/
-│   ├── logo_sportmaster.webp                         → (copiar del sitio original)
+│   ├── logo_sportmaster.webp                         → Logo (copiar del sitio actual)
 │   └── img/
 │       └── grada-inifed-50p.png                      → Render INIFED 50 espectadores
 ├── docs/
 │   └── ficha-tecnica-grada-inifed-50-personas.pdf    → Ficha técnica oficial
 ├── blog/
 │   ├── index.html                                    → Blog landing
-│   ├── gradas-inifed-normativa-que-cumplen/          → Art 1: Normativa (10 min)
-│   │   └── index.html
-│   ├── como-elegir-capacidad-grada-cancha-futbol/    → Art 2: Guía capacidad (8 min)
-│   │   └── index.html
-│   └── gradas-inifed-planos-que-incluyen/            → Art 3: Planos y memoria (12 min)
-│       └── index.html
+│   ├── gradas-inifed-normativa-que-cumplen/
+│   ├── como-elegir-capacidad-grada-cancha-futbol/
+│   └── gradas-inifed-planos-que-incluyen/
 └── README.md
 ```
 
-## Cambios v2 (este build)
+## Changelog
 
-1. **Filtro Apple-style** en catálogo con chips segmentados horizontales y transición fluida al filtrar tarjetas (filtra por capacidad: Todas / 12 / 35 / 50 / 75 / 100 / 150 / INIFED)
-2. **Facturación SAT analizada**: mantenida pero consolidada en un solo badge institucional (con órdenes de compra gobierno), removida del trust strip superior para no saturar
-3. **Banner intermedio reemplazado**: ya no pide plano; nuevo mensaje "Gradas INIFED listas en 20 días. Sin espera, sin sorpresas" enfocado en modelos estandarizados
-4. **Opción personalizada reducida**: enfoque en modelos estándar, no se pide plano en ningún CTA
-5. **Blog independiente** en `/blog/` con 3 artículos iniciales SEO/AEO optimizados (Article + FAQPage + Breadcrumb schemas)
-6. **Timing actualizado**: 15 días fabricación + 5 días instalación = **20 días total** (antes 30)
-7. **Fotos originales** del sitio Sportmaster referenciadas vía CDN directo (se cargan en navegador del usuario, no en este container)
-8. **Mobile responsive verificado**: text scaling clamp, filter chips con scroll-x en móvil, grid colapsa 3→2→1 columnas, hero reduce tipografía en pantallas pequeñas
-9. **Keywords INIFED**: "gradas inifed", "gradas inifed planos", "gradas deportivas inifed" integradas en Title, Meta, H1, H2, párrafos, alt text, schemas y FAQ
-10. **Nueva grada INIFED 50 espectadores** añadida como sección hero dedicada + primera card del catálogo + en blog + en schemas (Product schema completo con todas las propiedades técnicas)
+### v3 (este build)
+1. **Hero más claro**: imagen pasa de `opacity-40` a `opacity-75`, nuevo gradient lateral suave que solo oscurece el lado izquierdo (texto) y deja visible la foto. Añadido `text-shadow` al subtítulo para legibilidad sin competir con la imagen.
+2. **INIFED solo en el modelo 50p**: removidas todas las afirmaciones genéricas de "gradas INIFED" del sitio. El modelo INIFED ahora tiene una sección dedicada con header explícito: *"Único modelo con cumplimiento INIFED"* + subtítulo que aclara *"El resto de nuestro catálogo son modelos comerciales estándar"*.
+3. **Title, Meta, H1, Nav, Trust strip, CTAs, Footer, WhatsApp links** todos limpios de menciones genéricas de INIFED.
+4. **Schemas JSON-LD corregidos**: LocalBusiness name, Service serviceType, OfferCatalog name, BreadcrumbList y FAQPage ahora son neutros. El único lugar donde aparece INIFED es en el schema `Product` específico del modelo 50p.
+5. **FAQ reformulado**: la pregunta "¿Todas las gradas Sportmaster cumplen INIFED?" tiene respuesta explícita "No. Solo nuestro modelo de 50 espectadores con policarbonato 6mm".
+6. **Comparativa actualizada**: fila "Cumple INIFED" (afirmativa para metal) reemplazada por "Factura SAT" (más útil y honesta).
+7. **Blog alineado**: artículo 2 ya no promete "grada INIFED de 100 personas", aclara que el modelo INIFED solo existe en 50p. Artículo 1 CTA específico del modelo.
+8. **llms.txt reescrito**: sección "Importante sobre INIFED" explícita sobre qué modelo cumple.
+
+### v2
+- Filtro chips Apple-style en catálogo
+- Facturación SAT consolidada en un solo badge institucional
+- Banner intermedio sin pedir planos
+- Blog independiente con 3 artículos iniciales SEO/AEO
+- Timing 15+5 = 20 días
+- Fotos originales integradas desde CDN
+- Grada INIFED 50 espectadores añadida
+
+### v1
+- Rebuild inicial con schemas, proceso, cobertura, garantía, FAQ
+- Trust bar con 4 KPIs count-up
+- Tabla comparativa metal vs concreto vs aluminio
 
 ## Deploy local
 
@@ -58,57 +68,41 @@ python3 -m http.server 8080
 
 ## Deploy a Cloudflare Pages
 
-### Opción A — Git (recomendada)
-
 ```bash
-# Si tienes GitHub CLI
+# GitHub
 gh repo create gradas-sportmaster --public --source=. --remote=origin --push
 
-# O manualmente en https://github.com/new, luego:
-git init
-git add .
-git commit -m "feat: rebuild premium v2 with INIFED + blog"
-git branch -M main
+# O manualmente
 git remote add origin https://github.com/TU_USUARIO/gradas-sportmaster.git
 git push -u origin main
-```
 
-En Cloudflare → Pages → Create → Connect to Git → elegir repo → build config:
-- Framework preset: None
-- Build command: (vacío)
-- Build output directory: `/`
-
-### Opción B — Wrangler CLI
-
-```bash
+# Cloudflare Wrangler
 npm install -g wrangler
 wrangler login
 wrangler pages deploy . --project-name=gradas-sportmaster
 ```
 
-### Dominio custom
-
-En Cloudflare Pages → Custom domains → Add → `gradas-deportivas-futbol.sportmaster.mx`
+Luego en Cloudflare Pages → Custom domains → `gradas-deportivas-futbol.sportmaster.mx`
 
 ## Checklist post-deploy
 
 - [ ] HTTPS funciona
 - [ ] `sitemap.xml` accesible
 - [ ] `llms.txt` accesible
-- [ ] `/blog/` accesible con los 3 artículos
+- [ ] `/blog/` y los 3 artículos accesibles
 - [ ] `/docs/ficha-tecnica-grada-inifed-50-personas.pdf` accesible
 - [ ] Schemas validan en https://validator.schema.org/
 - [ ] PageSpeed > 90 móvil
 - [ ] Google Search Console: propiedad + sitemap
-- [ ] GA4 / Meta Pixel insertados (si aplica)
+- [ ] GA4 / Meta Pixel insertados
 
-## Imágenes pendientes de subir
+## Imágenes que debes copiar
 
-Las fotos de producto están referenciadas vía CDN del sitio actual:
-`https://gradas-deportivas-futbol.sportmaster.mx/assets/img/...`
+Desde el sitio actual `https://gradas-deportivas-futbol.sportmaster.mx/assets/` copiar a `/assets/` local:
 
-Funcionan en navegador inmediatamente. Para producción óptima, copiar también a `/assets/img/` local para no depender del CDN externo:
+**Logo:** `logo_sportmaster.webp` y `logo_sportmaster.png`
 
+**Productos (a `/assets/img/`):**
 - `GRADA 35 P TECHO CURVO LONA.webp`
 - `GRADA 35 P TECHO CURVO POLICARBONATO - copia.webp`
 - `GRADA 50P TECHO CURVO LONA ROJA.webp`
@@ -120,14 +114,26 @@ Funcionan en navegador inmediatamente. Para producción óptima, copiar también
 - `GRADA 100P TECHO RECTO LONA.webp`
 - `GRADA FLEX 35P TECHO LONA.webp`
 - `1 4.webp`
-- `logo_sportmaster.webp`
 
-La imagen INIFED (`grada-inifed-50p.png`) y el PDF (`ficha-tecnica-grada-inifed-50-personas.pdf`) ya están incluidos.
+La imagen INIFED (`grada-inifed-50p.png`) y el PDF ya están incluidos en el zip. Durante el preview en navegador, las imágenes de productos se cargan desde el CDN del sitio actual; para deploy final copiarlas localmente.
+
+## Posicionamiento legal/comercial
+
+Este sitio ha sido ajustado para **no afirmar** cumplimiento INIFED en ningún modelo excepto el de 50 espectadores con policarbonato 6mm. Esto protege ante:
+- Auditorías de obras con recursos públicos (SEP, "La Escuela es Nuestra", FONE)
+- Licitaciones que verifiquen respaldo documental
+- Clientes institucionales que comparen memoria firmada
+
+Si en el futuro se certifica otro modelo, actualizar:
+1. Nueva card en catálogo con borde lime y badge "INIFED"
+2. Añadir al schema Product dentro del JSON-LD del `<head>`
+3. Mencionar en sección `#inifed` como "modelo INIFED adicional"
+4. Actualizar `llms.txt` en la sección "Modelos INIFED disponibles"
 
 ## Próximas iteraciones recomendadas
 
-- Generar páginas individuales por modelo (`/modelos/grada-75-personas/`) con schema Product dedicado por cada una
-- Añadir casos reales con 6 proyectos entregados (fotos + nombre de cliente + ciudad)
+- Páginas individuales por modelo (`/modelos/grada-75-personas/`) con schema Product dedicado
+- Sección de casos reales con 6 proyectos entregados (fotos + cliente + ciudad)
 - 4 artículos de blog adicionales (1 por mes) para mantener posicionamiento AEO
-- Integrar formulario de contacto backend (Formspree, Netlify Forms o n8n)
-- A/B test headline del hero entre "Entrega en 20 días" vs "Memoria de cálculo firmada"
+- Integrar formulario backend (Formspree, Netlify Forms o n8n)
+- Certificar adicionales modelos INIFED si hay demanda institucional (ampliaría catálogo elegible para licitaciones)
