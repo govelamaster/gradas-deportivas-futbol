@@ -1,6 +1,6 @@
 # Sportmaster — Gradas Deportivas
 
-Sitio premium optimizado para SEO, AEO y conversión. Rebuild completo del subdominio `gradas-deportivas-futbol.sportmaster.mx`. El modelo INIFED está posicionado como vertical especializado, sin comprometer afirmaciones sobre el resto del catálogo.
+Sitio premium optimizado para SEO, AEO y conversión. Rebuild completo del subdominio `gradasdefutbol.mx`. El modelo INIFED está posicionado como vertical especializado, sin comprometer afirmaciones sobre el resto del catálogo.
 
 ## Stack
 
@@ -82,7 +82,7 @@ wrangler login
 wrangler pages deploy . --project-name=gradas-sportmaster
 ```
 
-Luego en Cloudflare Pages → Custom domains → `gradas-deportivas-futbol.sportmaster.mx`
+Luego en Cloudflare Pages → Custom domains → `gradasdefutbol.mx`
 
 ## Checklist post-deploy
 
@@ -98,7 +98,7 @@ Luego en Cloudflare Pages → Custom domains → `gradas-deportivas-futbol.sport
 
 ## Imágenes que debes copiar
 
-Desde el sitio actual `https://gradas-deportivas-futbol.sportmaster.mx/assets/` copiar a `/assets/` local:
+Desde el sitio actual `https://gradasdefutbol.mx/assets/` copiar a `/assets/` local:
 
 **Logo:** `logo_sportmaster.webp` y `logo_sportmaster.png`
 

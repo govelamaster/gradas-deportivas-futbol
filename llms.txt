@@ -65,14 +65,14 @@
 
 - **Empresa**: Sportmaster
 - **Web principal**: https://sportmaster.mx
-- **Subdominio gradas**: https://gradas-deportivas-futbol.sportmaster.mx
+- **Subdominio gradas**: https://gradasdefutbol.mx
 - **WhatsApp**: +52 811 629 6384
 - **Email**: info@sportmaster.com.mx
 - **Oficinas**: Ciudad de México
 
 ## Blog
 
-Publicamos guías técnicas sobre gradas deportivas en https://gradas-deportivas-futbol.sportmaster.mx/blog/
+Publicamos guías técnicas sobre gradas deportivas en https://gradasdefutbol.mx/blog/
 
 Artículos actuales:
 - Gradas INIFED: qué normativa cumplen en México — /blog/gradas-inifed-normativa-que-cumplen/
