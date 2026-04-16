@@ -1,28 +1,52 @@
-# Sportmaster — Gradas Deportivas
+# Sportmaster — Gradas Deportivas INIFED
 
-Sitio premium optimizado para SEO, AEO y conversión. Rebuild completo del subdominio `gradas-deportivas-futbol.sportmaster.mx`.
+Sitio premium optimizado para SEO, AEO y conversión. Rebuild completo del subdominio `gradas-deportivas-futbol.sportmaster.mx` con enfoque en **gradas INIFED con memoria de cálculo firmada**.
 
 ## Stack
 
 - **HTML5 + Tailwind CSS** (CDN, sin build)
-- **Vanilla JS** (count-up animations)
-- **SEO/AEO**: 7 schemas JSON-LD, sitemap, robots, llms.txt, OG completo
+- **Vanilla JS** (count-up animations + filter chips Apple-style)
+- **SEO/AEO**: 8 schemas JSON-LD, sitemap, robots, llms.txt, OG completo
 - **Performance**: lazy loading, font preload, hero con fetchpriority high
-- **Responsive**: mobile-first, breakpoints 640/768/1024/1280
+- **Responsive**: mobile-first, breakpoints 640/768/1024/1280 con text-scaling y filter chips scrollable en móvil
 
 ## Estructura
 
 ```
 .
-├── index.html         → Landing principal (todo incluido)
-├── sitemap.xml        → 5 URLs con anchors
-├── robots.txt         → Allow all + sitemap
-├── llms.txt           → Resumen para AI crawlers
+├── index.html                                        → Landing principal (INIFED + catálogo)
+├── sitemap.xml                                       → 10 URLs (landing + blog)
+├── robots.txt                                        → Allow all + sitemap
+├── llms.txt                                          → Resumen para AI crawlers
 ├── assets/
-│   ├── logo_sportmaster.webp
-│   └── img/           → Fotos de productos (copiar del sitio original)
+│   ├── logo_sportmaster.webp                         → (copiar del sitio original)
+│   └── img/
+│       └── grada-inifed-50p.png                      → Render INIFED 50 espectadores
+├── docs/
+│   └── ficha-tecnica-grada-inifed-50-personas.pdf    → Ficha técnica oficial
+├── blog/
+│   ├── index.html                                    → Blog landing
+│   ├── gradas-inifed-normativa-que-cumplen/          → Art 1: Normativa (10 min)
+│   │   └── index.html
+│   ├── como-elegir-capacidad-grada-cancha-futbol/    → Art 2: Guía capacidad (8 min)
+│   │   └── index.html
+│   └── gradas-inifed-planos-que-incluyen/            → Art 3: Planos y memoria (12 min)
+│       └── index.html
 └── README.md
 ```
+
+## Cambios v2 (este build)
+
+1. **Filtro Apple-style** en catálogo con chips segmentados horizontales y transición fluida al filtrar tarjetas (filtra por capacidad: Todas / 12 / 35 / 50 / 75 / 100 / 150 / INIFED)
+2. **Facturación SAT analizada**: mantenida pero consolidada en un solo badge institucional (con órdenes de compra gobierno), removida del trust strip superior para no saturar
+3. **Banner intermedio reemplazado**: ya no pide plano; nuevo mensaje "Gradas INIFED listas en 20 días. Sin espera, sin sorpresas" enfocado en modelos estandarizados
+4. **Opción personalizada reducida**: enfoque en modelos estándar, no se pide plano en ningún CTA
+5. **Blog independiente** en `/blog/` con 3 artículos iniciales SEO/AEO optimizados (Article + FAQPage + Breadcrumb schemas)
+6. **Timing actualizado**: 15 días fabricación + 5 días instalación = **20 días total** (antes 30)
+7. **Fotos originales** del sitio Sportmaster referenciadas vía CDN directo (se cargan en navegador del usuario, no en este container)
+8. **Mobile responsive verificado**: text scaling clamp, filter chips con scroll-x en móvil, grid colapsa 3→2→1 columnas, hero reduce tipografía en pantallas pequeñas
+9. **Keywords INIFED**: "gradas inifed", "gradas inifed planos", "gradas deportivas inifed" integradas en Title, Meta, H1, H2, párrafos, alt text, schemas y FAQ
+10. **Nueva grada INIFED 50 espectadores** añadida como sección hero dedicada + primera card del catálogo + en blog + en schemas (Product schema completo con todas las propiedades técnicas)
 
 ## Deploy local
 
@@ -36,29 +60,25 @@ python3 -m http.server 8080
 
 ### Opción A — Git (recomendada)
 
-1. Crear repo en GitHub:
-   ```bash
-   gh repo create gradas-sportmaster --public --source=. --remote=origin --push
-   ```
-   O manualmente en https://github.com/new, luego:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: rebuild premium"
-   git branch -M main
-   git remote add origin https://github.com/TU_USUARIO/gradas-sportmaster.git
-   git push -u origin main
-   ```
+```bash
+# Si tienes GitHub CLI
+gh repo create gradas-sportmaster --public --source=. --remote=origin --push
 
-2. Ir a https://dash.cloudflare.com → Pages → Create → Connect to Git
-3. Seleccionar el repo
-4. Build config:
-   - **Framework preset**: None
-   - **Build command**: (vacío)
-   - **Build output directory**: `/`
-5. Deploy → Cloudflare asigna `gradas-sportmaster.pages.dev`
+# O manualmente en https://github.com/new, luego:
+git init
+git add .
+git commit -m "feat: rebuild premium v2 with INIFED + blog"
+git branch -M main
+git remote add origin https://github.com/TU_USUARIO/gradas-sportmaster.git
+git push -u origin main
+```
 
-### Opción B — Wrangler CLI (deploy directo)
+En Cloudflare → Pages → Create → Connect to Git → elegir repo → build config:
+- Framework preset: None
+- Build command: (vacío)
+- Build output directory: `/`
+
+### Opción B — Wrangler CLI
 
 ```bash
 npm install -g wrangler
@@ -70,13 +90,13 @@ wrangler pages deploy . --project-name=gradas-sportmaster
 
 En Cloudflare Pages → Custom domains → Add → `gradas-deportivas-futbol.sportmaster.mx`
 
-Si el dominio ya está en Cloudflare, se configura automáticamente. Si no, apunta el CNAME del subdominio a `gradas-sportmaster.pages.dev`.
-
 ## Checklist post-deploy
 
 - [ ] HTTPS funciona
 - [ ] `sitemap.xml` accesible
 - [ ] `llms.txt` accesible
+- [ ] `/blog/` accesible con los 3 artículos
+- [ ] `/docs/ficha-tecnica-grada-inifed-50-personas.pdf` accesible
 - [ ] Schemas validan en https://validator.schema.org/
 - [ ] PageSpeed > 90 móvil
 - [ ] Google Search Console: propiedad + sitemap
@@ -84,7 +104,10 @@ Si el dominio ya está en Cloudflare, se configura automáticamente. Si no, apun
 
 ## Imágenes pendientes de subir
 
-Copiar del sitio original (`https://gradas-deportivas-futbol.sportmaster.mx/assets/img/`) a `/assets/img/`:
+Las fotos de producto están referenciadas vía CDN del sitio actual:
+`https://gradas-deportivas-futbol.sportmaster.mx/assets/img/...`
+
+Funcionan en navegador inmediatamente. Para producción óptima, copiar también a `/assets/img/` local para no depender del CDN externo:
 
 - `GRADA 35 P TECHO CURVO LONA.webp`
 - `GRADA 35 P TECHO CURVO POLICARBONATO - copia.webp`
@@ -97,31 +120,14 @@ Copiar del sitio original (`https://gradas-deportivas-futbol.sportmaster.mx/asse
 - `GRADA 100P TECHO RECTO LONA.webp`
 - `GRADA FLEX 35P TECHO LONA.webp`
 - `1 4.webp`
+- `logo_sportmaster.webp`
 
-Y el logo: `logo_sportmaster.webp`
+La imagen INIFED (`grada-inifed-50p.png`) y el PDF (`ficha-tecnica-grada-inifed-50-personas.pdf`) ya están incluidos.
 
-Ideal: generar además `og-gradas-sportmaster.jpg` (1200×630) para Open Graph.
+## Próximas iteraciones recomendadas
 
-## Mejoras vs sitio original
-
-| # | Antes | Después |
-|---|---|---|
-| 1 | "PRECIO: $0.00" en todos los productos | "Cotización personalizada" + CTA directo |
-| 2 | Sin schemas JSON-LD | 7 schemas: Org, LocalBusiness, Service, Website, Breadcrumb, FAQPage, Speakable |
-| 3 | Hero genérico "Gradas Deportivas Profesionales" | "600+ gradas instaladas en México. La tuya en 30 días." |
-| 4 | Sin prueba social cuantitativa | Stats bar: 600+ / 17 años / 31 estados / <1h |
-| 5 | Footer con links `#` | Footer navegación real + NAP + redes |
-| 6 | Sin `llms.txt` | llms.txt completo en raíz |
-| 7 | FAQ sin schema | 12 FAQs con FAQPage schema estructurado |
-| 8 | Tipografía sistema | Archivo Black + Inter (Google Fonts) |
-| 9 | Sin tabla comparativa | Metal vs Concreto vs Aluminio |
-| 10 | Sin sección de cobertura | Bloque visual "31 estados" |
-| 11 | Sin sección proceso | Timeline 4 pasos |
-
-## Siguiente iteración
-
-- Generar 6 páginas individuales por modelo (`/modelos/[slug]`) con schema Product completo por cada una
-- Añadir sección de casos reales con 6 fotos de proyectos entregados
-- Implementar testimonios con nombres reales
-- A/B test headline hero
-- Traducir versión `en-US` si se expande a US market
+- Generar páginas individuales por modelo (`/modelos/grada-75-personas/`) con schema Product dedicado por cada una
+- Añadir casos reales con 6 proyectos entregados (fotos + nombre de cliente + ciudad)
+- 4 artículos de blog adicionales (1 por mes) para mantener posicionamiento AEO
+- Integrar formulario de contacto backend (Formspree, Netlify Forms o n8n)
+- A/B test headline del hero entre "Entrega en 20 días" vs "Memoria de cálculo firmada"

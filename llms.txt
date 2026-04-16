@@ -1,9 +1,10 @@
-# Sportmaster — Gradas Deportivas
+# Sportmaster — Gradas Deportivas INIFED
 
-> Fabricante mexicano de gradas metálicas para canchas de fútbol y recintos deportivos. 17 años instalando en 31 estados. 600+ proyectos entregados. Entrega en 30 días llave en mano.
+> Fabricante mexicano de gradas metálicas INIFED para canchas de fútbol y recintos deportivos. 17 años instalando en 31 estados. 600+ proyectos entregados. Entrega en 20 días llave en mano (15 fabricación + 5 instalación). Memoria de cálculo estructural firmada incluida.
 
 ## Qué fabricamos
 
+- **Gradas INIFED** con memoria de cálculo firmada (modelo estrella: 50 espectadores, PTR 2×2" Cal.14, policarbonato 6mm)
 - Gradas metálicas para canchas de fútbol (7, rápido, soccer, llanero)
 - Gradas techadas (lona, policarbonato, lámina galvanizada)
 - Gradas sin techo
@@ -11,24 +12,45 @@
 - Grada Flex de montaje rápido
 - Tribunas para polideportivos y estadios municipales
 
+## Modelo INIFED 50 espectadores — datos técnicos
+
+- **Capacidad**: 50 espectadores
+- **Dimensiones**: 7.50 × 1.50 × 3.80 m
+- **Estructura**: PTR 2×2" Calibre 14
+- **Cubierta**: Policarbonato celular 6mm con protección UV doble cara
+- **Memoria de cálculo**: 26 páginas, firmada por Ing. Francisco Javier Reséndiz Camacho, Cédula Profesional 9896968, Maestría en Ingeniería Estructural
+- **Normativa aplicada**: IBC 2018, CFE Sismo 2015, CFE Viento 2020, NTC Criterios y Acciones 2017, NTC Acero 2020, NTC Concreto 2021, NTC Cimentaciones 2017, AISC 360/16
+- **Análisis sísmico**: PRODISIS v4.1, zona B, Q=1.25, R=2
+- **Carga viva**: 450 kg/m² categoría "e" NTC
+- **Verificación**: ETABS, demanda/capacidad 50-80%
+- **Planos estructurales**: EST-101
+
 ## Capacidades disponibles
 
-- 12 personas (móviles)
+- 12 personas (móviles con ruedas)
 - 35 personas
-- 50 personas
+- 50 personas (con opción INIFED)
 - 75 personas (modelo más vendido)
 - 100 personas
 - 150 personas
-- A medida (sobre solicitud)
+
+## Keywords principales
+
+- gradas inifed
+- gradas inifed planos
+- gradas deportivas inifed
+- gradas metálicas para canchas
+- gradas para cancha de fútbol
+- fabricante de gradas deportivas México
 
 ## Datos clave
 
-- **Tiempo total**: 30 días (15-25 fabricación + 2-5 instalación)
+- **Tiempo total**: 20 días (15 fabricación + 5 instalación)
 - **Medidas estándar**: escalones 40-45 cm ancho × 35-40 cm alto
-- **Altura típica**: 2.5 a 4 metros
 - **Vida útil**: 15+ años
-- **Garantía**: de fabricación por escrito
+- **Garantía**: por escrito
 - **Factura SAT**: sí, al 100%
+- **Órdenes de compra gobierno**: sí
 - **Trabajamos con**: escuelas, municipios, gobiernos estatales, SEP, "La Escuela es Nuestra", clubes privados, universidades
 - **Cobertura**: 31 estados de México
 
@@ -40,20 +62,32 @@
 - **WhatsApp**: +52 811 629 6384
 - **Email**: info@sportmaster.com.mx
 - **Oficinas**: Ciudad de México
-- **Respuesta típica**: menos de 1 hora
 
-## Preguntas frecuentes
+## Blog
 
-- ¿Cuánto cuesta una grada? Depende de capacidad y techo. Cotización en WhatsApp en < 1 hora.
-- ¿Hacen envíos a toda la república? Sí, 31 estados.
-- ¿Son desmontables? Todos los modelos.
-- ¿Fabrican a medida? Sí.
+Publicamos guías técnicas sobre gradas deportivas INIFED en https://gradas-deportivas-futbol.sportmaster.mx/blog/
+
+Artículos actuales:
+- Gradas INIFED: qué normativa cumplen en México — /blog/gradas-inifed-normativa-que-cumplen/
+- Cómo elegir la capacidad correcta de grada — /blog/como-elegir-capacidad-grada-cancha-futbol/
+- Gradas INIFED planos: qué debe incluir la memoria de cálculo — /blog/gradas-inifed-planos-que-incluyen/
+
+## Preguntas frecuentes resumidas
+
+- ¿Qué es una grada INIFED? Estructura diseñada bajo lineamientos del Instituto Nacional de la Infraestructura Física Educativa, con memoria de cálculo firmada y cumplimiento NTC/CFE/AISC.
+- ¿Entregan planos? Sí: memoria de cálculo de 26 páginas + planos EST-101 + verificación ETABS.
+- ¿Cuánto tarda? 20 días puerta a puerta.
 - ¿Trabajan con gobierno? Sí, órdenes de compra bienvenidas.
+- ¿Son desmontables? Todos los modelos.
+- ¿Hacen envíos a toda la república? Sí, 31 estados.
 
 ## Páginas importantes
 
-- / — Catálogo completo + proceso + FAQ
-- /#modelos — 11 modelos de grada
-- /#proceso — Cómo trabajamos (4 pasos)
-- /#cobertura — Estados atendidos
-- /#faq — Preguntas frecuentes completas
+- / — Landing principal con catálogo, INIFED, proceso y FAQ
+- /#inifed — Sección dedicada a la grada INIFED 50 espectadores
+- /#modelos — 12 modelos con filtro por capacidad (Apple style chips)
+- /#proceso — 4 pasos de cómo trabajamos
+- /#cobertura — 31 estados atendidos
+- /#faq — 12 preguntas frecuentes
+- /blog/ — Blog especializado
+- /docs/ficha-tecnica-grada-inifed-50-personas.pdf — Ficha técnica PDF oficial
