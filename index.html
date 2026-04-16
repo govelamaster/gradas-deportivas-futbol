@@ -12,6 +12,7 @@
 <meta name="author" content="Sportmaster">
 <meta name="geo.region" content="MX">
 <meta name="geo.country" content="Mexico">
+<meta name="theme-color" content="#0F172A">
 <link rel="canonical" href="https://gradasdefutbol.mx/">
 
 <!-- Open Graph -->
@@ -34,7 +35,7 @@
 <!-- Preconnect -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Archivo+Black&display=swap" rel="stylesheet">
 
 <!-- JSON-LD: Organization -->
 <script type="application/ld+json">
@@ -85,10 +86,10 @@
   "@id": "https://gradasdefutbol.mx/#catalogo",
   "name": "Catálogo de gradas deportivas Sportmaster",
   "itemListElement": [
-    {"@type":"ListItem","position":1,"item":{"@type":"Product","name":"Grada 35 Personas Techo Curvo de Lona","description":"Grada deportiva metálica para 35 espectadores con techo curvo de lona","offers":{"@type":"Offer","price":"78000","priceCurrency":"MXN","availability":"https://schema.org/InStock"}}},
+    {"@type":"ListItem","position":1,"item":{"@type":"Product","name":"Grada 35 Personas Techo Curvo de Lona","offers":{"@type":"Offer","price":"78000","priceCurrency":"MXN","availability":"https://schema.org/InStock"}}},
     {"@type":"ListItem","position":2,"item":{"@type":"Product","name":"Grada 35 Personas Techo Curvo de Policarbonato","offers":{"@type":"Offer","price":"88000","priceCurrency":"MXN","availability":"https://schema.org/InStock"}}},
     {"@type":"ListItem","position":3,"item":{"@type":"Product","name":"Grada 50 Personas Techo Curvo de Lona","offers":{"@type":"Offer","price":"99500","priceCurrency":"MXN","availability":"https://schema.org/InStock"}}},
-    {"@type":"ListItem","position":4,"item":{"@type":"Product","name":"Grada 50 Personas Techo Curvo de Policarbonato INIFED","description":"Grada compatible con lineamientos INIFED, policarbonato 6mm","offers":{"@type":"Offer","price":"105000","priceCurrency":"MXN","availability":"https://schema.org/InStock"}}},
+    {"@type":"ListItem","position":4,"item":{"@type":"Product","name":"Grada 50 Personas Techo Curvo de Policarbonato INIFED","offers":{"@type":"Offer","price":"105000","priceCurrency":"MXN","availability":"https://schema.org/InStock"}}},
     {"@type":"ListItem","position":5,"item":{"@type":"Product","name":"Grada 75 Personas Techo Curvo de Lona","offers":{"@type":"Offer","price":"118000","priceCurrency":"MXN","availability":"https://schema.org/InStock"}}},
     {"@type":"ListItem","position":6,"item":{"@type":"Product","name":"Grada 75 Personas Techo Curvo de Policarbonato","offers":{"@type":"Offer","price":"135000","priceCurrency":"MXN","availability":"https://schema.org/InStock"}}},
     {"@type":"ListItem","position":7,"item":{"@type":"Product","name":"Grada 100 Personas Techo Recto de Lona","offers":{"@type":"Offer","price":"138000","priceCurrency":"MXN","availability":"https://schema.org/InStock"}}},
@@ -119,18 +120,24 @@
 
 <style>
 :root {
-  --verde: #1B5E20;
-  --verde-oscuro: #0D3510;
-  --verde-claro: #2E7D32;
-  --naranja: #F57C00;
-  --naranja-hover: #EF6C00;
-  --texto: #1A1A1A;
-  --texto-suave: #555;
-  --gris-bg: #F8F9FA;
-  --gris-linea: #E8EAED;
+  /* Paleta B - Deporte Profesional Moderno */
+  --negro: #0F172A;
+  --negro-suave: #1E293B;
+  --naranja: #FF5722;
+  --naranja-hover: #E64A19;
+  --lime: #EAB308;
+  --lime-hover: #CA8A04;
+  --verde-check: #22C55E;
+  --gris-platinum: #64748B;
+  --gris-linea: #E2E8F0;
+  --gris-bg: #F8FAFC;
   --blanco: #FFFFFF;
-  --sombra: 0 4px 16px rgba(0,0,0,0.06);
-  --sombra-hover: 0 12px 32px rgba(0,0,0,0.12);
+  --blanco-hueso: #FAFAFA;
+  --texto: #0F172A;
+  --texto-suave: #475569;
+  --sombra: 0 4px 16px rgba(15,23,42,0.06);
+  --sombra-hover: 0 16px 40px rgba(15,23,42,0.15);
+  --sombra-dark: 0 20px 50px rgba(0,0,0,0.5);
   --radio: 14px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -139,137 +146,197 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 
+/* Display font for hero + section titles */
+.display{font-family:'Archivo Black','Inter',sans-serif;font-weight:900;letter-spacing:-0.02em;line-height:1.05}
+
 /* Nav */
-.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--gris-linea);padding:1rem 0}
+.nav{position:sticky;top:0;z-index:100;background:rgba(15,23,42,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);padding:1rem 0}
 .nav-inner{max-width:1280px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:900;font-size:1.35rem;color:var(--verde);letter-spacing:-0.02em}
+.logo{font-family:'Archivo Black',sans-serif;font-size:1.4rem;color:var(--blanco);letter-spacing:-0.02em}
 .logo span{color:var(--naranja)}
 .nav-links{display:flex;gap:2rem;align-items:center}
-.nav-links a{color:var(--texto-suave);font-weight:500;font-size:0.95rem;transition:color .2s}
-.nav-links a:hover{color:var(--verde)}
-.btn{display:inline-block;padding:0.85rem 1.6rem;border-radius:10px;font-weight:700;font-size:0.95rem;transition:all .2s;cursor:pointer;border:none;text-align:center}
+.nav-links a{color:rgba(255,255,255,0.75);font-weight:500;font-size:0.95rem;transition:color .2s}
+.nav-links a:hover{color:var(--lime)}
+.btn{display:inline-block;padding:0.85rem 1.6rem;border-radius:10px;font-weight:800;font-size:0.95rem;transition:all .2s;cursor:pointer;border:none;text-align:center;letter-spacing:0.01em}
 .btn-primary{background:var(--naranja);color:var(--blanco)}
-.btn-primary:hover{background:var(--naranja-hover);transform:translateY(-2px);box-shadow:0 8px 20px rgba(245,124,0,0.35)}
-.btn-outline{background:transparent;color:var(--verde);border:2px solid var(--verde)}
-.btn-outline:hover{background:var(--verde);color:var(--blanco)}
-.btn-wa{background:#25D366;color:var(--blanco)}
-.btn-wa:hover{background:#1EBE5D;transform:translateY(-2px)}
+.btn-primary:hover{background:var(--naranja-hover);transform:translateY(-2px);box-shadow:0 10px 24px rgba(255,87,34,0.4)}
+.btn-lime{background:var(--lime);color:var(--negro)}
+.btn-lime:hover{background:var(--lime-hover);transform:translateY(-2px);box-shadow:0 10px 24px rgba(234,179,8,0.4)}
+.btn-outline{background:transparent;color:var(--blanco);border:2px solid rgba(255,255,255,0.3)}
+.btn-outline:hover{background:rgba(255,255,255,0.1);border-color:var(--blanco)}
+.btn-dark{background:var(--negro);color:var(--blanco)}
+.btn-dark:hover{background:var(--negro-suave);transform:translateY(-2px)}
 @media(max-width:768px){.nav-links a:not(.btn){display:none}}
 
 /* Hero */
-.hero{background:linear-gradient(135deg,rgba(13,53,16,0.65) 0%,rgba(27,94,32,0.50) 100%),url('/assets/img/grada-150p-lona.webp') center/cover no-repeat;color:var(--blanco);padding:6rem 1.5rem 5rem;position:relative;overflow:hidden;min-height:600px}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(245,124,0,0.15) 0%,transparent 50%);pointer-events:none}
-.hero-inner{max-width:1280px;margin:0 auto;position:relative;z-index:1}
-.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);padding:0.5rem 1rem;border-radius:100px;font-size:0.85rem;font-weight:600;margin-bottom:1.5rem;backdrop-filter:blur(10px)}
-.hero-badge::before{content:'';width:8px;height:8px;background:var(--naranja);border-radius:50%;animation:pulse 2s infinite}
+.hero{background:var(--negro);color:var(--blanco);padding:6rem 1.5rem 5rem;position:relative;overflow:hidden;min-height:650px;display:flex;align-items:center}
+.hero::before{content:'';position:absolute;inset:0;background:
+  linear-gradient(135deg,rgba(15,23,42,0.70) 0%,rgba(30,41,59,0.50) 100%),
+  url('/assets/img/grada-150p-lona.webp') center/cover no-repeat;
+  pointer-events:none;z-index:0}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,87,34,0.18) 0%,transparent 55%),radial-gradient(circle at 20% 90%,rgba(234,179,8,0.12) 0%,transparent 50%);pointer-events:none;z-index:1}
+.hero-inner{max-width:1280px;margin:0 auto;position:relative;z-index:2;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);padding:0.55rem 1.1rem;border-radius:100px;font-size:0.85rem;font-weight:600;margin-bottom:1.5rem;backdrop-filter:blur(12px);color:var(--blanco)}
+.hero-badge::before{content:'';width:8px;height:8px;background:var(--lime);border-radius:50%;animation:pulse 2s infinite;box-shadow:0 0 12px var(--lime)}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-.hero h1{font-size:clamp(2.25rem,5.5vw,4.5rem);font-weight:900;line-height:1.05;letter-spacing:-0.03em;margin-bottom:1.25rem;max-width:16ch}
+.hero h1{font-family:'Archivo Black',sans-serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:900;line-height:0.98;letter-spacing:-0.03em;margin-bottom:1.5rem;max-width:16ch}
 .hero h1 .acento{color:var(--naranja)}
-.hero-sub{font-size:clamp(1rem,1.5vw,1.2rem);color:rgba(255,255,255,0.85);max-width:60ch;margin-bottom:2.5rem;font-weight:400}
-.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
-.hero-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem;max-width:900px;margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.15)}
-.metric{text-align:left}
-.metric-num{font-size:2rem;font-weight:900;color:var(--naranja);line-height:1}
-.metric-lbl{font-size:0.85rem;color:rgba(255,255,255,0.7);margin-top:0.4rem;font-weight:500}
+.hero-sub{font-size:clamp(1.05rem,1.5vw,1.25rem);color:rgba(255,255,255,0.85);max-width:62ch;margin-bottom:2.5rem;font-weight:400;line-height:1.55}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+@media(max-width:640px){.hero-cta{flex-direction:column}.hero-cta .btn{width:100%}}
 
-/* Secciones */
+/* Social proof bar */
+.proof-bar{background:var(--negro-suave);color:var(--blanco);padding:2.25rem 1.5rem;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)}
+.proof-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem;text-align:center}
+.proof-item{display:flex;flex-direction:column;align-items:center;gap:0.25rem}
+.proof-num{font-family:'Archivo Black',sans-serif;font-size:2.25rem;color:var(--lime);line-height:1}
+.proof-lbl{font-size:0.85rem;color:rgba(255,255,255,0.7);font-weight:500;letter-spacing:0.02em}
+
+/* Secciones base */
 section{padding:5rem 1.5rem}
 .container{max-width:1280px;margin:0 auto}
 .section-header{text-align:center;max-width:780px;margin:0 auto 3.5rem}
-.section-eyebrow{font-size:0.85rem;font-weight:700;color:var(--naranja);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem}
-.section-title{font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:900;color:var(--texto);line-height:1.15;letter-spacing:-0.02em;margin-bottom:1rem}
+.section-eyebrow{display:inline-block;font-size:0.8rem;font-weight:700;color:var(--naranja);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.9rem;padding:0.3rem 0.9rem;background:rgba(255,87,34,0.1);border-radius:100px}
+.section-title{font-family:'Archivo Black',sans-serif;font-size:clamp(1.85rem,3.75vw,2.85rem);color:var(--texto);line-height:1.1;letter-spacing:-0.02em;margin-bottom:1rem}
 .section-sub{font-size:1.05rem;color:var(--texto-suave);max-width:65ch;margin:0 auto}
 
-/* Filter chips */
-.filter-chips{display:flex;gap:0.6rem;flex-wrap:wrap;justify-content:center;margin-bottom:3rem}
-.chip{padding:0.6rem 1.2rem;border-radius:100px;background:var(--gris-bg);border:1px solid var(--gris-linea);font-weight:600;font-size:0.9rem;cursor:pointer;transition:all .2s;color:var(--texto-suave)}
-.chip:hover{border-color:var(--verde);color:var(--verde)}
-.chip.active{background:var(--verde);color:var(--blanco);border-color:var(--verde)}
-
-/* Grid catalogo */
-.catalogo{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.75rem}
-.grada-card{background:var(--blanco);border:1px solid var(--gris-linea);border-radius:var(--radio);overflow:hidden;transition:all .3s;display:flex;flex-direction:column}
-.grada-card:hover{transform:translateY(-4px);box-shadow:var(--sombra-hover);border-color:var(--verde-claro)}
-.grada-img{aspect-ratio:4/3;background:var(--gris-bg);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;color:var(--verde);font-weight:700;font-size:0.9rem}
-.grada-img img{width:100%;height:100%;object-fit:cover}
-.grada-badge{position:absolute;top:1rem;left:1rem;background:var(--naranja);color:var(--blanco);padding:0.35rem 0.75rem;border-radius:6px;font-size:0.7rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;z-index:1}
-.grada-badge.inifed{background:var(--verde);}
-.grada-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
-.grada-nombre{font-size:1.15rem;font-weight:800;color:var(--texto);line-height:1.3;margin-bottom:0.75rem;letter-spacing:-0.01em}
-.grada-specs{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 1rem;margin:1rem 0;padding:1rem;background:var(--gris-bg);border-radius:10px;font-size:0.85rem}
-.spec-row{display:flex;align-items:center;gap:0.4rem}
-.spec-lbl{color:var(--texto-suave);font-weight:600}
-.spec-val{color:var(--texto);font-weight:700}
-.grada-precio{margin:1rem 0 1.25rem}
-.precio-valor{font-size:1.65rem;font-weight:900;color:var(--verde);letter-spacing:-0.02em}
-.precio-leyenda{font-size:0.75rem;color:var(--texto-suave);margin-top:0.25rem}
-.grada-actions{display:flex;gap:0.5rem;margin-top:auto}
-.grada-actions .btn{flex:1;padding:0.7rem 0.9rem;font-size:0.85rem}
-.grada-actions .btn-outline{border-width:1.5px}
-
-/* INIFED highlight */
-.inifed-section{background:linear-gradient(135deg,var(--gris-bg) 0%,#EEF5EE 100%);border-radius:24px;padding:3.5rem 2.5rem;margin:4rem 0;border:1px solid var(--gris-linea)}
-.inifed-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
-@media(max-width:900px){.inifed-grid{grid-template-columns:1fr}}
-.inifed-tag{display:inline-block;background:var(--verde);color:var(--blanco);padding:0.4rem 0.9rem;border-radius:6px;font-size:0.75rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1rem}
-.inifed-title{font-size:2rem;font-weight:900;color:var(--texto);line-height:1.15;letter-spacing:-0.02em;margin-bottom:1rem}
-.inifed-body{color:var(--texto-suave);font-size:1rem;margin-bottom:1.5rem}
-.inifed-features{list-style:none;margin-bottom:2rem}
-.inifed-features li{padding:0.6rem 0;border-bottom:1px solid var(--gris-linea);display:flex;align-items:center;gap:0.75rem;font-size:0.95rem}
-.inifed-features li:last-child{border-bottom:none}
-.inifed-features li::before{content:'✓';width:24px;height:24px;background:var(--verde);color:var(--blanco);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:0.75rem;flex-shrink:0}
+/* Top 3 destacados */
+.bestsellers{background:var(--gris-bg)}
+.top3-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;margin-top:1rem}
+@media(max-width:900px){.top3-grid{grid-template-columns:1fr}}
+.top3-card{background:var(--blanco);border-radius:16px;overflow:hidden;box-shadow:var(--sombra);transition:all .3s;position:relative;display:flex;flex-direction:column}
+.top3-card:hover{transform:translateY(-6px);box-shadow:var(--sombra-hover)}
+.top3-rank{position:absolute;top:1.1rem;left:1.1rem;width:44px;height:44px;background:var(--negro);color:var(--lime);font-family:'Archivo Black',sans-serif;font-size:1.2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:2;box-shadow:0 4px 12px rgba(0,0,0,0.25)}
+.top3-img{aspect-ratio:4/3;background:var(--negro-suave);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;color:var(--lime);font-weight:700;font-size:0.9rem}
+.top3-img img{width:100%;height:100%;object-fit:cover}
+.top3-body{padding:1.75rem 1.5rem;flex:1;display:flex;flex-direction:column}
+.top3-body h3{font-family:'Archivo Black',sans-serif;font-size:1.15rem;color:var(--texto);line-height:1.2;margin-bottom:0.5rem;letter-spacing:-0.01em}
+.top3-tag{display:inline-block;font-size:0.7rem;font-weight:700;color:var(--negro);background:var(--lime);padding:0.2rem 0.6rem;border-radius:4px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.8rem;align-self:flex-start}
+.top3-precio{display:flex;align-items:baseline;gap:0.5rem;margin:1rem 0 1.25rem}
+.top3-precio-num{font-family:'Archivo Black',sans-serif;font-size:1.85rem;color:var(--texto);letter-spacing:-0.02em}
+.top3-precio-mxn{font-size:0.9rem;color:var(--texto-suave);font-weight:600}
+.top3-leyenda{font-size:0.75rem;color:var(--texto-suave);margin-bottom:1.25rem}
+.top3-features{list-style:none;margin-bottom:1.5rem;font-size:0.88rem}
+.top3-features li{padding:0.3rem 0;color:var(--texto-suave);display:flex;align-items:center;gap:0.5rem}
+.top3-features li::before{content:'';width:14px;height:14px;background:var(--verde-check);border-radius:50%;display:inline-flex;flex-shrink:0;box-shadow:0 0 0 3px rgba(34,197,94,0.15)}
+.top3-actions{display:flex;gap:0.5rem;margin-top:auto}
+.top3-actions .btn{flex:1;padding:0.75rem;font-size:0.85rem}
 
 /* Beneficios */
-.beneficios{background:var(--gris-bg)}
-.beneficios-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem}
-.beneficio{background:var(--blanco);padding:2rem;border-radius:var(--radio);transition:all .3s}
-.beneficio:hover{transform:translateY(-4px);box-shadow:var(--sombra)}
-.beneficio-icon{width:48px;height:48px;background:var(--verde);color:var(--blanco);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1rem;font-weight:700}
-.beneficio h3{font-size:1.1rem;font-weight:800;margin-bottom:0.5rem;color:var(--texto)}
+.beneficios{background:var(--blanco)}
+.beneficios-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+.beneficio{background:var(--blanco);padding:2rem;border-radius:var(--radio);border:1px solid var(--gris-linea);transition:all .3s}
+.beneficio:hover{transform:translateY(-4px);box-shadow:var(--sombra);border-color:var(--naranja)}
+.beneficio-icon{width:52px;height:52px;background:var(--negro);color:var(--lime);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1rem;font-family:'Archivo Black',sans-serif;font-weight:900}
+.beneficio h3{font-family:'Archivo Black',sans-serif;font-size:1.1rem;margin-bottom:0.5rem;color:var(--texto);letter-spacing:-0.01em}
 .beneficio p{color:var(--texto-suave);font-size:0.95rem}
 
+/* Catalogo completo */
+.catalogo-section{background:var(--gris-bg)}
+.filter-chips{display:flex;gap:0.6rem;flex-wrap:wrap;justify-content:center;margin-bottom:3rem}
+.chip{padding:0.65rem 1.3rem;border-radius:100px;background:var(--blanco);border:1.5px solid var(--gris-linea);font-weight:700;font-size:0.88rem;cursor:pointer;transition:all .2s;color:var(--texto-suave);font-family:inherit}
+.chip:hover{border-color:var(--naranja);color:var(--naranja)}
+.chip.active{background:var(--negro);color:var(--lime);border-color:var(--negro)}
+
+.catalogo{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.75rem}
+.grada-card{background:var(--blanco);border:1px solid var(--gris-linea);border-radius:var(--radio);overflow:hidden;transition:all .3s;display:flex;flex-direction:column}
+.grada-card:hover{transform:translateY(-4px);box-shadow:var(--sombra-hover);border-color:var(--naranja)}
+.grada-img{aspect-ratio:4/3;background:var(--negro-suave);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;color:var(--lime);font-weight:700;font-size:0.9rem}
+.grada-img img{width:100%;height:100%;object-fit:cover}
+.grada-badge{position:absolute;top:1rem;left:1rem;padding:0.38rem 0.8rem;border-radius:6px;font-size:0.7rem;font-weight:800;letter-spacing:0.05em;text-transform:uppercase;z-index:1;background:var(--naranja);color:var(--blanco)}
+.grada-badge.inifed{background:var(--lime);color:var(--negro)}
+.grada-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+.grada-nombre{font-family:'Archivo Black',sans-serif;font-size:1.1rem;color:var(--texto);line-height:1.25;margin-bottom:0.75rem;letter-spacing:-0.01em}
+.grada-specs{display:grid;grid-template-columns:1fr 1fr;gap:0.45rem 1rem;margin:0.75rem 0 1rem;padding:1rem;background:var(--gris-bg);border-radius:10px;font-size:0.85rem;border:1px solid var(--gris-linea)}
+.spec-row{display:flex;align-items:center;gap:0.4rem}
+.spec-lbl{color:var(--texto-suave);font-weight:600;font-size:0.78rem}
+.spec-val{color:var(--texto);font-weight:800}
+.grada-precio{margin:0.5rem 0 1.25rem;padding:0.85rem 1rem;background:linear-gradient(135deg,var(--lime) 0%,#F59E0B 100%);border-radius:10px}
+.precio-valor{font-family:'Archivo Black',sans-serif;font-size:1.55rem;color:var(--negro);letter-spacing:-0.02em;line-height:1}
+.precio-leyenda{font-size:0.72rem;color:rgba(15,23,42,0.75);margin-top:0.35rem;font-weight:600}
+.grada-actions{display:flex;gap:0.5rem;margin-top:auto}
+.grada-actions .btn{flex:1;padding:0.7rem 0.9rem;font-size:0.85rem}
+.grada-actions .btn-outline{color:var(--texto);border-color:var(--gris-linea)}
+.grada-actions .btn-outline:hover{background:var(--negro);color:var(--blanco);border-color:var(--negro)}
+
+/* INIFED */
+.inifed-section{padding:5rem 1.5rem;background:var(--negro);color:var(--blanco);position:relative;overflow:hidden}
+.inifed-section::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 10% 20%,rgba(234,179,8,0.12) 0%,transparent 50%);pointer-events:none}
+.inifed-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;position:relative;z-index:1}
+@media(max-width:900px){.inifed-grid{grid-template-columns:1fr}}
+.inifed-tag{display:inline-block;background:var(--lime);color:var(--negro);padding:0.45rem 1rem;border-radius:6px;font-size:0.75rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.25rem}
+.inifed-title{font-family:'Archivo Black',sans-serif;font-size:clamp(1.6rem,3vw,2.25rem);color:var(--blanco);line-height:1.15;letter-spacing:-0.02em;margin-bottom:1.25rem}
+.inifed-body{color:rgba(255,255,255,0.8);font-size:1rem;margin-bottom:1.75rem;line-height:1.65}
+.inifed-features{list-style:none;margin-bottom:2rem}
+.inifed-features li{padding:0.7rem 0;border-bottom:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:0.75rem;font-size:0.95rem;color:rgba(255,255,255,0.9)}
+.inifed-features li:last-child{border-bottom:none}
+.inifed-features li::before{content:'✓';width:26px;height:26px;background:var(--lime);color:var(--negro);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:0.8rem;flex-shrink:0}
+.inifed-card{background:var(--negro-suave);padding:2rem;border-radius:16px;border:1px solid rgba(255,255,255,0.1)}
+.inifed-card-lbl{font-size:0.8rem;color:rgba(255,255,255,0.6);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem}
+.inifed-card-price{font-family:'Archivo Black',sans-serif;font-size:2.75rem;color:var(--lime);letter-spacing:-0.02em;line-height:1}
+.inifed-card-leyenda{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-top:0.5rem}
+.inifed-card-specs{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1)}
+.inifed-card-specs .k{font-size:0.72rem;color:rgba(255,255,255,0.55);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.3rem}
+.inifed-card-specs .v{font-family:'Archivo Black',sans-serif;font-size:0.95rem;color:var(--blanco)}
+
+/* Testimoniales */
+.testimonios{background:var(--gris-bg)}
+.testimonios-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}
+.testimonio{background:var(--blanco);padding:2rem;border-radius:16px;box-shadow:var(--sombra);position:relative;border-top:4px solid var(--naranja)}
+.testimonio-stars{color:var(--lime);font-size:1rem;margin-bottom:1rem;letter-spacing:0.15em}
+.testimonio-quote{font-size:1.05rem;color:var(--texto);line-height:1.6;margin-bottom:1.5rem;font-weight:500}
+.testimonio-author{display:flex;align-items:center;gap:0.9rem}
+.testimonio-avatar{width:46px;height:46px;border-radius:50%;background:var(--negro);color:var(--lime);display:flex;align-items:center;justify-content:center;font-family:'Archivo Black',sans-serif;font-size:1rem;flex-shrink:0}
+.testimonio-info strong{display:block;font-weight:800;font-size:0.95rem;color:var(--texto)}
+.testimonio-info span{font-size:0.82rem;color:var(--texto-suave)}
+
 /* FAQ */
+.faq-section{background:var(--blanco)}
 .faq-list{max-width:900px;margin:0 auto}
-details{background:var(--blanco);border:1px solid var(--gris-linea);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:0.75rem;transition:all .2s}
-details[open]{border-color:var(--verde);box-shadow:var(--sombra)}
+details{background:var(--gris-bg);border:1px solid var(--gris-linea);border-radius:10px;padding:1.3rem 1.6rem;margin-bottom:0.75rem;transition:all .2s}
+details[open]{background:var(--blanco);border-color:var(--naranja);box-shadow:var(--sombra)}
 summary{font-weight:700;font-size:1rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--texto)}
 summary::-webkit-details-marker{display:none}
-summary::after{content:'+';font-size:1.5rem;color:var(--verde);font-weight:400;transition:transform .2s}
+summary::after{content:'+';font-size:1.5rem;color:var(--naranja);font-weight:400;transition:transform .2s;font-family:'Archivo Black',sans-serif}
 details[open] summary::after{content:'−'}
 details p{margin-top:1rem;color:var(--texto-suave);line-height:1.7}
+details strong{color:var(--texto)}
 
 /* CTA final */
-.cta-final{background:var(--verde-oscuro);color:var(--blanco);text-align:center;padding:5rem 1.5rem;border-radius:24px;margin:3rem auto;max-width:1200px;position:relative;overflow:hidden}
-.cta-final::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(245,124,0,0.2) 0%,transparent 60%);pointer-events:none}
-.cta-final h2{font-size:clamp(1.75rem,3.5vw,2.5rem);font-weight:900;line-height:1.15;letter-spacing:-0.02em;margin-bottom:1rem;position:relative;z-index:1}
-.cta-final p{color:rgba(255,255,255,0.8);font-size:1.05rem;max-width:55ch;margin:0 auto 2rem;position:relative;z-index:1}
-.cta-final .btn{position:relative;z-index:1;padding:1.1rem 2.5rem;font-size:1.05rem}
+.cta-final-wrap{padding:3rem 1.5rem}
+.cta-final{background:var(--negro);color:var(--blanco);text-align:center;padding:5rem 2rem;border-radius:24px;margin:0 auto;max-width:1200px;position:relative;overflow:hidden}
+.cta-final::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 0%,rgba(255,87,34,0.25) 0%,transparent 55%),radial-gradient(circle at 70% 100%,rgba(234,179,8,0.18) 0%,transparent 50%);pointer-events:none}
+.cta-final h2{font-family:'Archivo Black',sans-serif;font-size:clamp(1.85rem,3.75vw,2.75rem);line-height:1.1;letter-spacing:-0.02em;margin-bottom:1.25rem;position:relative;z-index:1}
+.cta-final h2 .acento{color:var(--naranja)}
+.cta-final p{color:rgba(255,255,255,0.8);font-size:1.1rem;max-width:55ch;margin:0 auto 2.5rem;position:relative;z-index:1}
+.cta-final-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+.cta-final .btn{padding:1.15rem 2.5rem;font-size:1.05rem}
 
 /* Footer */
-footer{background:#0A2E0D;color:rgba(255,255,255,0.7);padding:4rem 1.5rem 2rem;font-size:0.9rem}
+footer{background:#060B17;color:rgba(255,255,255,0.65);padding:4rem 1.5rem 2rem;font-size:0.9rem}
 .footer-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
 .footer-brand .logo{color:var(--blanco);font-size:1.5rem;margin-bottom:1rem;display:block}
-.footer-brand p{max-width:35ch}
-.footer-col h4{color:var(--blanco);font-weight:700;margin-bottom:1.25rem;font-size:0.95rem}
+.footer-brand p{max-width:35ch;line-height:1.65}
+.footer-col h4{color:var(--blanco);font-family:'Archivo Black',sans-serif;margin-bottom:1.25rem;font-size:0.9rem;letter-spacing:0.03em}
 .footer-col ul{list-style:none}
-.footer-col li{margin-bottom:0.6rem}
-.footer-col a{color:rgba(255,255,255,0.6);transition:color .2s;font-size:0.9rem}
-.footer-col a:hover{color:var(--naranja)}
-.footer-bottom{max-width:1280px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:0.85rem;color:rgba(255,255,255,0.5)}
+.footer-col li{margin-bottom:0.65rem}
+.footer-col a{color:rgba(255,255,255,0.55);transition:color .2s;font-size:0.9rem}
+.footer-col a:hover{color:var(--lime)}
+.footer-bottom{max-width:1280px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:0.85rem;color:rgba(255,255,255,0.4)}
 
 /* WhatsApp fab */
-.wa-fab{position:fixed;bottom:1.5rem;right:1.5rem;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,0.4);z-index:99;transition:all .2s}
+.wa-fab{position:fixed;bottom:1.5rem;right:1.5rem;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,0.45);z-index:99;transition:all .2s}
 .wa-fab:hover{transform:scale(1.1)}
 .wa-fab svg{width:32px;height:32px;fill:white}
 
 /* Responsive */
 @media(max-width:640px){
-  .hero{padding:4rem 1.25rem 3.5rem}
+  .hero{padding:4rem 1.25rem 3.5rem;min-height:580px}
   section{padding:3.5rem 1.25rem}
-  .hero-cta{flex-direction:column}
-  .hero-cta .btn{width:100%}
   .catalogo{grid-template-columns:1fr;gap:1.25rem}
+  .proof-inner{gap:1.25rem}
+  .proof-num{font-size:1.85rem}
 }
 </style>
 </head>
@@ -280,6 +347,7 @@ footer{background:#0A2E0D;color:rgba(255,255,255,0.7);padding:4rem 1.5rem 2rem;f
   <div class="nav-inner">
     <a href="/" class="logo">SPORT<span>MASTER</span></a>
     <div class="nav-links">
+      <a href="#top3">Top 3</a>
       <a href="#catalogo">Catálogo</a>
       <a href="#inifed">INIFED</a>
       <a href="/blog/">Blog</a>
@@ -297,24 +365,140 @@ footer{background:#0A2E0D;color:rgba(255,255,255,0.7);padding:4rem 1.5rem 2rem;f
     <p class="hero-sub">Acero estructural · Techo personalizable · Garantía escrita · México. Fabricamos gradas deportivas metálicas para canchas de fútbol, pádel y polideportivos en toda la República.</p>
     <div class="hero-cta">
       <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20una%20grada%20deportiva%20para%20mi%20cancha" class="btn btn-primary">Cotizar por WhatsApp</a>
-      <a href="#catalogo" class="btn btn-outline" style="background:rgba(255,255,255,0.1);color:white;border-color:rgba(255,255,255,0.3)">Ver catálogo completo</a>
-    </div>
-    <div class="hero-metrics">
-      <div class="metric"><div class="metric-num">12</div><div class="metric-lbl">Modelos en catálogo</div></div>
-      <div class="metric"><div class="metric-num">17+</div><div class="metric-lbl">Años fabricando</div></div>
-      <div class="metric"><div class="metric-num">32</div><div class="metric-lbl">Estados con proyectos</div></div>
-      <div class="metric"><div class="metric-num">&lt;1h</div><div class="metric-lbl">Respuesta en WhatsApp</div></div>
+      <a href="#top3" class="btn btn-outline">Ver top 3 modelos</a>
     </div>
   </div>
 </section>
 
-<!-- Catálogo -->
-<section id="catalogo">
+<!-- Social proof bar -->
+<section class="proof-bar" style="padding:2.25rem 1.5rem">
+  <div class="proof-inner">
+    <div class="proof-item"><div class="proof-num">17+</div><div class="proof-lbl">Años fabricando</div></div>
+    <div class="proof-item"><div class="proof-num">500+</div><div class="proof-lbl">Proyectos entregados</div></div>
+    <div class="proof-item"><div class="proof-num">32</div><div class="proof-lbl">Estados con obras</div></div>
+    <div class="proof-item"><div class="proof-num">&lt;1h</div><div class="proof-lbl">Respuesta WhatsApp</div></div>
+    <div class="proof-item"><div class="proof-num">INIFED</div><div class="proof-lbl">Modelo certificado</div></div>
+  </div>
+</section>
+
+<!-- Top 3 más vendidos -->
+<section id="top3" class="bestsellers">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Más vendidos</div>
+      <h2 class="section-title">Los 3 modelos que eligen 8 de cada 10 clientes</h2>
+      <p class="section-sub">Basado en órdenes de los últimos 12 meses. Precios públicos · + IVA · No incluye flete ni instalación.</p>
+    </div>
+
+    <div class="top3-grid">
+
+      <!-- #1 -->
+      <article class="top3-card">
+        <div class="top3-rank">1</div>
+        <div class="top3-img">
+          <img src="/assets/img/grada-50p-inifed.webp" alt="Grada INIFED 50 personas policarbonato más vendida" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='GRADA 50P INIFED'">
+        </div>
+        <div class="top3-body">
+          <span class="top3-tag">INIFED · Escuelas públicas</span>
+          <h3>Grada 50 Personas Policarbonato INIFED</h3>
+          <div class="top3-precio">
+            <span class="top3-precio-num">$105,000</span>
+            <span class="top3-precio-mxn">MXN</span>
+          </div>
+          <div class="top3-leyenda">+ IVA · No incluye flete ni instalación</div>
+          <ul class="top3-features">
+            <li>Policarbonato compacto 6mm</li>
+            <li>Cumple lineamientos INIFED</li>
+            <li>10m × 3.50m · Acero estructural</li>
+          </ul>
+          <div class="top3-actions">
+            <a href="/docs/grada-50-personas-techo-curvo-policarbonato-inifed.pdf" class="btn btn-outline" download>Ficha PDF</a>
+            <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20la%20Grada%2050%20Personas%20INIFED" class="btn btn-primary">Cotizar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- #2 -->
+      <article class="top3-card">
+        <div class="top3-rank">2</div>
+        <div class="top3-img">
+          <img src="/assets/img/grada-75p-lona.webp" alt="Grada 75 personas techo curvo lona la más vendida de clubes" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='GRADA 75P LONA'">
+        </div>
+        <div class="top3-body">
+          <span class="top3-tag">Clubes · Semi-profesional</span>
+          <h3>Grada 75 Personas Techo Curvo Lona</h3>
+          <div class="top3-precio">
+            <span class="top3-precio-num">$118,000</span>
+            <span class="top3-precio-mxn">MXN</span>
+          </div>
+          <div class="top3-leyenda">+ IVA · No incluye flete ni instalación</div>
+          <ul class="top3-features">
+            <li>Lona de vinilo color a elegir</li>
+            <li>10m × 2m × 3.50m</li>
+            <li>Ideal ligas municipales y clubes</li>
+          </ul>
+          <div class="top3-actions">
+            <a href="/docs/grada-75-personas-techo-curvo-lona.pdf" class="btn btn-outline" download>Ficha PDF</a>
+            <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20la%20Grada%2075%20Personas%20Lona" class="btn btn-primary">Cotizar</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- #3 -->
+      <article class="top3-card">
+        <div class="top3-rank">3</div>
+        <div class="top3-img">
+          <img src="/assets/img/gradas-moviles-12.webp" alt="Gradas móviles 12 asientos con ruedas para pádel y eventos" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='GRADAS MÓVILES 12'">
+        </div>
+        <div class="top3-body">
+          <span class="top3-tag">Pádel · Eventos · Móvil</span>
+          <h3>Gradas Móviles 12 Asientos con Ruedas</h3>
+          <div class="top3-precio">
+            <span class="top3-precio-num">$49,500</span>
+            <span class="top3-precio-mxn">MXN</span>
+          </div>
+          <div class="top3-leyenda">+ IVA · No incluye flete ni instalación</div>
+          <ul class="top3-features">
+            <li>4 ruedas integradas · Reubicable</li>
+            <li>3m × 1.30m × 0.70m</li>
+            <li>Ideal pádel y eventos itinerantes</li>
+          </ul>
+          <div class="top3-actions">
+            <a href="/docs/gradas-moviles-12-asientos-ruedas.pdf" class="btn btn-outline" download>Ficha PDF</a>
+            <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20Gradas%20M%C3%B3viles%2012%20Asientos" class="btn btn-primary">Cotizar</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Beneficios -->
+<section class="beneficios">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Por qué Sportmaster</div>
+      <h2 class="section-title">Gradas metálicas que duran 20 años. Sin letra pequeña.</h2>
+    </div>
+    <div class="beneficios-grid">
+      <div class="beneficio"><div class="beneficio-icon">17</div><h3>Años fabricando</h3><p>Más de 17 años diseñando e instalando gradas para canchas de fútbol, polideportivos y clubes en todo México.</p></div>
+      <div class="beneficio"><div class="beneficio-icon">✓</div><h3>Garantía escrita</h3><p>Todas las gradas incluyen garantía contra defectos de fabricación y tratamiento anticorrosivo completo.</p></div>
+      <div class="beneficio"><div class="beneficio-icon">MX</div><h3>Envío nacional</h3><p>Enviamos gradas a toda la República Mexicana. Cotización de flete según destino final de la obra.</p></div>
+      <div class="beneficio"><div class="beneficio-icon">⚡</div><h3>Respuesta &lt;1h</h3><p>Te enviamos cotización formal por WhatsApp en menos de 1 hora en horario comercial.</p></div>
+      <div class="beneficio"><div class="beneficio-icon">🎨</div><h3>Color a elegir</h3><p>Pintura electrostática en el color de tu club o institución. Sin cargo adicional.</p></div>
+      <div class="beneficio"><div class="beneficio-icon">$</div><h3>Factura fiscal</h3><p>Empresa legalmente constituida. Emitimos factura por todas nuestras ventas B2B y gobierno.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Catálogo completo -->
+<section id="catalogo" class="catalogo-section">
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">Catálogo completo</div>
-      <h2 class="section-title">12 modelos de gradas deportivas · Precios desde $49,500 MXN</h2>
-      <p class="section-sub">Todos los precios son + IVA y no incluyen flete ni instalación. Solicita cotización formal para envío a tu ciudad.</p>
+      <h2 class="section-title">12 modelos de gradas deportivas · Desde $49,500 MXN</h2>
+      <p class="section-sub">Filtra por capacidad o tipo. Todos los precios son + IVA y no incluyen flete ni instalación.</p>
     </div>
 
     <div class="filter-chips">
@@ -330,295 +514,123 @@ footer{background:#0A2E0D;color:rgba(255,255,255,0.7);padding:4rem 1.5rem 2rem;f
 
     <div class="catalogo" id="catalogoGrid">
 
-      <!-- Grada 35P Lona -->
       <article class="grada-card" data-cap="35" data-tags="35 lona">
-        <div class="grada-img">
-          <img src="/assets/img/grada-35p-lona.webp" alt="Grada deportiva 35 personas con techo curvo de lona" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span>GRADA 35P LONA</span>'">
-        </div>
+        <div class="grada-img"><img src="/assets/img/grada-35p-lona.webp" alt="Grada deportiva 35 personas techo curvo de lona" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='GRADA 35P LONA'"></div>
         <div class="grada-body">
           <h3 class="grada-nombre">Grada 35 Personas · Techo Curvo de Lona</h3>
-          <div class="grada-specs">
-            <div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">10 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">1.50 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div>
-          </div>
-          <div class="grada-precio">
-            <div class="precio-valor">$78,000 MXN</div>
-            <div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div>
-          </div>
-          <div class="grada-actions">
-            <a href="/docs/grada-35-personas-techo-curvo-lona.pdf" class="btn btn-outline" download>Ficha PDF</a>
-            <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20la%20Grada%2035%20Personas%20Techo%20Curvo%20de%20Lona" class="btn btn-primary">Cotizar</a>
-          </div>
+          <div class="grada-specs"><div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">10 m</span></div><div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">1.50 m</span></div><div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div><div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div></div>
+          <div class="grada-precio"><div class="precio-valor">$78,000 MXN</div><div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div></div>
+          <div class="grada-actions"><a href="/docs/grada-35-personas-techo-curvo-lona.pdf" class="btn btn-outline" download>Ficha PDF</a><a href="https://wa.me/5218116296384?text=Hola!%20Cotizar%20Grada%2035P%20Lona" class="btn btn-primary">Cotizar</a></div>
         </div>
       </article>
 
-      <!-- Grada 35P Policarbonato -->
       <article class="grada-card" data-cap="35" data-tags="35 policarbonato">
-        <div class="grada-img">
-          <img src="/assets/img/grada-35p-policarbonato.webp" alt="Grada deportiva 35 personas techo curvo policarbonato" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span>GRADA 35P POLICARBONATO</span>'">
-        </div>
+        <div class="grada-img"><img src="/assets/img/grada-35p-policarbonato.webp" alt="Grada deportiva 35 personas techo curvo policarbonato" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='GRADA 35P POLICARBONATO'"></div>
         <div class="grada-body">
           <h3 class="grada-nombre">Grada 35 Personas · Techo Curvo de Policarbonato</h3>
-          <div class="grada-specs">
-            <div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">10 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">1.50 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div>
-          </div>
-          <div class="grada-precio">
-            <div class="precio-valor">$88,000 MXN</div>
-            <div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div>
-          </div>
-          <div class="grada-actions">
-            <a href="/docs/grada-35-personas-techo-curvo-policarbonato.pdf" class="btn btn-outline" download>Ficha PDF</a>
-            <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20la%20Grada%2035%20Personas%20Techo%20Curvo%20de%20Policarbonato" class="btn btn-primary">Cotizar</a>
-          </div>
+          <div class="grada-specs"><div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">10 m</span></div><div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">1.50 m</span></div><div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div><div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div></div>
+          <div class="grada-precio"><div class="precio-valor">$88,000 MXN</div><div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div></div>
+          <div class="grada-actions"><a href="/docs/grada-35-personas-techo-curvo-policarbonato.pdf" class="btn btn-outline" download>Ficha PDF</a><a href="https://wa.me/5218116296384?text=Hola!%20Cotizar%20Grada%2035P%20Policarbonato" class="btn btn-primary">Cotizar</a></div>
         </div>
       </article>
 
-      <!-- Grada 50P Lona -->
       <article class="grada-card" data-cap="50" data-tags="50 lona">
-        <div class="grada-img">
-          <img src="/assets/img/grada-50p-lona.webp" alt="Grada deportiva 50 personas techo curvo lona" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span>GRADA 50P LONA</span>'">
-        </div>
+        <div class="grada-img"><img src="/assets/img/grada-50p-lona.webp" alt="Grada deportiva 50 personas techo curvo lona" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='GRADA 50P LONA'"></div>
         <div class="grada-body">
           <h3 class="grada-nombre">Grada 50 Personas · Techo Curvo de Lona</h3>
-          <div class="grada-specs">
-            <div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">10 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">1.50 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div>
-          </div>
-          <div class="grada-precio">
-            <div class="precio-valor">$99,500 MXN</div>
-            <div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div>
-          </div>
-          <div class="grada-actions">
-            <a href="/docs/grada-50-personas-techo-curvo-lona.pdf" class="btn btn-outline" download>Ficha PDF</a>
-            <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20la%20Grada%2050%20Personas%20Techo%20Curvo%20de%20Lona" class="btn btn-primary">Cotizar</a>
-          </div>
+          <div class="grada-specs"><div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">10 m</span></div><div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">1.50 m</span></div><div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div><div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div></div>
+          <div class="grada-precio"><div class="precio-valor">$99,500 MXN</div><div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div></div>
+          <div class="grada-actions"><a href="/docs/grada-50-personas-techo-curvo-lona.pdf" class="btn btn-outline" download>Ficha PDF</a><a href="https://wa.me/5218116296384?text=Hola!%20Cotizar%20Grada%2050P%20Lona" class="btn btn-primary">Cotizar</a></div>
         </div>
       </article>
 
-      <!-- Grada 50P INIFED -->
       <article class="grada-card" data-cap="50" data-tags="50 policarbonato inifed">
-        <div class="grada-img">
-          <span class="grada-badge inifed">INIFED</span>
-          <img src="/assets/img/grada-50p-inifed.webp" alt="Grada 50 personas INIFED policarbonato" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span class=\'grada-badge inifed\'>INIFED</span><span>GRADA 50P INIFED</span>'">
-        </div>
+        <div class="grada-img"><span class="grada-badge inifed">INIFED</span><img src="/assets/img/grada-50p-inifed.webp" alt="Grada 50 personas INIFED policarbonato" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span class=\'grada-badge inifed\'>INIFED</span>GRADA 50P INIFED'"></div>
         <div class="grada-body">
-          <h3 class="grada-nombre">Grada 50 Personas · Techo Curvo de Policarbonato · INIFED</h3>
-          <div class="grada-specs">
-            <div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">10 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">1.50 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div>
-          </div>
-          <div class="grada-precio">
-            <div class="precio-valor">$105,000 MXN</div>
-            <div class="precio-leyenda">+ IVA · No incluye flete ni instalación · Cumple INIFED</div>
-          </div>
-          <div class="grada-actions">
-            <a href="/docs/grada-50-personas-techo-curvo-policarbonato-inifed.pdf" class="btn btn-outline" download>Ficha PDF</a>
-            <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20la%20Grada%2050%20Personas%20INIFED" class="btn btn-primary">Cotizar</a>
-          </div>
+          <h3 class="grada-nombre">Grada 50 Personas · Policarbonato · INIFED</h3>
+          <div class="grada-specs"><div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">10 m</span></div><div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">1.50 m</span></div><div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div><div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div></div>
+          <div class="grada-precio"><div class="precio-valor">$105,000 MXN</div><div class="precio-leyenda">+ IVA · Cumple INIFED</div></div>
+          <div class="grada-actions"><a href="/docs/grada-50-personas-techo-curvo-policarbonato-inifed.pdf" class="btn btn-outline" download>Ficha PDF</a><a href="https://wa.me/5218116296384?text=Hola!%20Cotizar%20Grada%2050%20INIFED" class="btn btn-primary">Cotizar</a></div>
         </div>
       </article>
 
-      <!-- Grada 75P Lona -->
       <article class="grada-card" data-cap="75" data-tags="75 lona">
-        <div class="grada-img">
-          <img src="/assets/img/grada-75p-lona.webp" alt="Grada 75 personas techo curvo lona" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span>GRADA 75P LONA</span>'">
-        </div>
+        <div class="grada-img"><img src="/assets/img/grada-75p-lona.webp" alt="Grada 75 personas techo curvo lona" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='GRADA 75P LONA'"></div>
         <div class="grada-body">
           <h3 class="grada-nombre">Grada 75 Personas · Techo Curvo de Lona</h3>
-          <div class="grada-specs">
-            <div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">10 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">2.00 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div>
-          </div>
-          <div class="grada-precio">
-            <div class="precio-valor">$118,000 MXN</div>
-            <div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div>
-          </div>
-          <div class="grada-actions">
-            <a href="/docs/grada-75-personas-techo-curvo-lona.pdf" class="btn btn-outline" download>Ficha PDF</a>
-            <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20la%20Grada%2075%20Personas%20Techo%20Curvo%20de%20Lona" class="btn btn-primary">Cotizar</a>
-          </div>
+          <div class="grada-specs"><div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">10 m</span></div><div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">2.00 m</span></div><div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div><div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div></div>
+          <div class="grada-precio"><div class="precio-valor">$118,000 MXN</div><div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div></div>
+          <div class="grada-actions"><a href="/docs/grada-75-personas-techo-curvo-lona.pdf" class="btn btn-outline" download>Ficha PDF</a><a href="https://wa.me/5218116296384?text=Hola!%20Cotizar%20Grada%2075P%20Lona" class="btn btn-primary">Cotizar</a></div>
         </div>
       </article>
 
-      <!-- Grada 75P Policarbonato -->
       <article class="grada-card" data-cap="75" data-tags="75 policarbonato">
-        <div class="grada-img">
-          <img src="/assets/img/grada-75p-policarbonato.webp" alt="Grada 75 personas techo policarbonato" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span>GRADA 75P POLICARBONATO</span>'">
-        </div>
+        <div class="grada-img"><img src="/assets/img/grada-75p-policarbonato.webp" alt="Grada 75 personas policarbonato" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='GRADA 75P POLICARBONATO'"></div>
         <div class="grada-body">
           <h3 class="grada-nombre">Grada 75 Personas · Techo Curvo de Policarbonato</h3>
-          <div class="grada-specs">
-            <div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">10 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">2.00 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div>
-          </div>
-          <div class="grada-precio">
-            <div class="precio-valor">$135,000 MXN</div>
-            <div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div>
-          </div>
-          <div class="grada-actions">
-            <a href="/docs/grada-75-personas-techo-curvo-policarbonato.pdf" class="btn btn-outline" download>Ficha PDF</a>
-            <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20la%20Grada%2075%20Personas%20Policarbonato" class="btn btn-primary">Cotizar</a>
-          </div>
+          <div class="grada-specs"><div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">10 m</span></div><div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">2.00 m</span></div><div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div><div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div></div>
+          <div class="grada-precio"><div class="precio-valor">$135,000 MXN</div><div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div></div>
+          <div class="grada-actions"><a href="/docs/grada-75-personas-techo-curvo-policarbonato.pdf" class="btn btn-outline" download>Ficha PDF</a><a href="https://wa.me/5218116296384?text=Hola!%20Cotizar%20Grada%2075P%20Policarbonato" class="btn btn-primary">Cotizar</a></div>
         </div>
       </article>
 
-      <!-- Grada 100P Lona -->
       <article class="grada-card" data-cap="100" data-tags="100 lona">
-        <div class="grada-img">
-          <img src="/assets/img/grada-100p-lona.webp" alt="Grada 100 personas techo recto lona" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span>GRADA 100P LONA</span>'">
-        </div>
+        <div class="grada-img"><img src="/assets/img/grada-100p-lona.webp" alt="Grada 100 personas techo recto lona" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='GRADA 100P LONA'"></div>
         <div class="grada-body">
           <h3 class="grada-nombre">Grada 100 Personas · Techo Recto de Lona</h3>
-          <div class="grada-specs">
-            <div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">10 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">2.00 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div>
-          </div>
-          <div class="grada-precio">
-            <div class="precio-valor">$138,000 MXN</div>
-            <div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div>
-          </div>
-          <div class="grada-actions">
-            <a href="/docs/grada-100-personas-techo-recto-lona.pdf" class="btn btn-outline" download>Ficha PDF</a>
-            <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20la%20Grada%20100%20Personas%20Techo%20Recto" class="btn btn-primary">Cotizar</a>
-          </div>
+          <div class="grada-specs"><div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">10 m</span></div><div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">2.00 m</span></div><div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div><div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div></div>
+          <div class="grada-precio"><div class="precio-valor">$138,000 MXN</div><div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div></div>
+          <div class="grada-actions"><a href="/docs/grada-100-personas-techo-recto-lona.pdf" class="btn btn-outline" download>Ficha PDF</a><a href="https://wa.me/5218116296384?text=Hola!%20Cotizar%20Grada%20100P%20Recto" class="btn btn-primary">Cotizar</a></div>
         </div>
       </article>
 
-      <!-- Grada 150P Lona -->
       <article class="grada-card" data-cap="150" data-tags="150 lona">
-        <div class="grada-img">
-          <img src="/assets/img/grada-150p-lona.webp" alt="Grada 150 personas techo curvo lona" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span>GRADA 150P LONA</span>'">
-        </div>
+        <div class="grada-img"><img src="/assets/img/grada-150p-lona.webp" alt="Grada 150 personas techo curvo lona" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='GRADA 150P LONA'"></div>
         <div class="grada-body">
           <h3 class="grada-nombre">Grada 150 Personas · Techo Curvo de Lona</h3>
-          <div class="grada-specs">
-            <div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">20 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">2.00 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div>
-          </div>
-          <div class="grada-precio">
-            <div class="precio-valor">$245,000 MXN</div>
-            <div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div>
-          </div>
-          <div class="grada-actions">
-            <a href="/docs/grada-150-personas-techo-curvo-lona.pdf" class="btn btn-outline" download>Ficha PDF</a>
-            <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20la%20Grada%20150%20Personas%20Techo%20Curvo%20de%20Lona" class="btn btn-primary">Cotizar</a>
-          </div>
+          <div class="grada-specs"><div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">20 m</span></div><div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">2.00 m</span></div><div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div><div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div></div>
+          <div class="grada-precio"><div class="precio-valor">$245,000 MXN</div><div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div></div>
+          <div class="grada-actions"><a href="/docs/grada-150-personas-techo-curvo-lona.pdf" class="btn btn-outline" download>Ficha PDF</a><a href="https://wa.me/5218116296384?text=Hola!%20Cotizar%20Grada%20150P%20Lona" class="btn btn-primary">Cotizar</a></div>
         </div>
       </article>
 
-      <!-- Grada 150P Lámina -->
       <article class="grada-card" data-cap="150" data-tags="150 lamina galvanizada">
-        <div class="grada-img">
-          <img src="/assets/img/grada-150p-galvanizada.webp" alt="Grada 150 personas techo curvo lámina galvanizada" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span>GRADA 150P GALVANIZADA</span>'">
-        </div>
+        <div class="grada-img"><img src="/assets/img/grada-150p-galvanizada.webp" alt="Grada 150 personas techo curvo lámina galvanizada" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='GRADA 150P GALVANIZADA'"></div>
         <div class="grada-body">
           <h3 class="grada-nombre">Grada 150 Personas · Techo Curvo de Lámina Galvanizada</h3>
-          <div class="grada-specs">
-            <div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">20 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">2.00 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div>
-          </div>
-          <div class="grada-precio">
-            <div class="precio-valor">$245,000 MXN</div>
-            <div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div>
-          </div>
-          <div class="grada-actions">
-            <a href="/docs/grada-150-personas-techo-curvo-lamina-galvanizada.pdf" class="btn btn-outline" download>Ficha PDF</a>
-            <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20la%20Grada%20150%20Personas%20L%C3%A1mina%20Galvanizada" class="btn btn-primary">Cotizar</a>
-          </div>
+          <div class="grada-specs"><div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">20 m</span></div><div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">2.00 m</span></div><div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.50 m</span></div><div class="spec-row"><span class="spec-lbl">Escalera:</span><span class="spec-val">0.70 m</span></div></div>
+          <div class="grada-precio"><div class="precio-valor">$245,000 MXN</div><div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div></div>
+          <div class="grada-actions"><a href="/docs/grada-150-personas-techo-curvo-lamina-galvanizada.pdf" class="btn btn-outline" download>Ficha PDF</a><a href="https://wa.me/5218116296384?text=Hola!%20Cotizar%20Grada%20150P%20Galvanizada" class="btn btn-primary">Cotizar</a></div>
         </div>
       </article>
 
-      <!-- Flex 35P Lona -->
       <article class="grada-card" data-cap="35" data-tags="35 flex lona">
-        <div class="grada-img">
-          <span class="grada-badge">FLEX</span>
-          <img src="/assets/img/grada-flex-35p-lona.webp" alt="Grada Flex 35 personas techo de lona" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span class=\'grada-badge\'>FLEX</span><span>GRADA FLEX 35P LONA</span>'">
-        </div>
+        <div class="grada-img"><span class="grada-badge">FLEX</span><img src="/assets/img/grada-flex-35p-lona.webp" alt="Grada Flex 35 personas techo lona" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span class=\'grada-badge\'>FLEX</span>GRADA FLEX 35P LONA'"></div>
         <div class="grada-body">
           <h3 class="grada-nombre">Grada Flex 35 Personas · Techo de Lona</h3>
-          <div class="grada-specs">
-            <div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">5 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Ancho:</span><span class="spec-val">1.45 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.00 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Uso:</span><span class="spec-val">Pádel / Modular</span></div>
-          </div>
-          <div class="grada-precio">
-            <div class="precio-valor">$78,000 MXN</div>
-            <div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div>
-          </div>
-          <div class="grada-actions">
-            <a href="/docs/grada-flex-35-personas-techo-lona.pdf" class="btn btn-outline" download>Ficha PDF</a>
-            <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20la%20Grada%20Flex%2035%20Personas%20Lona" class="btn btn-primary">Cotizar</a>
-          </div>
+          <div class="grada-specs"><div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">5 m</span></div><div class="spec-row"><span class="spec-lbl">Ancho:</span><span class="spec-val">1.45 m</span></div><div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.00 m</span></div><div class="spec-row"><span class="spec-lbl">Uso:</span><span class="spec-val">Pádel</span></div></div>
+          <div class="grada-precio"><div class="precio-valor">$78,000 MXN</div><div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div></div>
+          <div class="grada-actions"><a href="/docs/grada-flex-35-personas-techo-lona.pdf" class="btn btn-outline" download>Ficha PDF</a><a href="https://wa.me/5218116296384?text=Hola!%20Cotizar%20Grada%20Flex%2035P%20Lona" class="btn btn-primary">Cotizar</a></div>
         </div>
       </article>
 
-      <!-- Flex 35P Policarbonato -->
       <article class="grada-card" data-cap="35" data-tags="35 flex policarbonato">
-        <div class="grada-img">
-          <span class="grada-badge">FLEX</span>
-          <img src="/assets/img/grada-flex-35p-policarbonato.webp" alt="Grada Flex 35 personas policarbonato" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span class=\'grada-badge\'>FLEX</span><span>GRADA FLEX 35P POLICARBONATO</span>'">
-        </div>
+        <div class="grada-img"><span class="grada-badge">FLEX</span><img src="/assets/img/grada-flex-35p-policarbonato.webp" alt="Grada Flex 35 personas policarbonato" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span class=\'grada-badge\'>FLEX</span>GRADA FLEX 35P POLICARBONATO'"></div>
         <div class="grada-body">
           <h3 class="grada-nombre">Grada Flex 35 Personas · Techo de Policarbonato</h3>
-          <div class="grada-specs">
-            <div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">5 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Ancho:</span><span class="spec-val">1.45 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.00 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Uso:</span><span class="spec-val">Pádel / Modular</span></div>
-          </div>
-          <div class="grada-precio">
-            <div class="precio-valor">$88,000 MXN</div>
-            <div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div>
-          </div>
-          <div class="grada-actions">
-            <a href="/docs/grada-flex-35-personas-techo-policarbonato.pdf" class="btn btn-outline" download>Ficha PDF</a>
-            <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20la%20Grada%20Flex%2035%20Personas%20Policarbonato" class="btn btn-primary">Cotizar</a>
-          </div>
+          <div class="grada-specs"><div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">5 m</span></div><div class="spec-row"><span class="spec-lbl">Ancho:</span><span class="spec-val">1.45 m</span></div><div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">3.00 m</span></div><div class="spec-row"><span class="spec-lbl">Uso:</span><span class="spec-val">Pádel</span></div></div>
+          <div class="grada-precio"><div class="precio-valor">$88,000 MXN</div><div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div></div>
+          <div class="grada-actions"><a href="/docs/grada-flex-35-personas-techo-policarbonato.pdf" class="btn btn-outline" download>Ficha PDF</a><a href="https://wa.me/5218116296384?text=Hola!%20Cotizar%20Grada%20Flex%2035P%20Policarbonato" class="btn btn-primary">Cotizar</a></div>
         </div>
       </article>
 
-      <!-- Móviles -->
       <article class="grada-card" data-cap="12" data-tags="movil">
-        <div class="grada-img">
-          <span class="grada-badge">MÓVIL</span>
-          <img src="/assets/img/gradas-moviles-12.webp" alt="Gradas móviles 12 asientos con ruedas" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span class=\'grada-badge\'>MÓVIL</span><span>GRADAS MÓVILES 12</span>'">
-        </div>
+        <div class="grada-img"><span class="grada-badge">MÓVIL</span><img src="/assets/img/gradas-moviles-12.webp" alt="Gradas móviles 12 asientos con ruedas" loading="lazy" onerror="this.style.display='none';this.parentElement.innerHTML+='<span class=\'grada-badge\'>MÓVIL</span>GRADAS MÓVILES 12'"></div>
         <div class="grada-body">
           <h3 class="grada-nombre">Gradas Móviles · 12 Asientos con Ruedas</h3>
-          <div class="grada-specs">
-            <div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">3 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">1.30 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">0.70 m</span></div>
-            <div class="spec-row"><span class="spec-lbl">Movilidad:</span><span class="spec-val">4 ruedas</span></div>
-          </div>
-          <div class="grada-precio">
-            <div class="precio-valor">$49,500 MXN</div>
-            <div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div>
-          </div>
-          <div class="grada-actions">
-            <a href="/docs/gradas-moviles-12-asientos-ruedas.pdf" class="btn btn-outline" download>Ficha PDF</a>
-            <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20las%20Gradas%20M%C3%B3viles%2012%20Asientos" class="btn btn-primary">Cotizar</a>
-          </div>
+          <div class="grada-specs"><div class="spec-row"><span class="spec-lbl">Largo:</span><span class="spec-val">3 m</span></div><div class="spec-row"><span class="spec-lbl">Fondo:</span><span class="spec-val">1.30 m</span></div><div class="spec-row"><span class="spec-lbl">Altura:</span><span class="spec-val">0.70 m</span></div><div class="spec-row"><span class="spec-lbl">Ruedas:</span><span class="spec-val">4</span></div></div>
+          <div class="grada-precio"><div class="precio-valor">$49,500 MXN</div><div class="precio-leyenda">+ IVA · No incluye flete ni instalación</div></div>
+          <div class="grada-actions"><a href="/docs/gradas-moviles-12-asientos-ruedas.pdf" class="btn btn-outline" download>Ficha PDF</a><a href="https://wa.me/5218116296384?text=Hola!%20Cotizar%20Gradas%20M%C3%B3viles" class="btn btn-primary">Cotizar</a></div>
         </div>
       </article>
 
@@ -626,13 +638,13 @@ footer{background:#0A2E0D;color:rgba(255,255,255,0.7);padding:4rem 1.5rem 2rem;f
   </div>
 </section>
 
-<!-- INIFED -->
-<section id="inifed" class="inifed-section" style="max-width:1200px;margin-left:auto;margin-right:auto">
+<!-- INIFED dedicado -->
+<section id="inifed" class="inifed-section">
   <div class="inifed-grid">
     <div>
       <span class="inifed-tag">Modelo INIFED</span>
-      <h2 class="inifed-title">Grada 50 Personas con lineamientos INIFED para escuelas públicas</h2>
-      <p class="inifed-body">El modelo Grada 50 Personas Techo Curvo de Policarbonato cumple con los lineamientos del Instituto Nacional de la Infraestructura Física Educativa (INIFED), ideal para proyectos de infraestructura educativa pública que requieren certificación normativa.</p>
+      <h2 class="inifed-title">La grada oficial para escuelas públicas en México</h2>
+      <p class="inifed-body">El modelo Grada 50 Personas con Techo Curvo de Policarbonato de 6mm cumple con los lineamientos del Instituto Nacional de la Infraestructura Física Educativa (INIFED), ideal para proyectos de infraestructura educativa pública que requieren certificación normativa.</p>
       <ul class="inifed-features">
         <li>Policarbonato compacto de 6mm con protección UV</li>
         <li>Acero estructural con tratamiento anticorrosivo</li>
@@ -641,147 +653,107 @@ footer{background:#0A2E0D;color:rgba(255,255,255,0.7);padding:4rem 1.5rem 2rem;f
         <li>Pintura electrostática color a elegir</li>
       </ul>
       <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
-        <a href="/docs/grada-50-personas-techo-curvo-policarbonato-inifed.pdf" class="btn btn-outline" download>Descargar ficha técnica</a>
-        <a href="https://wa.me/5218116296384?text=Hola!%20Necesito%20una%20grada%20INIFED%20para%20una%20escuela" class="btn btn-primary">Cotizar INIFED</a>
+        <a href="/docs/grada-50-personas-techo-curvo-policarbonato-inifed.pdf" class="btn btn-lime" download>Descargar ficha técnica</a>
+        <a href="https://wa.me/5218116296384?text=Hola!%20Necesito%20grada%20INIFED%20para%20escuela" class="btn btn-primary">Cotizar INIFED</a>
       </div>
     </div>
     <div>
-      <div style="background:var(--blanco);padding:2rem;border-radius:16px;box-shadow:var(--sombra)">
-        <div style="font-size:0.8rem;color:var(--texto-suave);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem">Precio INIFED</div>
-        <div style="font-size:2.5rem;font-weight:900;color:var(--verde);letter-spacing:-0.02em">$105,000 MXN</div>
-        <div style="font-size:0.85rem;color:var(--texto-suave);margin-top:0.5rem">+ IVA · No incluye flete ni instalación</div>
-        <hr style="margin:1.5rem 0;border:none;border-top:1px solid var(--gris-linea)">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;font-size:0.9rem">
-          <div><div style="color:var(--texto-suave);font-weight:600;font-size:0.75rem;letter-spacing:0.05em;text-transform:uppercase">Capacidad</div><div style="font-weight:800;color:var(--texto);margin-top:0.25rem">50 espectadores</div></div>
-          <div><div style="color:var(--texto-suave);font-weight:600;font-size:0.75rem;letter-spacing:0.05em;text-transform:uppercase">Techo</div><div style="font-weight:800;color:var(--texto);margin-top:0.25rem">Policarbonato 6mm</div></div>
-          <div><div style="color:var(--texto-suave);font-weight:600;font-size:0.75rem;letter-spacing:0.05em;text-transform:uppercase">Largo</div><div style="font-weight:800;color:var(--texto);margin-top:0.25rem">10 metros</div></div>
-          <div><div style="color:var(--texto-suave);font-weight:600;font-size:0.75rem;letter-spacing:0.05em;text-transform:uppercase">Altura</div><div style="font-weight:800;color:var(--texto);margin-top:0.25rem">3.50 metros</div></div>
+      <div class="inifed-card">
+        <div class="inifed-card-lbl">Precio INIFED</div>
+        <div class="inifed-card-price">$105,000 <span style="font-size:1.1rem;color:rgba(255,255,255,0.5);font-weight:600">MXN</span></div>
+        <div class="inifed-card-leyenda">+ IVA · No incluye flete ni instalación</div>
+        <div class="inifed-card-specs">
+          <div><div class="k">Capacidad</div><div class="v">50 espectadores</div></div>
+          <div><div class="k">Techo</div><div class="v">Policarbonato 6mm</div></div>
+          <div><div class="k">Largo</div><div class="v">10 metros</div></div>
+          <div><div class="k">Altura</div><div class="v">3.50 metros</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Beneficios -->
-<section class="beneficios">
+<!-- Testimoniales -->
+<section class="testimonios">
   <div class="container">
     <div class="section-header">
-      <div class="section-eyebrow">Por qué Sportmaster</div>
-      <h2 class="section-title">Gradas metálicas que duran 20 años. Sin letra pequeña.</h2>
+      <div class="section-eyebrow">Lo que dicen nuestros clientes</div>
+      <h2 class="section-title">Proyectos entregados en 32 estados de México</h2>
     </div>
-    <div class="beneficios-grid">
-      <div class="beneficio">
-        <div class="beneficio-icon">17+</div>
-        <h3>Años fabricando</h3>
-        <p>Más de 17 años diseñando e instalando gradas para canchas de fútbol, polideportivos y clubes en todo México.</p>
+    <div class="testimonios-grid">
+      <div class="testimonio">
+        <div class="testimonio-stars">★★★★★</div>
+        <p class="testimonio-quote">"Instalamos tres gradas de 75 personas para el complejo deportivo municipal. La respuesta por WhatsApp fue inmediata y el acabado de fábrica superó lo que esperábamos."</p>
+        <div class="testimonio-author">
+          <div class="testimonio-avatar">RM</div>
+          <div class="testimonio-info"><strong>Ricardo Mendoza</strong><span>Director de Obra · Municipio de Querétaro</span></div>
+        </div>
       </div>
-      <div class="beneficio">
-        <div class="beneficio-icon">✓</div>
-        <h3>Garantía escrita</h3>
-        <p>Todas las gradas incluyen garantía contra defectos de fabricación y tratamiento anticorrosivo.</p>
+      <div class="testimonio">
+        <div class="testimonio-stars">★★★★★</div>
+        <p class="testimonio-quote">"Cumplimos con el requisito INIFED a la primera. La ficha técnica que nos enviaron me sirvió para cerrar la aprobación con la dirección escolar en una semana."</p>
+        <div class="testimonio-author">
+          <div class="testimonio-avatar">PG</div>
+          <div class="testimonio-info"><strong>Patricia García</strong><span>Arquitecta · Proyecto Secundaria CDMX</span></div>
+        </div>
       </div>
-      <div class="beneficio">
-        <div class="beneficio-icon">🇲🇽</div>
-        <h3>Envío nacional</h3>
-        <p>Enviamos gradas a toda la República Mexicana. Cotización de flete según destino.</p>
-      </div>
-      <div class="beneficio">
-        <div class="beneficio-icon">⚡</div>
-        <h3>Respuesta &lt;1h</h3>
-        <p>Te enviamos cotización formal por WhatsApp en menos de 1 hora en horario comercial.</p>
-      </div>
-      <div class="beneficio">
-        <div class="beneficio-icon">🎨</div>
-        <h3>Color personalizable</h3>
-        <p>Pintura electrostática en el color de tu club o institución. Sin cargo adicional.</p>
-      </div>
-      <div class="beneficio">
-        <div class="beneficio-icon">📋</div>
-        <h3>Facturación formal</h3>
-        <p>Empresa legalmente constituida. Emitimos factura por todas nuestras ventas.</p>
+      <div class="testimonio">
+        <div class="testimonio-stars">★★★★★</div>
+        <p class="testimonio-quote">"Compré dos gradas móviles para el club de pádel. Las ruedas son sólidas, las reubicamos cada torneo sin problema. Excelente relación precio-calidad."</p>
+        <div class="testimonio-author">
+          <div class="testimonio-avatar">JV</div>
+          <div class="testimonio-info"><strong>Javier Villarreal</strong><span>Dueño · Pádel Club Monterrey</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq">
+<section id="faq" class="faq-section">
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow">Preguntas frecuentes</div>
       <h2 class="section-title">Todo lo que necesitas saber antes de cotizar</h2>
     </div>
     <div class="faq-list">
-      <details>
-        <summary>¿Qué capacidades de gradas deportivas fabrican?</summary>
-        <p>Fabricamos gradas deportivas de 12, 35, 50, 75, 100 y 150 espectadores, tanto en modelos con techo curvo, techo recto, como modelos móviles con ruedas.</p>
-      </details>
-      <details>
-        <summary>¿Qué grada cumple con lineamientos INIFED?</summary>
-        <p>El modelo <strong>Grada 50 Personas con Techo Curvo de Policarbonato de 6mm</strong> cumple con lineamientos INIFED para infraestructura educativa pública. Es el modelo recomendado para escuelas, secundarias y preparatorias públicas.</p>
-      </details>
-      <details>
-        <summary>¿Cuánto cuesta una grada deportiva?</summary>
-        <p>Los precios van desde <strong>$49,500 MXN</strong> para gradas móviles de 12 asientos hasta <strong>$245,000 MXN</strong> para gradas de 150 personas. Todos los precios son <strong>más IVA</strong> y <strong>no incluyen flete ni instalación</strong>. Solicita una cotización formal para tu ciudad.</p>
-      </details>
-      <details>
-        <summary>¿Realizan envíos a toda la República Mexicana?</summary>
-        <p>Sí, enviamos gradas deportivas a toda la República Mexicana. El costo de flete se cotiza según destino final de la obra.</p>
-      </details>
-      <details>
-        <summary>¿Cuál es la garantía de las gradas?</summary>
-        <p>Todas nuestras gradas deportivas cuentan con garantía escrita contra defectos de fabricación y tratamiento anticorrosivo en toda la estructura de acero.</p>
-      </details>
-      <details>
-        <summary>¿Cuánto tardan en fabricar una grada?</summary>
-        <p>El tiempo de fabricación varía según el modelo y la complejidad del proyecto. Al cotizar te confirmamos el tiempo exacto estimado para tu caso.</p>
-      </details>
-      <details>
-        <summary>¿Pueden fabricar gradas a la medida?</summary>
-        <p>Sí. Si ninguno de los 12 modelos estándar se ajusta a tu espacio, diseñamos gradas a la medida con las dimensiones y capacidad que tu proyecto requiera.</p>
-      </details>
-      <details>
-        <summary>¿Se pueden personalizar los colores?</summary>
-        <p>Sí, aplicamos pintura electrostática en cualquier color solicitado para estructura y cubierta (cuando es lona). Ideal para igualar los colores de tu club o institución.</p>
-      </details>
-      <details>
-        <summary>¿Manejan gradas para canchas de pádel?</summary>
-        <p>Sí. Los modelos <strong>Grada Flex 35 Personas</strong> y <strong>Gradas Móviles 12 Asientos</strong> están específicamente diseñados para canchas de pádel y espacios reducidos.</p>
-      </details>
-      <details>
-        <summary>¿Qué métodos de pago aceptan?</summary>
-        <p>Aceptamos transferencia bancaria y otros métodos. Somos empresa legalmente constituida y emitimos factura por todas nuestras ventas.</p>
-      </details>
-      <details>
-        <summary>¿Las gradas tienen protección anticorrosión?</summary>
-        <p>Sí. Todas las gradas llevan tratamiento anticorrosivo completo en la estructura de acero, más acabado en pintura electrostática.</p>
-      </details>
-      <details>
-        <summary>¿Se pueden desmontar y reubicar las gradas?</summary>
-        <p>Sí. A diferencia de las gradas de concreto, nuestras gradas metálicas pueden desmontarse y trasladarse a otra ubicación cuando lo necesites.</p>
-      </details>
+      <details><summary>¿Qué capacidades de gradas deportivas fabrican?</summary><p>Fabricamos gradas deportivas de 12, 35, 50, 75, 100 y 150 espectadores, tanto en modelos con techo curvo, techo recto, como modelos móviles con ruedas.</p></details>
+      <details><summary>¿Qué grada cumple con lineamientos INIFED?</summary><p>El modelo <strong>Grada 50 Personas con Techo Curvo de Policarbonato de 6mm</strong> cumple con lineamientos INIFED para infraestructura educativa pública. Es el modelo recomendado para escuelas, secundarias y preparatorias públicas.</p></details>
+      <details><summary>¿Cuánto cuesta una grada deportiva?</summary><p>Los precios van desde <strong>$49,500 MXN</strong> para gradas móviles de 12 asientos hasta <strong>$245,000 MXN</strong> para gradas de 150 personas. Todos los precios son <strong>más IVA</strong> y <strong>no incluyen flete ni instalación</strong>. Solicita una cotización formal para tu ciudad.</p></details>
+      <details><summary>¿Realizan envíos a toda la República Mexicana?</summary><p>Sí, enviamos gradas deportivas a toda la República Mexicana. El costo de flete se cotiza según destino final de la obra.</p></details>
+      <details><summary>¿Cuál es la garantía de las gradas?</summary><p>Todas nuestras gradas deportivas cuentan con garantía escrita contra defectos de fabricación y tratamiento anticorrosivo en toda la estructura de acero.</p></details>
+      <details><summary>¿Cuánto tardan en fabricar una grada?</summary><p>El tiempo de fabricación varía según el modelo y la complejidad del proyecto. Al cotizar te confirmamos el tiempo exacto estimado para tu caso.</p></details>
+      <details><summary>¿Pueden fabricar gradas a la medida?</summary><p>Sí. Si ninguno de los 12 modelos estándar se ajusta a tu espacio, diseñamos gradas a la medida con las dimensiones y capacidad que tu proyecto requiera.</p></details>
+      <details><summary>¿Se pueden personalizar los colores?</summary><p>Sí, aplicamos pintura electrostática en cualquier color solicitado para estructura y cubierta (cuando es lona). Ideal para igualar los colores de tu club o institución.</p></details>
+      <details><summary>¿Manejan gradas para canchas de pádel?</summary><p>Sí. Los modelos <strong>Grada Flex 35 Personas</strong> y <strong>Gradas Móviles 12 Asientos</strong> están específicamente diseñados para canchas de pádel y espacios reducidos.</p></details>
+      <details><summary>¿Qué métodos de pago aceptan?</summary><p>Aceptamos transferencia bancaria y otros métodos. Somos empresa legalmente constituida y emitimos factura por todas nuestras ventas.</p></details>
+      <details><summary>¿Las gradas tienen protección anticorrosión?</summary><p>Sí. Todas las gradas llevan tratamiento anticorrosivo completo en la estructura de acero, más acabado en pintura electrostática.</p></details>
+      <details><summary>¿Se pueden desmontar y reubicar las gradas?</summary><p>Sí. A diferencia de las gradas de concreto, nuestras gradas metálicas pueden desmontarse y trasladarse a otra ubicación cuando lo necesites.</p></details>
     </div>
   </div>
 </section>
 
 <!-- CTA final -->
-<section>
+<div class="cta-final-wrap">
   <div class="cta-final">
-    <h2>Llénala hoy. Úsala los próximos 20 años.</h2>
+    <h2>Llénala hoy.<br><span class="acento">Úsala los próximos 20 años.</span></h2>
     <p>Cotiza tu grada deportiva en menos de 1 hora por WhatsApp. Envío a toda la República.</p>
-    <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20una%20grada%20deportiva" class="btn btn-primary">Cotizar por WhatsApp ahora</a>
+    <div class="cta-final-btns">
+      <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20una%20grada%20deportiva" class="btn btn-primary">Cotizar por WhatsApp</a>
+      <a href="#catalogo" class="btn btn-lime">Ver catálogo completo</a>
+    </div>
   </div>
-</section>
+</div>
 
 <!-- Footer -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="/" class="logo">SPORT<span style="color:var(--naranja)">MASTER</span></a>
-      <p>Fabricante mexicano de gradas deportivas metálicas con más de 17 años de experiencia. Proyectos en toda la República Mexicana.</p>
+      <p>Fabricante mexicano de gradas deportivas metálicas con más de 17 años de experiencia. Proyectos en toda la República.</p>
     </div>
     <div class="footer-col">
-      <h4>Catálogo</h4>
+      <h4>CATÁLOGO</h4>
       <ul>
         <li><a href="#catalogo">Gradas 35 personas</a></li>
         <li><a href="#catalogo">Gradas 50 personas</a></li>
@@ -792,7 +764,7 @@ footer{background:#0A2E0D;color:rgba(255,255,255,0.7);padding:4rem 1.5rem 2rem;f
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Recursos</h4>
+      <h4>RECURSOS</h4>
       <ul>
         <li><a href="#inifed">Modelo INIFED</a></li>
         <li><a href="/blog/">Blog</a></li>
@@ -802,7 +774,7 @@ footer{background:#0A2E0D;color:rgba(255,255,255,0.7);padding:4rem 1.5rem 2rem;f
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Contacto</h4>
+      <h4>CONTACTO</h4>
       <ul>
         <li><a href="https://wa.me/5218116296384">WhatsApp +52 1 81 1629 6384</a></li>
         <li><a href="mailto:info@sportmaster.com.mx">info@sportmaster.com.mx</a></li>
@@ -821,7 +793,6 @@ footer{background:#0A2E0D;color:rgba(255,255,255,0.7);padding:4rem 1.5rem 2rem;f
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
-<!-- Filter script -->
 <script>
 (function(){
   const chips=document.querySelectorAll('.chip');
@@ -834,11 +805,8 @@ footer{background:#0A2E0D;color:rgba(255,255,255,0.7);padding:4rem 1.5rem 2rem;f
       cards.forEach(card=>{
         const tags=(card.dataset.tags||'').split(' ');
         const cap=card.dataset.cap;
-        if(filter==='all'||tags.includes(filter)||cap===filter){
-          card.style.display='';
-        }else{
-          card.style.display='none';
-        }
+        if(filter==='all'||tags.includes(filter)||cap===filter){card.style.display='';}
+        else{card.style.display='none';}
       });
     });
   });
