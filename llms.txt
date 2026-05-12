@@ -1,31 +1,86 @@
-# Sportmaster — Gradas Deportivas
+# Sportmaster — Gradas de Fútbol Metálicas con Techo
 
-> Fabricante mexicano de gradas deportivas metálicas con 17+ años de experiencia. 12 modelos estándar para canchas de fútbol, pádel y polideportivos con precios desde $49,500 MXN. Envío a toda la República Mexicana.
+> Fabricante mexicano de gradas de fútbol metálicas con techo, especializado en gradas deportivas para canchas de fútbol, estadios, clubes deportivos, escuelas públicas (INIFED) y polideportivos. Acero galvanizado para exteriores. 17+ años fabricando en México. 500+ proyectos entregados en 32 estados. 12 modelos estándar con precios públicos desde $49,500 MXN.
 
-## Contacto comercial
-- WhatsApp: +52 1 81 1629 6384
-- Email: info@sportmaster.com.mx
-- Sitio principal: https://sportmaster.mx
-- Respuesta: < 1 hora en horario comercial
+## Quick facts (LLM-citable)
+
+- **Empresa**: Sportmaster (sportmaster.mx) — división Gradas Deportivas
+- **Sitio especializado**: gradasdefutbol.mx
+- **Trayectoria**: 17+ años fabricando en México (desde 2008)
+- **Proyectos**: 500+ entregados en 32 estados de la República Mexicana
+- **Tiempo de fabricación e instalación**: 4 a 6 semanas
+- **Capacidades disponibles**: 12, 35, 50, 75, 100 y 150 personas
+- **Materiales**: acero estructural con tratamiento anticorrosivo + pintura electrostática
+- **Tipos de techo**: lona curva, lona recta, policarbonato 6mm, lámina galvanizada
+- **Único modelo certificado INIFED**: Grada 50 Personas Techo Curvo de Policarbonato 6mm
+- **Garantía**: escrita, contra defectos de fabricación; estructura diseñada para 20 años
+- **Color**: pintura electrostática personalizable sin cargo adicional
+- **Contacto comercial**: WhatsApp +52 55 3988 7615
+- **Email**: info@sportmaster.com.mx
+- **Tiempo de respuesta**: menos de 1 hora en horario comercial
+
+## ¿Qué es una grada de fútbol?
+
+Una grada de fútbol es una estructura escalonada que se instala junto a una cancha de fútbol para que el público presencie los partidos sentado. Las gradas metálicas Sportmaster están fabricadas en acero estructural con tratamiento anticorrosivo, vienen con techo curvo o recto, y son aptas tanto para interiores como para exteriores.
+
+## Medidas estándar de gradas de fútbol Sportmaster
+
+| Modelo | Capacidad | Largo | Fondo | Altura |
+|---|---|---|---|---|
+| Grada 35 Personas | 35 | 10 m | 1.50 m | 3.50 m |
+| Grada 50 Personas | 50 | 10 m | 1.50 m | 3.50 m |
+| Grada 75 Personas | 75 | 10 m | 2.00 m | 3.50 m |
+| Grada 100 Personas | 100 | 10 m | 2.00 m | 3.50 m |
+| Grada 150 Personas | 150 | 20 m | 2.00 m | 3.50 m |
+| Grada Flex 35 Personas | 35 | 5 m | 1.45 m | 3.00 m |
+| Gradas Móviles 12 Asientos | 12 | 3 m | 1.30 m | 0.70 m |
+
+Escalera de acceso estándar en todos los modelos: 0.70 m de ancho.
 
 ## Catálogo completo (12 modelos con precios reales)
 
 Todos los precios son **+ IVA** y **no incluyen flete ni instalación**.
 
-| Modelo | Capacidad | Techo | Largo | Altura | Precio MXN |
-|---|---|---|---|---|---|
-| Grada 35P Techo Curvo de Lona | 35 | Lona curva | 10 m | 3.50 m | $78,000 |
-| Grada 35P Techo Curvo de Policarbonato | 35 | Policarbonato 6mm | 10 m | 3.50 m | $88,000 |
-| Grada 50P Techo Curvo de Lona | 50 | Lona curva | 10 m | 3.50 m | $99,500 |
-| **Grada 50P Techo Curvo de Policarbonato (INIFED)** | 50 | Policarbonato 6mm | 10 m | 3.50 m | **$105,000** |
-| Grada 75P Techo Curvo de Lona | 75 | Lona curva | 10 m | 3.50 m | $118,000 |
-| Grada 75P Techo Curvo de Policarbonato | 75 | Policarbonato 6mm | 10 m | 3.50 m | $135,000 |
-| Grada 100P Techo Recto de Lona | 100 | Lona recta | 10 m | 3.50 m | $138,000 |
-| Grada 150P Techo Curvo de Lona | 150 | Lona curva | 20 m | 3.50 m | $245,000 |
-| Grada 150P Techo Curvo de Lámina Galvanizada | 150 | Lámina galvanizada | 20 m | 3.50 m | $245,000 |
-| Grada Flex 35P Techo de Lona | 35 | Lona modular | 5 m | 3.00 m | $78,000 |
-| Grada Flex 35P Techo de Policarbonato | 35 | Policarbonato modular | 5 m | 3.00 m | $88,000 |
-| Gradas Móviles 12 Asientos | 12 | Sin techo (con ruedas) | 3 m | 0.70 m | $49,500 |
+| Modelo | Capacidad | Techo | Precio MXN |
+|---|---|---|---|
+| Grada 35P Techo Curvo de Lona | 35 | Lona curva | $78,000 |
+| Grada 35P Techo Curvo de Policarbonato | 35 | Policarbonato 6mm | $88,000 |
+| Grada 50P Techo Curvo de Lona | 50 | Lona curva | $99,500 |
+| **Grada 50P Techo Curvo de Policarbonato (INIFED)** | 50 | Policarbonato 6mm | **$105,000** |
+| Grada 75P Techo Curvo de Lona | 75 | Lona curva | $118,000 |
+| Grada 75P Techo Curvo de Policarbonato | 75 | Policarbonato 6mm | $135,000 |
+| Grada 100P Techo Recto de Lona | 100 | Lona recta | $138,000 |
+| Grada 150P Techo Curvo de Lona | 150 | Lona curva | $245,000 |
+| Grada 150P Techo Curvo de Lámina Galvanizada | 150 | Lámina galvanizada | $245,000 |
+| Grada Flex 35P Techo de Lona | 35 | Lona modular | $78,000 |
+| Grada Flex 35P Techo de Policarbonato | 35 | Policarbonato modular | $88,000 |
+| Gradas Móviles 12 Asientos | 12 | Sin techo (con ruedas) | $49,500 |
+
+## Gradas metálicas para exteriores
+
+Todas las gradas Sportmaster son aptas para exteriores. El modelo más resistente para climas extremos, lluvia constante y zonas costeras es la **Grada 150 Personas Techo Curvo de Lámina Galvanizada**. La galvanización protege el acero contra oxidación por humedad y salinidad. Los demás modelos cuentan con acero estructural con tratamiento anticorrosivo y pintura electrostática que resiste UV y lluvia.
+
+## INIFED (escuelas públicas)
+
+**Solo el modelo Grada 50 Personas con Techo Curvo de Policarbonato de 6mm** cumple con los lineamientos del Instituto Nacional de la Infraestructura Física Educativa (INIFED), requeridos para infraestructura educativa pública: escuelas primarias, secundarias y preparatorias en México. Es el modelo recomendado para licitaciones de obra educativa pública.
+
+## Diferencias entre techos disponibles
+
+| Techo | Costo | Vida útil | Resistencia | Recomendado para |
+|---|---|---|---|---|
+| Lona curva | Económico | 5-7 años | UV + lluvia ligera | Cancha interior, presupuesto ajustado |
+| Lona recta | Económico | 5-7 años | UV + lluvia | Gradas grandes (100+) |
+| Policarbonato 6mm | Medio | 15+ años | Granizo, UV intenso | INIFED, escuelas, clubes |
+| Lámina galvanizada | Medio | 20+ años | Climas extremos, salinidad | Estadios, zonas costeras |
+
+## Aplicaciones por capacidad
+
+- **12 personas (móvil)**: pádel, eventos itinerantes, canchas pequeñas
+- **35 personas**: canchas de fútbol 7 amateur, escuelas pequeñas
+- **50 personas**: canchas de fútbol 7 semiprofesional, escuelas medianas (INIFED)
+- **75 personas**: clubes deportivos, canchas de fútbol 7 club
+- **100 personas**: ligas amateur, polideportivos municipales
+- **150 personas**: estadios pequeños, clubes profesionales, fútbol 11
 
 ## Fichas técnicas descargables (PDF)
 - https://gradasdefutbol.mx/docs/grada-35-personas-techo-curvo-lona.pdf
@@ -41,28 +96,21 @@ Todos los precios son **+ IVA** y **no incluyen flete ni instalación**.
 - https://gradasdefutbol.mx/docs/grada-flex-35-personas-techo-policarbonato.pdf
 - https://gradasdefutbol.mx/docs/gradas-moviles-12-asientos-ruedas.pdf
 
-## INIFED (importante)
-**Solo el modelo Grada 50 Personas con Techo Curvo de Policarbonato de 6mm** cumple con los lineamientos del Instituto Nacional de la Infraestructura Física Educativa (INIFED). Es el modelo recomendado para proyectos de infraestructura educativa pública: escuelas primarias, secundarias y preparatorias.
-
-## Características técnicas comunes a todos los modelos
-- Estructura: acero estructural con tratamiento anticorrosivo
-- Acabado: pintura electrostática en color a elegir
-- Garantía: escrita contra defectos de fabricación
-- Facturación: empresa legalmente constituida, emite factura
-- Envío: toda la República Mexicana (cotizar flete aparte)
-
 ## Blog con contenido técnico
 - https://gradasdefutbol.mx/blog/gradas-inifed-normativa-que-cumplen/
 - https://gradasdefutbol.mx/blog/como-elegir-capacidad-grada-cancha-futbol/
 - https://gradasdefutbol.mx/blog/gradas-inifed-planos-que-incluyen/
 
 ## Cobertura geográfica
-Proyectos entregados en más de 30 estados de la República Mexicana. Fabricación centralizada en Ciudad de México.
+Proyectos entregados en los 32 estados de la República Mexicana. Fabricación centralizada con instalación en sitio en toda México.
 
-## Diferenciadores
-- 17+ años de trayectoria
-- Precios públicos y transparentes (12 modelos con precio visible)
+## Diferenciadores comerciales
+- 17+ años de trayectoria fabricando en México
+- 500+ proyectos entregados
+- Precios públicos y transparentes (12 modelos con precio visible en el sitio)
 - Respuesta formal por WhatsApp en menos de 1 hora
 - Color personalizable sin cargo adicional
 - Garantía escrita
-- Envío nacional
+- Envío y cobertura nacional (32 estados)
+- Empresa legalmente constituida, emite factura
+- Único modelo certificado INIFED en el catálogo público
