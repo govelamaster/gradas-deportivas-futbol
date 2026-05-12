@@ -54,23 +54,43 @@
   .btn-cot:hover{background:#086323;transform:translateY(-1px);box-shadow:0 8px 20px rgba(10,122,46,0.4)}
   @media(max-width:768px){.nav-links a:not(.btn-cot){display:none}}
 
-  /* Hero */
-  .hero{position:relative;min-height:60vh;background:#0a0a0a;color:#fff;display:flex;align-items:center;overflow:hidden;padding:80px 20px}
-  .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,10,0.85) 0%,rgba(10,122,46,0.55) 100%),url('/assets/img/grada-150p-lona.webp') center/cover no-repeat;z-index:0}
-  .hero::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,193,7,0.18) 0%,transparent 55%);z-index:1}
-  .hero-in{max-width:1100px;margin:0 auto;position:relative;z-index:2;width:100%}
-  .hero-kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(16,179,65,0.18);border:1px solid rgba(16,179,65,0.45);color:var(--verde-claro);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:7px 16px;border-radius:100px;margin-bottom:22px}
-  .hero-kicker::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--verde-claro);animation:pulse 2s infinite;box-shadow:0 0 12px var(--verde-claro)}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-  .hero h1{font-family:'Archivo Black',sans-serif;font-size:clamp(2rem,5vw,3.75rem);line-height:1.05;letter-spacing:-0.02em;margin-bottom:18px;max-width:18ch}
-  .hero h1 em{font-style:normal;color:var(--verde-claro)}
-  .hero-meta{display:flex;gap:18px;flex-wrap:wrap;font-size:.85rem;color:rgba(255,255,255,0.7);margin-bottom:30px}
-  .hero-meta span{display:inline-flex;align-items:center;gap:6px}
-  .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:680px;margin-top:8px}
-  .hero-stat{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:18px 16px;backdrop-filter:blur(8px)}
-  .hero-stat-num{font-family:'Archivo Black',sans-serif;font-size:1.6rem;color:var(--verde-claro);line-height:1;margin-bottom:6px}
-  .hero-stat-lbl{font-size:.78rem;color:rgba(255,255,255,0.75);font-weight:500}
-  @media(max-width:640px){.hero-stats{grid-template-columns:1fr 1fr}.hero-stat-num{font-size:1.3rem}}
+  /* Hero — showroom style (NYC senior) */
+  .hero{background:#fafafa;padding:80px 20px 0;border-bottom:1px solid #ececec;position:relative;overflow:hidden}
+  .hero-in{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;min-height:60vh}
+  .hero-text{padding:20px 0}
+  .hero-kicker{display:inline-flex;align-items:center;gap:8px;background:#eafbef;border:1px solid var(--verde-medio);color:var(--verde-oscuro);font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:7px 16px;border-radius:100px;margin-bottom:24px}
+  .hero-kicker::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--verde-medio);animation:pulse 2s infinite;box-shadow:0 0 10px var(--verde-medio)}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.2)}}
+  .hero h1{font-family:'Archivo Black',sans-serif;font-size:clamp(2.2rem,4.8vw,4rem);line-height:1.02;letter-spacing:-0.025em;margin-bottom:20px;color:var(--negro)}
+  .hero h1 em{font-style:normal;color:var(--verde-oscuro);display:inline-block}
+  .hero-sub{font-size:clamp(1rem,1.3vw,1.18rem);color:var(--gris-medio);line-height:1.55;max-width:46ch;margin-bottom:36px;font-weight:500}
+  .hero-cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:38px}
+  .hero-cta-primary{display:inline-flex;align-items:center;gap:10px;background:var(--verde-oscuro);color:#fff;padding:16px 28px;border-radius:12px;font-weight:800;font-size:.98rem;letter-spacing:.01em;transition:all .25s;box-shadow:0 8px 22px rgba(10,122,46,0.22)}
+  .hero-cta-primary:hover{background:#086323;transform:translateY(-2px);box-shadow:0 14px 32px rgba(10,122,46,0.32)}
+  .hero-cta-secondary{display:inline-flex;align-items:center;gap:8px;color:var(--negro);font-weight:700;font-size:.95rem;border-bottom:2px solid var(--verde-medio);padding-bottom:3px;transition:color .2s}
+  .hero-cta-secondary:hover{color:var(--verde-oscuro)}
+  .hero-trust{display:flex;gap:0;align-items:center;font-size:.83rem;color:var(--gris-medio);font-weight:600;flex-wrap:wrap}
+  .hero-trust span{display:inline-flex;align-items:center;gap:6px;padding:0 14px;border-right:1px solid #d4d4d4}
+  .hero-trust span:first-child{padding-left:0}
+  .hero-trust span:last-child{border-right:none}
+  .hero-trust strong{color:var(--verde-oscuro);font-family:'Archivo Black',sans-serif;font-weight:900}
+  .hero-img{position:relative;display:flex;align-items:flex-end;justify-content:center;min-height:60vh}
+  .hero-img::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center bottom,rgba(10,122,46,0.06) 0%,transparent 60%);z-index:0}
+  .hero-img img{position:relative;z-index:1;max-width:100%;max-height:62vh;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 30px 60px rgba(10,122,46,0.18)) drop-shadow(0 12px 24px rgba(0,0,0,0.08))}
+  @media(max-width:900px){
+    .hero{padding:60px 20px 30px}
+    .hero-in{grid-template-columns:1fr;gap:24px;min-height:auto}
+    .hero-img{min-height:auto;padding:8px 0 20px}
+    .hero-img img{max-height:42vh}
+    .hero h1{font-size:clamp(1.9rem,7vw,2.6rem)}
+    .hero-trust{font-size:.78rem;gap:0}
+    .hero-trust span{padding:0 10px}
+  }
+  @media(max-width:600px){
+    .hero-cta-row{flex-direction:column;align-items:stretch}
+    .hero-cta-primary{justify-content:center}
+    .hero-cta-secondary{justify-content:center;padding-top:8px}
+  }
 
   /* Article */
   .art{max-width:780px;margin:0 auto;padding:60px 20px 30px}
@@ -276,26 +296,28 @@
 <!-- Hero -->
 <header class="hero">
   <div class="hero-in">
-    <div class="hero-kicker">Guía de precios · Actualizado 2026</div>
-    <h1>Cuánto cuesta una grada para <em>cancha de fútbol</em>: precios reales 2026</h1>
-    <div class="hero-meta">
-      <span>📅 Publicado: 12 mayo 2026</span>
-      <span>⏱️ Lectura: 7 min</span>
-      <span>✍️ Equipo Sportmaster</span>
+    <div class="hero-text">
+      <div class="hero-kicker">Guía de precios · Actualizado 2026</div>
+      <h1>¿Cuánto cuesta una <em>grada de fútbol</em>?</h1>
+      <p class="hero-sub">Precios reales de los 12 modelos Sportmaster fabricados en México. Desde $49,500 hasta $245,000 MXN — con techo, listas en 4 a 6 semanas.</p>
+      <div class="hero-cta-row">
+        <a href="#tabla-completa" class="hero-cta-primary">
+          Ver tabla de precios
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+        </a>
+        <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20una%20grada%20deportiva" class="hero-cta-secondary">
+          Cotizar por WhatsApp →
+        </a>
+      </div>
+      <div class="hero-trust">
+        <span><strong>17</strong> años fabricando</span>
+        <span><strong>500+</strong> proyectos</span>
+        <span><strong>32</strong> estados</span>
+        <span><strong>&lt;1h</strong> respuesta</span>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-stat-num">$49,500</div>
-        <div class="hero-stat-lbl">desde · grada móvil 12 asientos</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">$99,500</div>
-        <div class="hero-stat-lbl">la más vendida · 50 personas</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">$245,000</div>
-        <div class="hero-stat-lbl">tope · 150 personas estadio</div>
-      </div>
+    <div class="hero-img">
+      <img src="/assets/img/grada-150p-lona.webp" alt="Grada de fútbol metálica Sportmaster con techo curvo · 150 personas" loading="eager" fetchpriority="high">
     </div>
   </div>
 </header>
