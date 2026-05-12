@@ -44,7 +44,9 @@
   /* Nav */
   .nav{position:sticky;top:0;z-index:100;background:rgba(26,26,26,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0}
   .nav-in{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
-  .nav .logo img{height:42px;width:auto;display:block}
+  .nav .logo{display:inline-flex;align-items:center;background:#fff;padding:6px 14px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.12);transition:transform .2s}
+  .nav .logo:hover{transform:translateY(-1px)}
+  .nav .logo img{height:32px;width:auto;display:block}
   .nav-links{display:flex;gap:28px;align-items:center}
   .nav-links a{color:rgba(255,255,255,0.78);font-weight:500;font-size:0.92rem;transition:color .2s}
   .nav-links a:hover{color:var(--amarillo)}
@@ -183,7 +185,8 @@
 
   /* Footer mini */
   .ft{background:var(--negro);color:rgba(255,255,255,0.7);padding:40px 20px;text-align:center;font-size:.85rem}
-  .ft .logo img{height:36px;margin:0 auto 14px}
+  .ft .logo{display:inline-block;background:#fff;padding:6px 14px;border-radius:10px;margin:0 auto 14px}
+  .ft .logo img{height:30px;width:auto;display:block}
   .ft a{color:var(--verde-claro);font-weight:600}
 
   /* WhatsApp float */
