@@ -28,7 +28,7 @@
     --verde-oscuro:#0a7a2e;
     --verde-medio:#10b341;
     --verde-claro:#27C654;
-    --amarillo:#ffc107;
+    --amarillo:#10b341;
     --negro:#1a1a1a;
     --gris-medio:#4a4a4a;
     --gris-claro:#e5e5e5;
@@ -61,12 +61,12 @@
   .hero-kicker::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--verde-claro);animation:pulse 2s infinite;box-shadow:0 0 12px var(--verde-claro)}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
   .hero h1{font-family:'Archivo Black',sans-serif;font-size:clamp(2rem,5vw,3.75rem);line-height:1.05;letter-spacing:-0.02em;margin-bottom:18px;max-width:18ch}
-  .hero h1 em{font-style:normal;color:var(--amarillo)}
+  .hero h1 em{font-style:normal;color:var(--verde-claro)}
   .hero-meta{display:flex;gap:18px;flex-wrap:wrap;font-size:.85rem;color:rgba(255,255,255,0.7);margin-bottom:30px}
   .hero-meta span{display:inline-flex;align-items:center;gap:6px}
   .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:680px;margin-top:8px}
   .hero-stat{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:18px 16px;backdrop-filter:blur(8px)}
-  .hero-stat-num{font-family:'Archivo Black',sans-serif;font-size:1.6rem;color:var(--amarillo);line-height:1;margin-bottom:6px}
+  .hero-stat-num{font-family:'Archivo Black',sans-serif;font-size:1.6rem;color:var(--verde-claro);line-height:1;margin-bottom:6px}
   .hero-stat-lbl{font-size:.78rem;color:rgba(255,255,255,0.75);font-weight:500}
   @media(max-width:640px){.hero-stats{grid-template-columns:1fr 1fr}.hero-stat-num{font-size:1.3rem}}
 
@@ -86,7 +86,7 @@
   .tldr{position:relative;border:2px solid var(--negro);border-radius:16px;padding:24px 22px 22px;margin:0 0 36px;background:#fff;overflow:hidden}
   .tldr::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--verde-oscuro)}
   .tldr-h{font-family:'Archivo Black',sans-serif;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--negro);margin-bottom:14px;display:flex;align-items:center;gap:8px}
-  .tldr-h::before{content:'⚡';color:var(--amarillo);font-size:1.2rem}
+  .tldr-h::before{content:'✓';color:var(--verde-medio);font-size:1.2rem;font-weight:bold}
   .tldr-list{list-style:none;margin:0;padding:0}
   .tldr-list li{position:relative;padding:11px 0 11px 22px;border-bottom:1px solid #E2E8F0;color:#333;font-size:.95rem;line-height:1.55}
   .tldr-list li::before{content:'';position:absolute;left:0;top:18px;width:8px;height:8px;border-radius:50%;background:var(--verde-medio)}
@@ -100,8 +100,8 @@
   .price-table tr:last-child td{border-bottom:none}
   .price-table tr:hover td{background:#fafdf6}
   .price-table .precio{font-family:'Archivo Black',sans-serif;color:var(--verde-oscuro);font-size:1rem;white-space:nowrap}
-  .price-table .inifed-row td{background:#fff8e1!important}
-  .price-table .inifed-row td:first-child::after{content:'INIFED';display:inline-block;background:var(--amarillo);color:var(--negro);font-size:.65rem;font-weight:800;padding:2px 6px;border-radius:4px;margin-left:6px;vertical-align:middle;letter-spacing:.05em}
+  .price-table .inifed-row td{background:#eafbef!important}
+  .price-table .inifed-row td:first-child::after{content:'INIFED';display:inline-block;background:var(--verde-oscuro);color:#fff;font-size:.65rem;font-weight:800;padding:2px 6px;border-radius:4px;margin-left:6px;vertical-align:middle;letter-spacing:.05em}
   @media(max-width:640px){.price-table{font-size:.82rem}.price-table th,.price-table td{padding:10px 8px}}
 
   /* Cap-bloque (precio por capacidad) */
@@ -112,14 +112,23 @@
   .cap-card-precio{font-size:.85rem;color:var(--gris-medio);margin:6px 0 0;font-weight:600}
   .cap-card-precio strong{color:var(--negro);font-size:1rem}
 
-  /* Banner intermedio (sutil) */
-  .gradas-banner{position:relative;margin:48px 0;padding:54px 32px;border-radius:20px;overflow:hidden;text-align:center;min-height:200px;display:flex;align-items:center;justify-content:center;background-position:center;background-size:cover}
-  .gradas-banner::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,122,46,0.88) 0%,rgba(26,26,26,0.78) 100%);z-index:1}
-  .gradas-banner.alt::before{background:linear-gradient(135deg,rgba(26,26,26,0.86) 0%,rgba(10,122,46,0.72) 100%)}
-  .gradas-banner-content{position:relative;z-index:2;color:#fff;max-width:780px}
-  .gradas-banner-text{font-family:'Archivo Black',sans-serif;font-size:clamp(1.35rem,2.6vw,2rem);line-height:1.2;letter-spacing:-0.01em}
-  .gradas-banner-text em{font-style:normal;color:var(--amarillo)}
-  .gradas-banner-text-2{display:block;margin-top:6px;color:rgba(255,255,255,0.92);font-size:0.85em}
+  /* Banner intermedio (estilo split blanco+verde, foto + texto) */
+  .gradas-banner{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:52px 0;background:#fff;border:1px solid var(--gris-claro);border-radius:20px;overflow:hidden;box-shadow:0 10px 36px rgba(10,122,46,0.08);position:relative}
+  .gradas-banner::after{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--verde-oscuro) 0%,var(--verde-medio) 100%);z-index:2}
+  .gradas-banner-img{background-position:center;background-size:cover;min-height:300px;background-color:#0a0a0a}
+  .gradas-banner-content{padding:42px 38px;display:flex;flex-direction:column;justify-content:center;background:#fff;background-image:radial-gradient(circle at 1px 1px,rgba(10,122,46,0.06) 1px,transparent 0);background-size:18px 18px}
+  .gradas-banner-text{font-family:'Archivo Black',sans-serif;font-size:clamp(1.25rem,2.2vw,1.85rem);line-height:1.15;color:var(--negro);letter-spacing:-0.01em;margin:0}
+  .gradas-banner-text em{font-style:normal;color:var(--verde-oscuro)}
+  .gradas-banner-text strong{font-weight:inherit;color:var(--verde-oscuro)}
+  .gradas-banner-line{width:60px;height:4px;background:var(--verde-medio);border-radius:2px;margin:18px 0}
+  .gradas-banner-sub{color:var(--gris-medio);font-size:0.96rem;line-height:1.6;margin:0;font-weight:500}
+  .gradas-banner.reverse .gradas-banner-img{order:2}
+  @media(max-width:720px){
+    .gradas-banner{grid-template-columns:1fr}
+    .gradas-banner-img{min-height:220px;order:1!important}
+    .gradas-banner-content{padding:30px 26px;order:2}
+    .gradas-banner.reverse .gradas-banner-img{order:1}
+  }
 
   /* Callout INFO */
   .callout{display:flex;gap:16px;background:#f4faed;border-left:4px solid var(--verde-medio);border-radius:10px;padding:18px 22px;margin:24px 0}
@@ -160,10 +169,10 @@
 
   /* CTA final */
   .cta-final{background:linear-gradient(135deg,var(--verde-oscuro) 0%,#063d18 100%);color:#fff;padding:54px 32px;border-radius:20px;margin:48px 0;text-align:center;position:relative;overflow:hidden}
-  .cta-final::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 80%,rgba(255,193,7,0.18) 0%,transparent 50%)}
+  .cta-final::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 80%,rgba(39,198,84,0.22) 0%,transparent 50%)}
   .cta-final-content{position:relative;z-index:1}
   .cta-final h3{font-family:'Archivo Black',sans-serif;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.15;margin-bottom:14px;color:#fff}
-  .cta-final h3 em{font-style:normal;color:var(--amarillo)}
+  .cta-final h3 em{font-style:normal;color:var(--verde-claro)}
   .cta-final p{font-size:1rem;color:rgba(255,255,255,0.85);max-width:560px;margin:0 auto 26px}
   .cta-final-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .cta-final-btns a{padding:14px 28px;border-radius:10px;font-weight:800;font-size:.95rem;transition:all .2s}
@@ -308,9 +317,12 @@
   <p>En esta guía te damos los <strong>precios públicos de los 12 modelos estándar de gradas Sportmaster</strong>, fabricante mexicano con 17 años de experiencia y más de 500 proyectos entregados en 32 estados. Todos los precios incluyen acero estructural con tratamiento anticorrosivo, pintura electrostática en color a elegir, garantía escrita y empaque para envío.</p>
 
   <!-- Banner 1 -->
-  <div class="gradas-banner fade-in" style="background-image:url('/assets/img/grada-150p-lona.webp')">
+  <div class="gradas-banner fade-in">
+    <div class="gradas-banner-img" style="background-image:url('/assets/img/grada-150p-lona.webp')"></div>
     <div class="gradas-banner-content">
-      <div class="gradas-banner-text">Una cancha vacía se ve <em>improvisada</em>.<br><span class="gradas-banner-text-2">Una cancha con gradas se siente profesional.</span></div>
+      <h3 class="gradas-banner-text">Una cancha vacía se ve <em>improvisada</em>.<br>Con gradas se siente <em>profesional</em>.</h3>
+      <div class="gradas-banner-line"></div>
+      <p class="gradas-banner-sub">La diferencia entre una cancha común y un complejo deportivo que impone.</p>
     </div>
   </div>
 
@@ -389,9 +401,12 @@
   </div>
 
   <!-- Banner 2 -->
-  <div class="gradas-banner alt fade-in" style="background-image:url('/assets/img/grada-75p-lona.webp')">
+  <div class="gradas-banner reverse fade-in">
+    <div class="gradas-banner-img" style="background-image:url('/assets/img/grada-75p-lona.webp')"></div>
     <div class="gradas-banner-content">
-      <div class="gradas-banner-text">Convierte cualquier cancha en una experiencia <em>profesional</em>.</div>
+      <h3 class="gradas-banner-text">Convierte cualquier cancha en una experiencia <em>profesional</em>.</h3>
+      <div class="gradas-banner-line"></div>
+      <p class="gradas-banner-sub">Más comodidad, más presencia, más permanencia para todos los que usan tu instalación.</p>
     </div>
   </div>
 
@@ -426,9 +441,12 @@
   <p>La diferencia de precio entre versión lona y versión policarbonato es típicamente $10,000 a $17,000 MXN. La lámina galvanizada tiene el mismo precio que lona pero ofrece resistencia 4× mayor para exteriores con clima extremo o salinidad costera.</p>
 
   <!-- Banner 3 -->
-  <div class="gradas-banner fade-in" style="background-image:url('/assets/img/grada-50p-inifed.webp')">
+  <div class="gradas-banner fade-in">
+    <div class="gradas-banner-img" style="background-image:url('/assets/img/grada-50p-inifed.webp')"></div>
     <div class="gradas-banner-content">
-      <div class="gradas-banner-text">Haz que tu escuela, club o academia luzca como instalación de <em>alto nivel</em>.</div>
+      <h3 class="gradas-banner-text">Haz que tu escuela, club o academia luzca como instalación de <em>alto nivel</em>.</h3>
+      <div class="gradas-banner-line"></div>
+      <p class="gradas-banner-sub">Un complejo deportivo con gradas proyecta nivel, orden y profesionalismo desde el primer vistazo.</p>
     </div>
   </div>
 
@@ -554,9 +572,12 @@
   </div>
 
   <!-- Banner 4 -->
-  <div class="gradas-banner alt fade-in" style="background-image:url('/assets/img/grada-150p-galvanizada.webp')">
+  <div class="gradas-banner reverse fade-in">
+    <div class="gradas-banner-img" style="background-image:url('/assets/img/grada-150p-galvanizada.webp')"></div>
     <div class="gradas-banner-content">
-      <div class="gradas-banner-text">No construyas solo una cancha.<br><span class="gradas-banner-text-2">Construye un <em>lugar</em> donde la gente quiera estar.</span></div>
+      <h3 class="gradas-banner-text">No construyas solo una cancha.<br>Construye un <em>lugar donde la gente quiera estar</em>.</h3>
+      <div class="gradas-banner-line"></div>
+      <p class="gradas-banner-sub">Las gradas no solo agregan asientos. Agregan emoción, presencia y prestigio.</p>
     </div>
   </div>
 
