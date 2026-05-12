@@ -24,6 +24,7 @@
   tailwind.config = { theme: { extend: { fontFamily: { display: ['"Archivo Black"', 'sans-serif'], sans: ['Inter', 'sans-serif'] }, colors: { navy: { deep: '#0F172A', mid: '#1E293B' }, lime: { brand: '#84CC16' }, amber: { brand: '#F59E0B' } } } } };
 </script>
 <style>
+  html { scroll-padding-top: 130px; }
   body { font-family: 'Inter', sans-serif; background: #fff; color: #0F172A; }
   h1, h2, h3, h4 { font-family: 'Archivo Black', sans-serif; letter-spacing: -0.02em; line-height: 1.1; }
   .prose-article h2 { font-size: 1.875rem; margin-top: 3rem; margin-bottom: 1rem; color: #0F172A; }
@@ -41,6 +42,84 @@
   table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
   th, td { text-align: left; padding: .75rem 1rem; border-bottom: 1px solid #E2E8F0; font-size: .9rem; }
   th { background: #0F172A; color: white; font-family: 'Archivo Black', sans-serif; text-transform: uppercase; font-size: .75rem; letter-spacing: .05em; }
+
+  /* --- Blog retention --- */
+  .cat-bar{position:sticky;top:64px;z-index:40;background:#F8FAFC;border-bottom:1px solid #E2E8F0;}
+  .cat-bar-in{max-width:1280px;margin:0 auto;padding:10px 16px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
+  .cat-bar-in::-webkit-scrollbar{display:none;}
+  .cat-pill{flex-shrink:0;display:inline-block;padding:6px 14px;background:#fff;border:1px solid #E2E8F0;border-radius:999px;font-size:12px;font-weight:600;color:#334155;text-decoration:none;white-space:nowrap;transition:all .2s;}
+  .cat-pill:hover{border-color:#84CC16;color:#0F172A;}
+  .cat-pill.active{background:#0F172A;color:#fff;border-color:#0F172A;}
+  @media (min-width:768px){.cat-bar{top:80px;}}
+  @media (max-width:600px){.cat-pill{font-size:11px;padding:5px 12px;}.cat-bar-in{gap:6px;}}
+  .tldr{position:relative;border:2px solid #0F172A;border-radius:16px;padding:24px 22px 18px;margin:0 0 36px;background:#fff;overflow:hidden;}
+  .tldr::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:#84CC16;}
+  .tldr-h{font-family:'Archivo Black',sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#0F172A;margin-bottom:14px;}
+  .tldr-list{list-style:none!important;margin:0!important;padding:0!important;}
+  .tldr-list li{position:relative;padding:10px 0 10px 18px!important;border-bottom:1px solid #E2E8F0;color:#334155!important;font-size:14px!important;line-height:1.55!important;margin:0!important;}
+  .tldr-list li::before{content:""!important;position:absolute;left:0;top:18px;width:6px;height:6px;border-radius:50%;background:#84CC16;}
+  .tldr-list li:last-child{border-bottom:none;}
+  .tldr-list li strong{color:#0F172A;font-weight:700;}
+  .tldr-cta{display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:10px 18px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:999px;font-size:13px;font-weight:700;color:#0F172A!important;text-decoration:none!important;transition:all .2s;}
+  .tldr-cta:hover{background:#0F172A;color:#fff!important;border-color:#0F172A;}
+  @media (max-width:600px){.tldr{padding:20px 16px 16px;}.tldr-list li{font-size:13px!important;}}
+  .blog-il{display:grid;grid-template-columns:120px 1fr;gap:0;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:16px;overflow:hidden;text-decoration:none!important;margin:32px 0;transition:all .25s;}
+  .blog-il:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(15,23,42,.08);border-color:#84CC16;}
+  .blog-il-img{width:120px;height:100%;min-height:110px;object-fit:cover;}
+  .blog-il-body{padding:14px 18px;display:flex;flex-direction:column;justify-content:center;gap:4px;}
+  .blog-il-kicker{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#84CC16;}
+  .blog-il-kicker::before{content:"";width:5px;height:5px;border-radius:50%;background:#84CC16;}
+  .blog-il-title{font-family:'Archivo Black',sans-serif;font-size:15px;color:#0F172A;line-height:1.25;}
+  .blog-il-desc{font-size:12px;color:#475569;line-height:1.45;}
+  @media (max-width:600px){.blog-il{grid-template-columns:90px 1fr;}.blog-il-img{width:90px;min-height:95px;}.blog-il-title{font-size:13px;}.blog-il-desc{font-size:11px;}}
+  .wa-mid{position:relative;background:#0F172A;border-radius:16px;padding:22px 24px;display:flex;align-items:center;gap:18px;margin:36px 0;overflow:hidden;}
+  .wa-mid::before{content:"";position:absolute;width:260px;height:260px;background:radial-gradient(circle,#84CC16 0%,transparent 70%);top:-130px;right:-100px;opacity:.07;pointer-events:none;}
+  .wa-mid-body{flex:1;position:relative;z-index:1;}
+  .wa-mid-title{font-family:'Archivo Black',sans-serif;font-size:17px;color:#fff;line-height:1.2;margin-bottom:4px;}
+  .wa-mid-desc{font-size:13px;color:rgba(255,255,255,.65)!important;line-height:1.5;margin:0!important;}
+  .wa-mid-btn{flex-shrink:0;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff!important;font-weight:700;font-size:13px;padding:11px 20px;border-radius:999px;text-decoration:none!important;box-shadow:0 8px 22px rgba(37,211,102,.35);white-space:nowrap;}
+  .wa-mid-btn svg{width:16px;height:16px;}
+  @media (max-width:600px){.wa-mid{flex-direction:column;align-items:flex-start;padding:20px;}.wa-mid-btn{width:100%;justify-content:center;}}
+  .back-top{display:inline-flex;align-items:center;gap:6px;margin:24px 0 8px;padding:8px 16px;background:transparent;border:1px solid #E2E8F0;border-radius:999px;font-size:12px;font-weight:600;color:#475569;text-decoration:none!important;transition:all .2s;}
+  .back-top:hover{border-color:#0F172A;color:#0F172A;}
+  .npn{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0 32px;}
+  .npn>a{display:flex;flex-direction:column;background:#fff;border:1px solid #E2E8F0;border-radius:16px;overflow:hidden;text-decoration:none!important;transition:all .25s;}
+  .npn>a:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(15,23,42,.08);border-color:#84CC16;}
+  .npn-img{width:100%;height:120px;object-fit:cover;}
+  .npn-body{padding:14px 18px 16px;}
+  .npn-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#84CC16;display:inline-flex;align-items:center;gap:8px;margin-bottom:6px;}
+  .npn-label::before{content:"";width:16px;height:2px;background:#84CC16;}
+  .npn>a.next .npn-label{flex-direction:row-reverse;}
+  .npn>a.next .npn-body{text-align:right;}
+  .npn-title{font-family:'Archivo Black',sans-serif;font-size:15px;color:#0F172A;line-height:1.25;}
+  @media (max-width:600px){.npn{grid-template-columns:1fr;gap:14px;}.npn-img{height:100px;}.npn>a.next .npn-body{text-align:left;}.npn>a.next .npn-label{flex-direction:row;}}
+  .rel{margin:40px 0 32px;}
+  .rel-h{font-family:'Archivo Black',sans-serif;font-size:20px;color:#0F172A;margin-bottom:18px;}
+  .rel-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .rc{display:flex;flex-direction:column;background:#fff;border:1px solid #E2E8F0;border-radius:16px;overflow:hidden;text-decoration:none!important;transition:all .25s;}
+  .rc:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(15,23,42,.08);border-color:#84CC16;}
+  .rc-img{width:100%;height:140px;object-fit:cover;}
+  .rc-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1;}
+  .rc-cat{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#84CC16;}
+  .rc-cat::before{content:"";width:5px;height:5px;border-radius:50%;background:#84CC16;}
+  .rc-title{font-family:'Archivo Black',sans-serif;font-size:15px;color:#0F172A;line-height:1.2;}
+  .rc-desc{font-size:12px;color:#64748B;line-height:1.5;margin-top:auto;}
+  @media (max-width:600px){.rel-grid{grid-template-columns:1fr;}.rc-img{height:120px;}}
+  .blog-ft{background:#F8FAFC;border-top:1px solid #E2E8F0;padding:48px 0;}
+  .blog-ft .ct{max-width:1100px;margin:0 auto;padding:0 20px;}
+  .blog-ft-h{font-family:'Archivo Black',sans-serif;font-size:22px;color:#0F172A;text-align:center;margin-bottom:8px;}
+  .blog-ft-sub{font-size:14px;color:#64748B;text-align:center;margin-bottom:28px;}
+  .blog-ft-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px;}
+  .bf-card{display:flex;flex-direction:column;background:#fff;border:1px solid #E2E8F0;border-radius:14px;overflow:hidden;text-decoration:none!important;transition:all .25s;}
+  .bf-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(15,23,42,.08);border-color:#84CC16;}
+  .bf-card-img{width:100%;height:110px;object-fit:cover;}
+  .bf-card-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px;}
+  .bf-card-cat{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#84CC16;}
+  .bf-card-title{font-family:'Archivo Black',sans-serif;font-size:14px;color:#0F172A;line-height:1.2;}
+  .blog-ft-all{text-align:center;}
+  .blog-ft-all a{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;border:1px solid #0F172A;border-radius:999px;font-size:13px;font-weight:700;color:#0F172A!important;text-decoration:none!important;transition:all .2s;}
+  .blog-ft-all a:hover{background:#0F172A;color:#fff!important;}
+  @media (max-width:600px){.blog-ft-grid{grid-template-columns:1fr 1fr;gap:10px;}.bf-card-img{height:90px;}.bf-card-title{font-size:13px;}}
 </style>
 
 <!-- Article schema -->
@@ -90,7 +169,7 @@
 }
 </script>
 </head>
-<body class="antialiased">
+<body class="antialiased" id="top">
 
 <!-- NAV -->
 <nav class="fixed top-0 inset-x-0 z-50 bg-navy-deep/95 backdrop-blur-md border-b border-white/10">
@@ -109,7 +188,17 @@
   </div>
 </nav>
 
-<article class="pt-28 md:pt-36 pb-20">
+<!-- CATEGORY BAR -->
+<div class="cat-bar">
+  <div class="cat-bar-in">
+    <a href="/blog/" class="cat-pill">Todos</a>
+    <a href="/blog/gradas-inifed-normativa-que-cumplen/" class="cat-pill active">Normativa</a>
+    <a href="/blog/como-elegir-capacidad-grada-cancha-futbol/" class="cat-pill">Guía de compra</a>
+    <a href="/blog/gradas-inifed-planos-que-incluyen/" class="cat-pill">Técnico</a>
+  </div>
+</div>
+
+<article class="pt-20 md:pt-24 pb-20">
   <header class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
     <nav class="text-xs md:text-sm text-slate-500 mb-6">
       <a href="/" class="hover:text-lime-brand">Inicio</a> · <a href="/blog/" class="hover:text-lime-brand">Blog</a> · <span>Normativa</span>
@@ -126,6 +215,17 @@
     <img src="../../assets/img/grada-inifed-50p.png" alt="Grada INIFED 50 espectadores policarbonato con memoria de cálculo" class="rounded-2xl w-full mb-10 shadow-xl" width="900" height="600">
 
     <div class="prose-article">
+      <div class="tldr">
+        <div class="tldr-h">Lo esencial en 30 segundos</div>
+        <ul class="tldr-list">
+          <li><strong>8 normativas obligatorias</strong>: IBC 2018, CFE Sismo 2015, CFE Viento 2020, NTC Acero/Concreto/Cimentaciones, NTC Criterios y Acciones 2017 y AISC 360/16.</li>
+          <li><strong>Carga viva categoría "e": 450 kg/m²</strong> — la más alta de NTC, reservada para gradas y zonas de reunión.</li>
+          <li><strong>Memoria firmada</strong> por ingeniero civil con cédula profesional + planos EST-101 + verificación ETABS.</li>
+          <li><strong>Solo el modelo Grada 50P Policarbonato 6mm</strong> de Sportmaster cumple INIFED.</li>
+        </ul>
+        <a href="https://wa.me/5218116296384?text=sportmaster.mx%20Vengo%20del%20blog%20normativa.%20Quiero%20cotizar%20la%20grada%20INIFED%2050P." class="tldr-cta">Cotizar grada INIFED 50P →</a>
+      </div>
+
       <p><strong>Una grada INIFED</strong> no es simplemente una grada "bonita" o "resistente". Es una estructura que cumple con los lineamientos del <strong>Instituto Nacional de la Infraestructura Física Educativa</strong>, el organismo federal mexicano que certifica la calidad técnica, seguridad y funcionalidad de espacios educativos.</p>
 
       <p>Si eres director de escuela, funcionario de municipio, ingeniero de obra o administrador de club, y vas a comprar gradas deportivas, esta guía te ahorra reuniones y presupuestos mal orientados.</p>
@@ -142,6 +242,15 @@
         <li>Protege legalmente al adquirente frente a incidentes</li>
         <li>Garantiza que la estructura tiene respaldo ingenieril documentado</li>
       </ul>
+
+      <a href="/blog/gradas-inifed-planos-que-incluyen/" class="blog-il">
+        <img src="/assets/img/grada-35p-policarbonato.webp" alt="Planos estructurales gradas INIFED memoria de cálculo" class="blog-il-img" loading="lazy">
+        <div class="blog-il-body">
+          <span class="blog-il-kicker">Artículo técnico</span>
+          <span class="blog-il-title">Qué planos y memoria debe entregarte el proveedor</span>
+          <span class="blog-il-desc">Los 5 documentos obligatorios del expediente estructural INIFED.</span>
+        </div>
+      </a>
 
       <h2>Las 8 normativas que debe cumplir una grada INIFED</h2>
 
@@ -171,6 +280,17 @@
       <h3>8. AISC 360/16</h3>
       <p>Norma norteamericana del American Institute of Steel Construction, referenciada por las NTC. Complementa la verificación de elementos metálicos con criterios internacionales.</p>
 
+      <div class="wa-mid">
+        <div class="wa-mid-body">
+          <div class="wa-mid-title">¿Tu obra es con fondos públicos?</div>
+          <p class="wa-mid-desc">Modelo INIFED 50P con memoria firmada, planos EST-101 y verificación ETABS. Sin compromiso.</p>
+        </div>
+        <a href="https://wa.me/5218116296384?text=sportmaster.mx%20Vengo%20del%20blog%20normativa.%20Mi%20obra%20es%20con%20fondos%20p%C3%BAblicos." class="wa-mid-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Hablar por WhatsApp
+        </a>
+      </div>
+
       <h2>Qué documentos debes exigir a tu proveedor</h2>
 
       <p>Cuando cotices <strong>gradas INIFED planos</strong>, el expediente técnico debe contener mínimo:</p>
@@ -182,6 +302,15 @@
         <li><strong>Ficha técnica</strong> de materiales (PTR, policarbonato, pintura, anticorrosivo)</li>
         <li><strong>Certificados</strong> de cumplimiento INIFED, NTC y demás normas aplicables</li>
       </ul>
+
+      <a href="/blog/como-elegir-capacidad-grada-cancha-futbol/" class="blog-il">
+        <img src="/assets/img/grada-75p-lona.webp" alt="Cómo elegir capacidad de grada deportiva" class="blog-il-img" loading="lazy">
+        <div class="blog-il-body">
+          <span class="blog-il-kicker">Siguiente paso</span>
+          <span class="blog-il-title">Cómo elegir la capacidad correcta de grada</span>
+          <span class="blog-il-desc">Método de 4 pasos para no comprar de menos ni de más.</span>
+        </div>
+      </a>
 
       <h2>Preguntas frecuentes</h2>
 
@@ -205,7 +334,85 @@
       </div>
     </div>
   </div>
+
+  <!-- Back to top + Prev/Next + Related -->
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+    <a href="#top" class="back-top">↑ Volver arriba</a>
+
+    <nav class="npn" aria-label="Navegación entre artículos">
+      <a href="/blog/">
+        <img src="/assets/img/grada-inifed-50p.png" alt="Volver al blog" class="npn-img" loading="lazy">
+        <div class="npn-body">
+          <div class="npn-label">Índice del blog</div>
+          <div class="npn-title">Volver al blog</div>
+        </div>
+      </a>
+      <a href="/blog/como-elegir-capacidad-grada-cancha-futbol/" class="next">
+        <img src="/assets/img/grada-75p-lona.webp" alt="Cómo elegir capacidad de grada" class="npn-img" loading="lazy">
+        <div class="npn-body">
+          <div class="npn-label">Siguiente artículo</div>
+          <div class="npn-title">Cómo elegir la capacidad correcta de grada</div>
+        </div>
+      </a>
+    </nav>
+
+    <section class="rel">
+      <div class="rel-h">También te puede interesar</div>
+      <div class="rel-grid">
+        <a href="/blog/como-elegir-capacidad-grada-cancha-futbol/" class="rc">
+          <img class="rc-img" src="/assets/img/grada-75p-lona.webp" alt="Capacidad correcta de grada" loading="lazy">
+          <div class="rc-body">
+            <div class="rc-cat">Guía de compra</div>
+            <div class="rc-title">Cómo elegir la capacidad correcta de grada</div>
+            <div class="rc-desc">Método probado para calcular aforo ideal según tipo de cancha y frecuencia de torneos.</div>
+          </div>
+        </a>
+        <a href="/blog/gradas-inifed-planos-que-incluyen/" class="rc">
+          <img class="rc-img" src="/assets/img/grada-35p-policarbonato.webp" alt="Planos INIFED memoria de cálculo" loading="lazy">
+          <div class="rc-body">
+            <div class="rc-cat">Técnico</div>
+            <div class="rc-title">Gradas INIFED planos: memoria de cálculo</div>
+            <div class="rc-desc">Los 5 componentes obligatorios del expediente estructural firmado.</div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
 </article>
+
+<!-- BLOG FOOTER GRID -->
+<section class="blog-ft">
+  <div class="ct">
+    <div class="blog-ft-h">Explora todo el blog</div>
+    <p class="blog-ft-sub">Guías técnicas sobre gradas INIFED, normativa y selección para escuelas, municipios y clubes.</p>
+    <div class="blog-ft-grid">
+      <a href="/blog/gradas-inifed-normativa-que-cumplen/" class="bf-card">
+        <img class="bf-card-img" src="/assets/img/grada-inifed-50p.png" alt="Normativa INIFED" loading="lazy">
+        <div class="bf-card-body">
+          <span class="bf-card-cat">Normativa</span>
+          <span class="bf-card-title">Gradas INIFED: qué normativa cumplen en México</span>
+        </div>
+      </a>
+      <a href="/blog/como-elegir-capacidad-grada-cancha-futbol/" class="bf-card">
+        <img class="bf-card-img" src="/assets/img/grada-75p-lona.webp" alt="Elegir capacidad de grada" loading="lazy">
+        <div class="bf-card-body">
+          <span class="bf-card-cat">Guía de compra</span>
+          <span class="bf-card-title">Cómo elegir la capacidad correcta de grada</span>
+        </div>
+      </a>
+      <a href="/blog/gradas-inifed-planos-que-incluyen/" class="bf-card">
+        <img class="bf-card-img" src="/assets/img/grada-35p-policarbonato.webp" alt="Planos INIFED" loading="lazy">
+        <div class="bf-card-body">
+          <span class="bf-card-cat">Técnico</span>
+          <span class="bf-card-title">Gradas INIFED planos: memoria de cálculo</span>
+        </div>
+      </a>
+    </div>
+    <div class="blog-ft-all">
+      <a href="/blog/">Ver todos los artículos →</a>
+    </div>
+  </div>
+</section>
 
 <footer class="bg-navy-mid text-white py-10 border-t border-white/5">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-white/60">
