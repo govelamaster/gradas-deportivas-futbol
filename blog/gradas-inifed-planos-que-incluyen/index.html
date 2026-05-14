@@ -99,7 +99,8 @@
   .blog-ft .ct{max-width:1100px;margin:0 auto;padding:0 20px;}
   .blog-ft-h{font-family:'Archivo Black',sans-serif;font-size:22px;color:#0F172A;text-align:center;margin-bottom:8px;}
   .blog-ft-sub{font-size:14px;color:#64748B;text-align:center;margin-bottom:28px;}
-  .blog-ft-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px;}
+  .blog-ft-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px;}
+  @media (max-width:900px){.blog-ft-grid{grid-template-columns:repeat(2,1fr);}}
   .bf-card{display:flex;flex-direction:column;background:#fff;border:1px solid #E2E8F0;border-radius:14px;overflow:hidden;text-decoration:none!important;transition:all .25s;}
   .bf-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(15,23,42,.08);border-color:#84CC16;}
   .bf-card-img{width:100%;height:110px;object-fit:cover;}
@@ -110,6 +111,22 @@
   .blog-ft-all a{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;border:1px solid #0F172A;border-radius:999px;font-size:13px;font-weight:700;color:#0F172A!important;text-decoration:none!important;transition:all .2s;}
   .blog-ft-all a:hover{background:#0F172A;color:#fff!important;}
   @media (max-width:600px){.blog-ft-grid{grid-template-columns:1fr 1fr;gap:10px;}.bf-card-img{height:90px;}.bf-card-title{font-size:13px;}}
+
+  /* --- Article final CTA (dark) — overrides prose-article specificity --- */
+  .article-cta-dark{position:relative;margin:48px 0 16px;padding:36px 32px;background:linear-gradient(135deg,#0F172A 0%,#1E293B 100%);border-radius:20px;color:#fff;overflow:hidden;box-shadow:0 20px 50px rgba(15,23,42,.18);}
+  .article-cta-dark::before{content:"";position:absolute;width:340px;height:340px;background:radial-gradient(circle,#84CC16 0%,transparent 70%);top:-160px;right:-120px;opacity:.10;pointer-events:none;}
+  .article-cta-dark::after{content:"";position:absolute;width:240px;height:240px;background:radial-gradient(circle,#F59E0B 0%,transparent 70%);bottom:-120px;left:-80px;opacity:.07;pointer-events:none;}
+  .article-cta-dark > *{position:relative;z-index:1;}
+  .article-cta-dark h3{color:#ffffff !important;font-family:'Archivo Black',sans-serif !important;font-size:1.55rem !important;line-height:1.15 !important;letter-spacing:-0.02em !important;margin:0 0 12px !important;}
+  .article-cta-dark p{color:rgba(255,255,255,.82) !important;font-size:1rem !important;line-height:1.6 !important;margin:0 0 22px !important;}
+  .article-cta-dark p strong{color:#ffffff !important;font-weight:700 !important;}
+  .article-cta-dark .btn-row{display:flex;gap:12px;flex-wrap:wrap;}
+  .article-cta-dark .btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:14px;padding:13px 26px;border-radius:12px;text-decoration:none !important;transition:all .2s;letter-spacing:-0.01em;}
+  .article-cta-dark .btn-primary{background:#84CC16;color:#0F172A !important;box-shadow:0 10px 24px rgba(132,204,22,.30);}
+  .article-cta-dark .btn-primary:hover{background:#a3e635;transform:translateY(-2px);box-shadow:0 14px 30px rgba(132,204,22,.40);}
+  .article-cta-dark .btn-ghost{background:rgba(255,255,255,.08);color:#fff !important;border:1px solid rgba(255,255,255,.18);}
+  .article-cta-dark .btn-ghost:hover{background:rgba(255,255,255,.14);border-color:#84CC16;color:#84CC16 !important;}
+  @media (max-width:600px){.article-cta-dark{padding:28px 22px;}.article-cta-dark h3{font-size:1.3rem !important;}.article-cta-dark .btn{width:100%;justify-content:center;}}
 </style>
 
 <script type="application/ld+json">
@@ -331,12 +348,12 @@
 
       <p>Con este expediente completo, la obra se entrega, pasa auditoría y queda respaldada para el resto de su vida útil.</p>
 
-      <div class="mt-10 p-6 md:p-8 bg-navy-deep rounded-2xl text-white">
-        <h3 class="text-2xl mb-3 text-white">¿Quieres ver un ejemplo real?</h3>
-        <p class="text-white/80 mb-4">Descarga la ficha técnica de nuestra <strong>grada INIFED 50 espectadores</strong> con memoria firmada, planos EST-101 y verificación ETABS documentada.</p>
-        <div class="flex flex-col sm:flex-row gap-3">
-          <a href="/docs/ficha-tecnica-grada-inifed-50-personas.pdf" target="_blank" class="inline-flex items-center gap-2 bg-lime-brand text-navy-deep font-bold px-6 py-3 rounded-lg">Descargar ficha PDF →</a>
-          <a href="https://wa.me/5218116296384?text=sportmaster.mx%20Vengo%20del%20blog%20planos%20INIFED.%20Necesito%20cotizar." class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white font-semibold px-6 py-3 rounded-lg">Cotizar por WhatsApp</a>
+      <div class="article-cta-dark">
+        <h3>¿Quieres ver un ejemplo real?</h3>
+        <p>Descarga la ficha técnica de nuestra <strong>grada INIFED 50 espectadores</strong> con memoria firmada, planos EST-101 y verificación ETABS documentada.</p>
+        <div class="btn-row">
+          <a href="/docs/ficha-tecnica-grada-inifed-50-personas.pdf" target="_blank" class="btn btn-primary">Descargar ficha PDF →</a>
+          <a href="https://wa.me/5218116296384?text=sportmaster.mx%20Vengo%20del%20blog%20planos%20INIFED.%20Necesito%20cotizar." class="btn btn-ghost">Cotizar por WhatsApp</a>
         </div>
       </div>
     </div>
@@ -393,6 +410,13 @@
     <div class="blog-ft-h">Explora todo el blog</div>
     <p class="blog-ft-sub">Guías técnicas sobre gradas INIFED, normativa y selección para escuelas, municipios y clubes.</p>
     <div class="blog-ft-grid">
+      <a href="/blog/cuanto-cuesta-grada-cancha-futbol-precios-2026/" class="bf-card">
+        <img class="bf-card-img" src="/assets/img/grada-150p-lona.webp" alt="Precios gradas 2026" loading="lazy">
+        <div class="bf-card-body">
+          <span class="bf-card-cat">Precios</span>
+          <span class="bf-card-title">Cuánto cuesta una grada para cancha de fútbol: precios 2026</span>
+        </div>
+      </a>
       <a href="/blog/gradas-inifed-normativa-que-cumplen/" class="bf-card">
         <img class="bf-card-img" src="/assets/img/grada-inifed-50p.png" alt="Normativa INIFED" loading="lazy">
         <div class="bf-card-body">
