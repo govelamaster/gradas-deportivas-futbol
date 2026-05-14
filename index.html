@@ -111,7 +111,7 @@
   "mainEntity": [
     {"@type":"Question","name":"¿Qué medidas tiene una grada de fútbol?","acceptedAnswer":{"@type":"Answer","text":"Las gradas de fútbol Sportmaster miden 10 m de largo por 3.50 m de altura para capacidades de 35 a 100 personas, y 20 m de largo por 3.50 m de altura para 150 personas. El fondo va de 1.50 m a 2.00 m según capacidad. La escalera estándar es de 0.70 m."}},
     {"@type":"Question","name":"¿Qué capacidades de gradas deportivas fabrican?","acceptedAnswer":{"@type":"Answer","text":"Fabricamos gradas deportivas de 12, 35, 50, 75, 100 y 150 personas, en modelos con techo curvo de lona, techo curvo de policarbonato, techo recto de lona, techo de lámina galvanizada y modelos móviles con ruedas."}},
-    {"@type":"Question","name":"¿Las gradas metálicas son aptas para exteriores?","acceptedAnswer":{"@type":"Answer","text":"Sí. Todas nuestras gradas metálicas Sportmaster son aptas para exteriores. Cuentan con acero estructural con tratamiento anticorrosivo y pintura electrostática. El modelo de 150 personas con techo de lámina galvanizada es el más resistente para climas extremos, lluvia constante y zonas costeras."}},
+    {"@type":"Question","name":"¿Las gradas metálicas son aptas para exteriores?","acceptedAnswer":{"@type":"Answer","text":"Sí. Todas nuestras gradas metálicas Sportmaster son aptas para exteriores. Cuentan con acero estructural con tratamiento anticorrosivo y pintura de esmalte. El modelo de 150 personas con techo de lámina galvanizada es el más resistente para climas extremos, lluvia constante y zonas costeras."}},
     {"@type":"Question","name":"¿Qué grada cumple con lineamientos INIFED?","acceptedAnswer":{"@type":"Answer","text":"El modelo Grada 50 Personas con Techo Curvo de Policarbonato de 6mm es el único que cumple con los lineamientos del Instituto Nacional de la Infraestructura Física Educativa (INIFED), requerido para infraestructura educativa pública en México."}},
     {"@type":"Question","name":"¿Cuánto cuesta una grada para cancha de fútbol?","acceptedAnswer":{"@type":"Answer","text":"Los precios van desde $49,500 MXN para gradas móviles de 12 asientos hasta $245,000 MXN para gradas de 150 personas. Una grada de 35 personas con techo cuesta desde $78,000 MXN, una de 50 personas desde $99,500 MXN, una de 75 personas desde $118,000 MXN y una de 100 personas desde $138,000 MXN. Todos los precios son más IVA y no incluyen flete ni instalación."}},
     {"@type":"Question","name":"¿Qué diferencia hay entre techo de lona y techo de policarbonato?","acceptedAnswer":{"@type":"Answer","text":"El techo de lona es más económico y ofrece protección contra sol y lluvia. El techo de policarbonato de 6mm es traslúcido, deja pasar la luz natural, resiste granizo, tiene mayor durabilidad (15+ años) y es el único que cumple INIFED. La lámina galvanizada es la opción más resistente para climas extremos."}},
@@ -377,70 +377,76 @@ footer{background:#060B17;color:rgba(255,255,255,0.65);padding:4rem 1.5rem 2rem;
 .nav-v2-cta svg{width:16px;height:16px;flex-shrink:0}
 @media(max-width:1024px){.nav-v2-in{padding:0 24px;gap:16px}.nav-v2-links{display:none}}
 
-/* HERO V2 */
-.hero-v2{position:relative;min-height:100vh;padding:110px 56px 0;max-width:1440px;margin:0 auto;display:grid;grid-template-columns:42% 58%;align-items:start;overflow:visible}
-.hero-v2-text{padding:36px 48px 60px 0;display:flex;flex-direction:column;justify-content:center;min-height:calc(100vh - 110px)}
-.hero-v2-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sm-text);background:rgba(255,255,255,.72);border:1px solid rgba(0,0,0,.08);padding:12px 18px;border-radius:999px;margin-bottom:28px;align-self:flex-start;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.hero-v2-eyebrow::before{content:"●";font-size:8px;color:var(--sm-green);line-height:1}
-.hero-v2-headline{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:clamp(56px,6vw,92px);line-height:.93;letter-spacing:-0.05em;color:var(--sm-text);margin-bottom:26px;font-weight:900;font-feature-settings:'ss01','ss02','cv11'}
-.hero-v2-headline .acento{color:var(--sm-green)}
-.hero-v2-sub{font-family:'Inter',-apple-system,sans-serif;font-size:21px;line-height:1.6;font-weight:450;color:var(--sm-subtle);max-width:620px;margin-bottom:34px;letter-spacing:-.005em}
-.hero-v2-ctas{display:flex;gap:14px;align-items:center;margin-bottom:34px;flex-wrap:wrap}
-.hero-v2-btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--sm-green);color:#fff;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:18px 28px;border-radius:16px;text-decoration:none;box-shadow:0 10px 30px rgba(103,197,46,.22);transition:all .2s}
-.hero-v2-btn-primary:hover{background:var(--sm-green-hover);transform:translateY(-2px);box-shadow:0 14px 38px rgba(103,197,46,.32)}
+/* HERO V3 — APPLE STYLE (full-bleed photo, text on top) */
+.hero-v2{position:relative;min-height:100vh;overflow:hidden;display:flex;align-items:flex-end;padding:0;max-width:none;margin:0}
+.hero-v2::before{content:"";position:absolute;inset:0;z-index:0;background-image:url('/assets/img/grada-150p-lona.webp');background-size:cover;background-position:center;background-repeat:no-repeat;will-change:transform}
+.hero-v2::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.18) 35%,rgba(0,0,0,.05) 55%,rgba(9,17,31,.78) 100%)}
+.hero-v2-text{position:relative;z-index:2;width:100%;max-width:1440px;margin:0 auto;padding:140px 56px 280px;display:flex;flex-direction:column;align-items:flex-start}
+.hero-v2-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Inter',-apple-system,sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);padding:12px 18px;border-radius:999px;margin-bottom:32px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.hero-v2-eyebrow::before{content:"●";font-size:8px;color:var(--sm-green);line-height:1;filter:drop-shadow(0 0 8px rgba(103,197,46,.8))}
+.hero-v2-headline{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:clamp(56px,6vw,92px);line-height:.93;letter-spacing:-0.05em;color:#fff;margin:0 0 28px;font-weight:900;max-width:18ch;text-shadow:0 2px 24px rgba(0,0,0,.18);font-feature-settings:'ss01','ss02','cv11'}
+.hero-v2-headline .acento{color:var(--sm-green);text-shadow:0 2px 24px rgba(0,0,0,.18)}
+.hero-v2-sub{font-family:'Inter',-apple-system,sans-serif;font-size:21px;line-height:1.55;font-weight:450;color:rgba(255,255,255,.92);max-width:620px;margin:0 0 40px;letter-spacing:-.005em;text-shadow:0 1px 12px rgba(0,0,0,.25)}
+.hero-v2-ctas{display:flex;gap:14px;align-items:center;margin:0 0 48px;flex-wrap:wrap}
+.hero-v2-btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--sm-green);color:#fff;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:18px 28px;border-radius:16px;text-decoration:none;box-shadow:0 10px 30px rgba(103,197,46,.4);transition:all .25s}
+.hero-v2-btn-primary:hover{background:var(--sm-green-hover);transform:translateY(-2px);box-shadow:0 14px 38px rgba(103,197,46,.55)}
 .hero-v2-btn-primary svg{width:18px;height:18px;flex-shrink:0}
-.hero-v2-btn-secondary{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.82);border:1px solid rgba(0,0,0,.08);color:var(--sm-text);font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:18px 28px;border-radius:16px;text-decoration:none;transition:all .2s}
-.hero-v2-btn-secondary:hover{background:#fff;transform:translateY(-1px);box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.hero-v2-btn-secondary{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.32);color:#fff;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:18px 28px;border-radius:16px;text-decoration:none;transition:all .25s;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.hero-v2-btn-secondary:hover{background:rgba(255,255,255,.22);transform:translateY(-1px)}
 .hero-v2-btn-secondary svg{width:16px;height:16px}
-.hero-v2-features{display:flex;gap:38px;flex-wrap:wrap;margin-top:8px}
-.hero-v2-feat{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;max-width:84px}
-.hero-v2-feat-icon{width:28px;height:28px;color:var(--sm-green);flex-shrink:0}
+.hero-v2-features{display:flex;gap:38px;flex-wrap:wrap}
+.hero-v2-feat{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;max-width:88px}
+.hero-v2-feat-icon{width:28px;height:28px;color:var(--sm-green);flex-shrink:0;filter:drop-shadow(0 0 12px rgba(103,197,46,.5))}
 .hero-v2-feat-icon svg{width:28px;height:28px;stroke-width:1.8;stroke:var(--sm-green);fill:none;stroke-linecap:round;stroke-linejoin:round}
-.hero-v2-feat-label{font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--sm-text);text-transform:uppercase;line-height:1.25}
-.hero-v2-img-wrap{position:relative;align-self:stretch;min-height:calc(100vh - 110px);overflow:visible}
-.hero-v2-img{position:absolute;top:0;left:0;width:115%;height:100%;object-fit:cover;object-position:center right;border-radius:0}
+.hero-v2-feat-label{font-family:'Inter',-apple-system,sans-serif;font-size:11px;font-weight:700;letter-spacing:.04em;color:#fff;text-transform:uppercase;line-height:1.25;text-shadow:0 1px 8px rgba(0,0,0,.4)}
 
-/* Hero stats card glass (abajo del hero, absolute bottom) */
-.hero-v2-stats{position:absolute;left:56px;right:56px;bottom:60px;z-index:5;background:rgba(255,255,255,.86);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:28px;padding:34px 44px;box-shadow:0 30px 60px rgba(0,0,0,.08);display:grid;grid-template-columns:repeat(5,1fr);gap:32px;align-items:center}
+/* No img element needed — background-image en .hero-v2::before */
+.hero-v2-img-wrap{display:none}
+.hero-v2-img{display:none}
+
+/* Stats card glass abajo (sobre la foto) */
+.hero-v2-stats{position:absolute;left:56px;right:56px;bottom:48px;z-index:5;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:28px;padding:30px 40px;box-shadow:0 30px 60px rgba(0,0,0,.18);display:grid;grid-template-columns:repeat(5,1fr);gap:24px;align-items:center;max-width:calc(1440px - 112px);margin:0 auto}
 .hero-v2-stat{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
-.hero-v2-stat:not(:last-child)::after{content:"";position:absolute;right:-16px;top:50%;transform:translateY(-50%);width:1px;height:48px;background:rgba(0,0,0,.06)}
-.hero-v2-stat-num{font-family:'Inter',-apple-system,sans-serif;font-size:52px;font-weight:900;letter-spacing:-.045em;color:var(--sm-green);line-height:1;font-feature-settings:'ss01','tnum'}
-.hero-v2-stat-num.text{font-size:42px}
+.hero-v2-stat:not(:last-child)::after{content:"";position:absolute;right:-12px;top:50%;transform:translateY(-50%);width:1px;height:48px;background:rgba(0,0,0,.08)}
+.hero-v2-stat-num{font-family:'Inter',-apple-system,sans-serif;font-size:48px;font-weight:900;letter-spacing:-.045em;color:var(--sm-green);line-height:1;font-feature-settings:'ss01','tnum'}
+.hero-v2-stat-num.text{font-size:36px}
 .hero-v2-stat-divider{width:24px;height:2px;background:var(--sm-green);margin:8px 0;border-radius:2px}
-.hero-v2-stat-label{font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--sm-stat-label);text-transform:uppercase;line-height:1.3}
+.hero-v2-stat-label{font-family:'Inter',-apple-system,sans-serif;font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--sm-stat-label);text-transform:uppercase;line-height:1.3}
 
-/* Hero scroll arrow */
-.hero-v2-scroll{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);z-index:6;width:38px;height:38px;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.06);animation:scrollBounce 2s ease-in-out infinite}
+/* Scroll arrow */
+.hero-v2-scroll{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:6;width:38px;height:38px;background:rgba(255,255,255,.95);border:1px solid rgba(0,0,0,.06);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.15);animation:scrollBounce 2s ease-in-out infinite;text-decoration:none}
 .hero-v2-scroll svg{width:18px;height:18px;color:var(--sm-text)}
 @keyframes scrollBounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
 
-/* RESPONSIVE HERO V2 */
+/* RESPONSIVE HERO V3 */
 @media(max-width:1100px){
-  .hero-v2{padding:110px 32px 0;grid-template-columns:48% 52%}
-  .hero-v2-text{padding:24px 28px 60px 0}
-  .hero-v2-stats{left:32px;right:32px;padding:26px 28px;gap:18px}
-  .hero-v2-stat-num{font-size:42px}
-  .hero-v2-stat-num.text{font-size:32px}
-  .hero-v2-stat-label{font-size:11px}
+  .hero-v2-text{padding:130px 32px 280px}
+  .hero-v2-stats{left:32px;right:32px;padding:24px 26px;gap:16px}
+  .hero-v2-stat-num{font-size:38px}
+  .hero-v2-stat-num.text{font-size:28px}
+  .hero-v2-stat-label{font-size:10px}
 }
 @media(max-width:880px){
-  .hero-v2{padding:104px 20px 40px;grid-template-columns:1fr;min-height:auto}
-  .hero-v2-text{padding:0;min-height:auto}
-  .hero-v2-headline{font-size:clamp(38px,8.5vw,52px)}
-  .hero-v2-sub{font-size:17px}
-  .hero-v2-img-wrap{min-height:340px;margin-top:32px;border-radius:24px;overflow:hidden}
-  .hero-v2-img{position:relative;width:100%;height:340px}
-  .hero-v2-features{gap:22px;justify-content:space-between}
-  .hero-v2-feat{max-width:64px;gap:6px}
+  .hero-v2{min-height:100vh;align-items:flex-start}
+  .hero-v2-text{padding:120px 22px 320px}
+  .hero-v2-headline{font-size:clamp(40px,9vw,60px);max-width:none}
+  .hero-v2-sub{font-size:17px;margin-bottom:32px}
+  .hero-v2-features{gap:22px;justify-content:flex-start}
+  .hero-v2-feat{max-width:72px;gap:6px}
   .hero-v2-feat-label{font-size:10px}
-  .hero-v2-stats{position:relative;left:auto;right:auto;bottom:auto;margin-top:24px;grid-template-columns:repeat(2,1fr);gap:24px;padding:22px}
+  .hero-v2-stats{position:absolute;left:16px;right:16px;bottom:16px;grid-template-columns:repeat(3,1fr);gap:14px;padding:18px}
   .hero-v2-stat:not(:last-child)::after{display:none}
-  .hero-v2-stat:nth-child(5){grid-column:1/-1}
+  .hero-v2-stat-num{font-size:30px}
+  .hero-v2-stat-num.text{font-size:22px}
+  .hero-v2-stat:nth-child(4),.hero-v2-stat:nth-child(5){grid-column:span 1}
   .hero-v2-scroll{display:none}
 }
 @media(max-width:480px){
-  .hero-v2-ctas{flex-direction:column;align-items:stretch}
+  .hero-v2-text{padding:110px 20px 340px}
+  .hero-v2-ctas{flex-direction:column;align-items:stretch;width:100%}
   .hero-v2-btn-primary,.hero-v2-btn-secondary{justify-content:center}
+  .hero-v2-stats{grid-template-columns:repeat(2,1fr);padding:16px;gap:12px}
+  .hero-v2-stat:nth-child(5){grid-column:1/-1}
 }
 </style>
 </head>
@@ -506,10 +512,6 @@ footer{background:#060B17;color:rgba(255,255,255,0.65);padding:4rem 1.5rem 2rem;
       </div>
     </div>
   </div>
-  <div class="hero-v2-img-wrap">
-    <img src="/assets/img/grada-150p-lona.webp" alt="Grada de fútbol metálica Sportmaster con techo curvo blanco — capacidad 150 personas para estadio profesional" class="hero-v2-img" loading="eager" fetchpriority="high">
-  </div>
-
   <!-- Stats card glass abajo -->
   <div class="hero-v2-stats">
     <div class="hero-v2-stat">
@@ -650,7 +652,7 @@ footer{background:#060B17;color:rgba(255,255,255,0.65);padding:4rem 1.5rem 2rem;
       <div class="beneficio"><div class="beneficio-icon">✓</div><h3>Garantía escrita</h3><p>Todas las gradas incluyen garantía contra defectos de fabricación y tratamiento anticorrosivo completo.</p></div>
       <div class="beneficio"><div class="beneficio-icon">MX</div><h3>Envío nacional</h3><p>Enviamos gradas a toda la República Mexicana. Cotización de flete según destino final de la obra.</p></div>
       <div class="beneficio"><div class="beneficio-icon">⚡</div><h3>Respuesta &lt;1h</h3><p>Te enviamos cotización formal por WhatsApp en menos de 1 hora en horario comercial.</p></div>
-      <div class="beneficio"><div class="beneficio-icon">🎨</div><h3>Color a elegir</h3><p>Pintura electrostática en el color de tu club o institución. Sin cargo adicional.</p></div>
+      <div class="beneficio"><div class="beneficio-icon">🎨</div><h3>Color a elegir</h3><p>Pintura de esmalte en el color de tu club o institución. Sin cargo adicional.</p></div>
       <div class="beneficio"><div class="beneficio-icon">$</div><h3>Factura fiscal</h3><p>Empresa legalmente constituida. Emitimos factura por todas nuestras ventas B2B y gobierno.</p></div>
     </div>
   </div>
@@ -814,7 +816,7 @@ footer{background:#060B17;color:rgba(255,255,255,0.65);padding:4rem 1.5rem 2rem;
         <li>Acero estructural con tratamiento anticorrosivo</li>
         <li>Escalera lateral con barandales normativos</li>
         <li>Capacidad 50 espectadores · 10m largo × 3.50m altura</li>
-        <li>Pintura electrostática color a elegir</li>
+        <li>Pintura de esmalte color a elegir</li>
       </ul>
       <div style="display:flex;gap:0.75rem;flex-wrap:wrap">
         <a href="/docs/grada-50-personas-techo-curvo-policarbonato-inifed.pdf" class="btn btn-lime" download>Descargar ficha técnica</a>
@@ -888,10 +890,10 @@ footer{background:#060B17;color:rgba(255,255,255,0.65);padding:4rem 1.5rem 2rem;
       <details><summary>¿Cuál es la garantía de las gradas?</summary><p>Todas nuestras gradas deportivas cuentan con garantía escrita contra defectos de fabricación y tratamiento anticorrosivo en toda la estructura de acero.</p></details>
       <details><summary>¿Cuánto tardan en fabricar una grada?</summary><p>El tiempo de fabricación varía según el modelo y la complejidad del proyecto. Al cotizar te confirmamos el tiempo exacto estimado para tu caso.</p></details>
       <details><summary>¿Pueden fabricar gradas a la medida?</summary><p>Sí. Si ninguno de los 12 modelos estándar se ajusta a tu espacio, diseñamos gradas a la medida con las dimensiones y capacidad que tu proyecto requiera.</p></details>
-      <details><summary>¿Se pueden personalizar los colores?</summary><p>Sí, aplicamos pintura electrostática en cualquier color solicitado para estructura y cubierta (cuando es lona). Ideal para igualar los colores de tu club o institución.</p></details>
+      <details><summary>¿Se pueden personalizar los colores?</summary><p>Sí, aplicamos pintura de esmalte en cualquier color solicitado para estructura y cubierta (cuando es lona). Ideal para igualar los colores de tu club o institución.</p></details>
       <details><summary>¿Manejan gradas para canchas de pádel?</summary><p>Sí. Los modelos <strong>Grada Flex 35 Personas</strong> y <strong>Gradas Móviles 12 Asientos</strong> están específicamente diseñados para canchas de pádel y espacios reducidos.</p></details>
       <details><summary>¿Qué métodos de pago aceptan?</summary><p>Aceptamos transferencia bancaria y otros métodos. Somos empresa legalmente constituida y emitimos factura por todas nuestras ventas.</p></details>
-      <details><summary>¿Las gradas tienen protección anticorrosión?</summary><p>Sí. Todas las gradas llevan tratamiento anticorrosivo completo en la estructura de acero, más acabado en pintura electrostática.</p></details>
+      <details><summary>¿Las gradas tienen protección anticorrosión?</summary><p>Sí. Todas las gradas llevan tratamiento anticorrosivo completo en la estructura de acero, más acabado en pintura de esmalte.</p></details>
       <details><summary>¿Se pueden desmontar y reubicar las gradas?</summary><p>Sí. A diferencia de las gradas de concreto, nuestras gradas metálicas pueden desmontarse y trasladarse a otra ubicación cuando lo necesites.</p></details>
     </div>
   </div>
