@@ -4,14 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<title>Blog Gradas Deportivas | Guías INIFED, Normativa y Selección | Sportmaster</title>
-<meta name="description" content="Blog especializado en gradas metálicas INIFED para canchas deportivas. Guías de normativa, planos, selección de capacidad y mejores prácticas. Actualizado semanalmente.">
+<title>Blog Gradas Deportivas | Precios, INIFED, Normativa y Guías | Sportmaster</title>
+<meta name="description" content="Blog especializado en gradas metálicas para canchas de fútbol y recintos deportivos en México. Precios 2026, normativa INIFED, planos estructurales y guías de selección. Actualizado mensualmente.">
 <link rel="canonical" href="https://gradasdefutbol.mx/blog/">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Blog Gradas Deportivas INIFED | Sportmaster">
-<meta property="og:description" content="Guías técnicas sobre gradas INIFED, normativa y selección para canchas deportivas en México.">
+<meta property="og:description" content="Precios 2026, normativa INIFED, planos estructurales y guías técnicas sobre gradas deportivas en México.">
 <meta property="og:url" content="https://gradasdefutbol.mx/blog/">
+<meta property="og:image" content="https://gradasdefutbol.mx/assets/img/grada-150p-lona.webp">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,10 +24,91 @@
   };
 </script>
 <style>
+  html { scroll-padding-top: 130px; }
   body { font-family: 'Inter', sans-serif; background: #fff; color: #0F172A; }
-  h1, h2, h3 { font-family: 'Archivo Black', sans-serif; letter-spacing: -0.03em; line-height: 1.05; }
-  .card-article { transition: all .3s ease; }
-  .card-article:hover { transform: translateY(-4px); border-color: #84CC16; box-shadow: 0 20px 40px rgba(0,0,0,.08); }
+  h1, h2, h3, h4 { font-family: 'Archivo Black', sans-serif; letter-spacing: -0.02em; line-height: 1.1; }
+
+  /* ---- Eyebrow uppercase verde sobre cada H2 ---- */
+  .section-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#84CC16;margin-bottom:8px;}
+  .section-eyebrow::before{content:"";width:18px;height:2px;background:#84CC16;}
+
+  /* ---- Category Bar sticky ---- */
+  .cat-bar{position:sticky;top:64px;z-index:40;background:#F8FAFC;border-bottom:1px solid #E2E8F0;}
+  .cat-bar-in{max-width:1280px;margin:0 auto;padding:10px 16px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
+  .cat-bar-in::-webkit-scrollbar{display:none;}
+  .cat-pill{flex-shrink:0;display:inline-block;padding:6px 14px;background:#fff;border:1px solid #E2E8F0;border-radius:999px;font-size:12px;font-weight:600;color:#334155;text-decoration:none;white-space:nowrap;transition:all .2s;}
+  .cat-pill:hover{border-color:#84CC16;color:#0F172A;}
+  .cat-pill.active{background:#0F172A;color:#fff;border-color:#0F172A;}
+  @media (min-width:768px){.cat-bar{top:80px;}}
+  @media (max-width:600px){.cat-pill{font-size:11px;padding:5px 12px;}.cat-bar-in{gap:6px;}}
+
+  /* ---- Featured Article ---- */
+  .feat-wrap{max-width:1100px;margin:0 auto;padding:0 20px;}
+  .feat-card{display:grid;grid-template-columns:1.1fr 1fr;gap:0;background:#fff;border:1px solid #E2E8F0;border-radius:24px;overflow:hidden;text-decoration:none;transition:all .3s;position:relative;}
+  .feat-card:hover{transform:translateY(-4px);box-shadow:0 24px 56px rgba(15,23,42,.10);border-color:#84CC16;}
+  .feat-img{width:100%;height:100%;min-height:340px;object-fit:cover;}
+  .feat-body{padding:36px 36px 36px;display:flex;flex-direction:column;justify-content:center;}
+  .feat-badge{display:inline-flex;align-items:center;gap:8px;background:#F59E0B;color:#0F172A;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;align-self:flex-start;margin-bottom:14px;}
+  .feat-cat{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#84CC16;margin-bottom:10px;}
+  .feat-title{font-family:'Archivo Black',sans-serif;font-size:28px;line-height:1.1;color:#0F172A;margin-bottom:14px;letter-spacing:-0.02em;}
+  .feat-desc{font-size:15px;line-height:1.6;color:#475569;margin-bottom:18px;}
+  .feat-meta{display:flex;gap:14px;font-size:12px;color:#64748B;}
+  .feat-meta span{display:inline-flex;align-items:center;gap:6px;}
+  .feat-link{margin-top:18px;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#0F172A;}
+  @media (max-width:900px){.feat-card{grid-template-columns:1fr;}.feat-img{min-height:240px;}.feat-body{padding:28px 24px;}.feat-title{font-size:24px;}}
+
+  /* ---- Article Grid ---- */
+  .art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto;padding:0 20px;}
+  .art-card{display:flex;flex-direction:column;background:#fff;border:1px solid #E2E8F0;border-radius:20px;overflow:hidden;text-decoration:none;transition:all .3s;}
+  .art-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(15,23,42,.10);border-color:#84CC16;}
+  .art-img-wrap{aspect-ratio:16/10;background:#F1F5F9;overflow:hidden;}
+  .art-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+  .art-card:hover .art-img-wrap img{transform:scale(1.04);}
+  .art-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1;}
+  .art-cat{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#84CC16;}
+  .art-cat::before{content:"";width:5px;height:5px;border-radius:50%;background:#84CC16;}
+  .art-title{font-family:'Archivo Black',sans-serif;font-size:18px;line-height:1.2;color:#0F172A;letter-spacing:-0.01em;}
+  .art-desc{font-size:13.5px;line-height:1.55;color:#64748B;margin-top:auto;}
+  .art-meta{display:flex;gap:10px;align-items:center;font-size:11px;color:#94A3B8;margin-top:8px;}
+  @media (max-width:900px){.art-grid{grid-template-columns:repeat(2,1fr);gap:16px;}}
+  @media (max-width:600px){.art-grid{grid-template-columns:1fr;}.art-title{font-size:17px;}}
+
+  /* ---- CTA WhatsApp ---- */
+  .blog-cta{position:relative;background:#0F172A;border-radius:24px;padding:48px 36px;text-align:center;overflow:hidden;margin:64px auto 0;max-width:1100px;}
+  .blog-cta::before{content:"";position:absolute;width:420px;height:420px;background:radial-gradient(circle,#84CC16 0%,transparent 70%);top:-200px;right:-150px;opacity:.10;pointer-events:none;}
+  .blog-cta::after{content:"";position:absolute;width:320px;height:320px;background:radial-gradient(circle,#F59E0B 0%,transparent 70%);bottom:-150px;left:-100px;opacity:.08;pointer-events:none;}
+  .blog-cta h2{position:relative;z-index:1;font-family:'Archivo Black',sans-serif;font-size:28px;color:#fff;line-height:1.15;margin-bottom:12px;letter-spacing:-0.02em;}
+  .blog-cta h2 .acento{color:#84CC16;}
+  .blog-cta p{position:relative;z-index:1;font-size:15px;color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 24px;}
+  .blog-cta-btns{position:relative;z-index:1;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  .blog-cta .btn-wa{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-weight:800;font-size:14px;padding:13px 26px;border-radius:999px;text-decoration:none;box-shadow:0 10px 28px rgba(37,211,102,.35);transition:all .2s;}
+  .blog-cta .btn-wa:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(37,211,102,.45);}
+  .blog-cta .btn-wa svg{width:18px;height:18px;}
+  .blog-cta .btn-out{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1.5px solid rgba(255,255,255,.25);color:#fff;font-weight:700;font-size:13px;padding:12px 22px;border-radius:999px;text-decoration:none;transition:all .2s;}
+  .blog-cta .btn-out:hover{background:rgba(255,255,255,.08);border-color:#84CC16;color:#84CC16;}
+  @media (max-width:600px){.blog-cta{padding:36px 22px;}.blog-cta h2{font-size:22px;}}
+
+  /* ---- Blog Footer Grid (retention) ---- */
+  .blog-ft{background:#F8FAFC;border-top:1px solid #E2E8F0;padding:56px 0 64px;margin-top:64px;}
+  .blog-ft .ct{max-width:1100px;margin:0 auto;padding:0 20px;}
+  .blog-ft-h{font-family:'Archivo Black',sans-serif;font-size:24px;color:#0F172A;text-align:center;margin-bottom:8px;letter-spacing:-0.02em;}
+  .blog-ft-sub{font-size:14px;color:#64748B;text-align:center;margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto;}
+  .blog-ft-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px;}
+  .bf-card{display:flex;flex-direction:column;background:#fff;border:1px solid #E2E8F0;border-radius:14px;overflow:hidden;text-decoration:none;transition:all .25s;}
+  .bf-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(15,23,42,.08);border-color:#84CC16;}
+  .bf-card-img{width:100%;aspect-ratio:16/10;object-fit:cover;}
+  .bf-card-body{padding:14px 16px 18px;display:flex;flex-direction:column;gap:6px;}
+  .bf-card-cat{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#84CC16;}
+  .bf-card-title{font-family:'Archivo Black',sans-serif;font-size:14px;color:#0F172A;line-height:1.25;}
+  .blog-ft-all{text-align:center;}
+  .blog-ft-all a{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;border:1px solid #0F172A;border-radius:999px;font-size:13px;font-weight:700;color:#0F172A;text-decoration:none;transition:all .2s;}
+  .blog-ft-all a:hover{background:#0F172A;color:#fff;}
+  @media (max-width:900px){.blog-ft-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:600px){.blog-ft-grid{grid-template-columns:1fr 1fr;gap:10px;}.bf-card-title{font-size:13px;}}
+
+  /* ---- Fade-in scroll ---- */
+  .fade-up{opacity:0;transform:translateY(20px);transition:opacity .8s ease-out, transform .8s ease-out;}
+  .fade-up.is-visible{opacity:1;transform:translateY(0);}
 </style>
 
 <!-- Blog schema -->
@@ -34,15 +116,33 @@
 {
   "@context": "https://schema.org",
   "@type": "Blog",
-  "name": "Blog Sportmaster — Gradas Deportivas INIFED",
+  "name": "Blog Sportmaster — Gradas Deportivas",
   "url": "https://gradasdefutbol.mx/blog/",
-  "description": "Blog especializado en gradas metálicas INIFED para canchas de fútbol y recintos deportivos en México.",
+  "description": "Blog especializado en gradas metálicas para canchas de fútbol y recintos deportivos en México: precios 2026, normativa INIFED, planos y guías de selección.",
   "publisher": {
     "@type": "Organization",
     "name": "Sportmaster",
     "logo": { "@type": "ImageObject", "url": "https://gradasdefutbol.mx/assets/logo-sportmaster.webp" }
   },
-  "inLanguage": "es-MX"
+  "inLanguage": "es-MX",
+  "blogPost": [
+    { "@type": "BlogPosting", "headline": "Cuánto cuesta una grada para cancha de fútbol: precios 2026", "url": "https://gradasdefutbol.mx/blog/cuanto-cuesta-grada-cancha-futbol-precios-2026/" },
+    { "@type": "BlogPosting", "headline": "Gradas INIFED: qué normativa cumplen en México", "url": "https://gradasdefutbol.mx/blog/gradas-inifed-normativa-que-cumplen/" },
+    { "@type": "BlogPosting", "headline": "Cómo elegir la capacidad correcta de grada", "url": "https://gradasdefutbol.mx/blog/como-elegir-capacidad-grada-cancha-futbol/" },
+    { "@type": "BlogPosting", "headline": "Gradas INIFED planos: memoria de cálculo", "url": "https://gradasdefutbol.mx/blog/gradas-inifed-planos-que-incluyen/" }
+  ]
+}
+</script>
+
+<!-- Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://gradasdefutbol.mx/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://gradasdefutbol.mx/blog/" }
+  ]
 }
 </script>
 </head>
@@ -56,12 +156,12 @@
         <img src="/assets/logo-sportmaster.webp" alt="Sportmaster Gradas Deportivas" class="h-8 md:h-10 w-auto bg-white px-3 py-1 rounded-lg">
       </a>
       <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-white/80">
-        <a href="/#inifed" class="hover:text-lime-brand">Modelo INIFED</a>
-        <a href="/#modelos" class="hover:text-lime-brand">Modelos</a>
-        <a href="/#proceso" class="hover:text-lime-brand">Proceso</a>
+        <a href="/#inifed" class="hover:text-lime-brand transition">Modelo INIFED</a>
+        <a href="/#modelos" class="hover:text-lime-brand transition">Modelos</a>
+        <a href="/#proceso" class="hover:text-lime-brand transition">Proceso</a>
         <a href="/blog/" class="text-lime-brand">Blog</a>
       </div>
-      <a href="https://wa.me/5218116296384?text=sportmaster.mx%20Hola%2C%20me%20interesa%20cotizar%20una%20grada." class="inline-flex items-center gap-2 bg-lime-brand text-navy-deep font-bold px-4 md:px-6 py-2.5 md:py-3 rounded-lg text-xs md:text-sm">Cotizar</a>
+      <a href="https://wa.me/5218116296384?text=sportmaster.mx%20Hola%2C%20me%20interesa%20cotizar%20una%20grada." class="inline-flex items-center gap-2 bg-lime-brand text-navy-deep font-bold px-4 md:px-6 py-2.5 md:py-3 rounded-lg text-xs md:text-sm hover:bg-lime-brand/90 transition">Cotizar</a>
     </div>
   </div>
 </nav>
@@ -72,86 +172,164 @@
     <span class="inline-flex items-center gap-2 bg-lime-brand/20 border border-lime-brand/40 text-lime-brand text-xs md:text-sm font-semibold px-3 py-1.5 rounded-full mb-6">Blog especializado</span>
     <h1 class="text-4xl md:text-6xl mb-4">Blog Gradas<br><span class="text-lime-brand">Deportivas INIFED</span></h1>
     <p class="text-white/80 text-base md:text-lg max-w-3xl">
-      Guías técnicas, normativa, selección y mejores prácticas para escuelas, municipios y clubes deportivos en México. Actualizado semanalmente.
+      Precios actualizados, normativa INIFED, planos estructurales y guías técnicas para escuelas, municipios y clubes deportivos en México. Escrito por el equipo detrás de <strong class="text-white">+17 años fabricando gradas</strong>.
     </p>
   </div>
 </header>
 
+<!-- CATEGORY BAR (sticky) -->
+<div class="cat-bar">
+  <div class="cat-bar-in">
+    <a href="/blog/" class="cat-pill active">Todos</a>
+    <a href="/blog/cuanto-cuesta-grada-cancha-futbol-precios-2026/" class="cat-pill">Precios</a>
+    <a href="/blog/gradas-inifed-normativa-que-cumplen/" class="cat-pill">Normativa</a>
+    <a href="/blog/como-elegir-capacidad-grada-cancha-futbol/" class="cat-pill">Guía de compra</a>
+    <a href="/blog/gradas-inifed-planos-que-incluyen/" class="cat-pill">Técnico</a>
+  </div>
+</div>
+
+<!-- FEATURED ARTICLE -->
+<section class="py-14 md:py-16 bg-white">
+  <div class="feat-wrap">
+    <div class="section-eyebrow fade-up">Artículo destacado</div>
+    <a href="/blog/cuanto-cuesta-grada-cancha-futbol-precios-2026/" class="feat-card fade-up">
+      <img src="/assets/img/grada-150p-lona.webp" alt="Precios 2026 gradas deportivas para cancha de fútbol" class="feat-img" loading="eager">
+      <div class="feat-body">
+        <span class="feat-badge">Nuevo · Mayo 2026</span>
+        <span class="feat-cat">Precios</span>
+        <h2 class="feat-title">Cuánto cuesta una grada para cancha de fútbol: precios 2026</h2>
+        <p class="feat-desc">Tabla completa de los 12 modelos Sportmaster con precios reales: desde $49,500 hasta $245,000 MXN. Más los 5 factores que afectan el costo final y comparativo por presupuesto.</p>
+        <div class="feat-meta">
+          <span>7 min lectura</span>
+          <span>·</span>
+          <span>Actualizado mayo 2026</span>
+        </div>
+        <span class="feat-link">Leer artículo completo →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
 <!-- ARTICLES GRID -->
-<section class="py-12 md:py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-      <a href="/blog/cuanto-cuesta-grada-cancha-futbol-precios-2026/" class="card-article bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 block">
-        <div class="aspect-[16/9] bg-slate-200 overflow-hidden">
-          <img src="/assets/img/grada-150p-lona.webp" alt="Precios gradas cancha fútbol 2026" class="w-full h-full object-cover" loading="lazy">
-        </div>
-        <div class="p-6">
-          <span class="text-xs text-amber-brand font-semibold uppercase tracking-wider">Precios</span>
-          <h2 class="text-xl text-navy-deep mt-2 mb-3">Cuánto cuesta una grada para cancha de fútbol: precios 2026</h2>
-          <p class="text-sm text-slate-600 mb-4">Tabla completa de los 12 modelos Sportmaster con precios reales: desde $49,500 hasta $245,000 MXN. Factores que afectan el costo final.</p>
-          <div class="flex items-center gap-2 text-xs text-slate-500">
-            <span>7 min lectura</span><span>·</span><span>Mayo 2026</span>
-          </div>
+<section class="pb-16 md:pb-20 bg-white">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+    <div class="section-eyebrow fade-up">Todos los artículos</div>
+    <h2 class="text-3xl md:text-4xl text-navy-deep">Guías técnicas y normativas</h2>
+  </div>
+  <div class="art-grid">
+    <a href="/blog/gradas-inifed-normativa-que-cumplen/" class="art-card fade-up">
+      <div class="art-img-wrap"><img src="/assets/img/grada-inifed-50p.png" alt="Gradas INIFED normativa NTC CFE AISC México" loading="lazy"></div>
+      <div class="art-body">
+        <span class="art-cat">Normativa</span>
+        <h3 class="art-title">Gradas INIFED: qué normativa cumplen en México</h3>
+        <p class="art-desc">Las 8 normas obligatorias (NTC, CFE Sismo, CFE Viento, AISC) explicadas paso a paso para directores de escuela y responsables de obra pública.</p>
+        <div class="art-meta"><span>10 min lectura</span><span>·</span><span>Abril 2026</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/como-elegir-capacidad-grada-cancha-futbol/" class="art-card fade-up">
+      <div class="art-img-wrap"><img src="/assets/img/grada-75p-lona.webp" alt="Elegir capacidad de grada para cancha de fútbol 7 soccer" loading="lazy"></div>
+      <div class="art-body">
+        <span class="art-cat">Guía de compra</span>
+        <h3 class="art-title">Cómo elegir la capacidad correcta de grada</h3>
+        <p class="art-desc">Método de 4 pasos para calcular aforo ideal según tipo de cancha (fútbol 7, rápido, soccer), frecuencia de torneos y proyección de uso.</p>
+        <div class="art-meta"><span>8 min lectura</span><span>·</span><span>Abril 2026</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/gradas-inifed-planos-que-incluyen/" class="art-card fade-up">
+      <div class="art-img-wrap"><img src="/assets/img/grada-35p-policarbonato.webp" alt="Gradas INIFED planos memoria de cálculo expediente estructural" loading="lazy"></div>
+      <div class="art-body">
+        <span class="art-cat">Técnico</span>
+        <h3 class="art-title">Gradas INIFED planos: memoria de cálculo</h3>
+        <p class="art-desc">Los 5 documentos obligatorios del expediente estructural firmado: memoria, planos EST-101, reporte ETABS, fichas técnicas y certificados.</p>
+        <div class="art-meta"><span>12 min lectura</span><span>·</span><span>Abril 2026</span></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- CTA WhatsApp -->
+<section class="px-4 sm:px-6 lg:px-8">
+  <div class="blog-cta fade-up">
+    <h2>¿Tu proyecto necesita <span class="acento">una grada deportiva?</span></h2>
+    <p>Cotización rápida por WhatsApp. Modelos INIFED estándar con entrega en 20 días. Envío a toda la República Mexicana.</p>
+    <div class="blog-cta-btns">
+      <a href="https://wa.me/5218116296384?text=sportmaster.mx%20Vengo%20del%20blog%20y%20me%20interesa%20una%20grada%20deportiva." class="btn-wa">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Cotizar por WhatsApp
+      </a>
+      <a href="/#modelos" class="btn-out">Ver catálogo completo</a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG FOOTER GRID (retention) -->
+<section class="blog-ft">
+  <div class="ct">
+    <div class="blog-ft-h">Explora todo el blog</div>
+    <p class="blog-ft-sub">Guías técnicas sobre precios, normativa INIFED, planos y selección de gradas deportivas en México.</p>
+    <div class="blog-ft-grid">
+      <a href="/blog/cuanto-cuesta-grada-cancha-futbol-precios-2026/" class="bf-card">
+        <img class="bf-card-img" src="/assets/img/grada-150p-lona.webp" alt="Precios gradas 2026" loading="lazy">
+        <div class="bf-card-body">
+          <span class="bf-card-cat">Precios</span>
+          <span class="bf-card-title">Cuánto cuesta una grada para cancha de fútbol: precios 2026</span>
         </div>
       </a>
-
-      <a href="/blog/gradas-inifed-normativa-que-cumplen/" class="card-article bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 block">
-        <div class="aspect-[16/9] bg-slate-200 overflow-hidden">
-          <img src="/assets/img/grada-inifed-50p.png" alt="Gradas INIFED normativa México NTC CFE" class="w-full h-full object-cover" loading="lazy">
-        </div>
-        <div class="p-6">
-          <span class="text-xs text-amber-brand font-semibold uppercase tracking-wider">Normativa</span>
-          <h2 class="text-xl text-navy-deep mt-2 mb-3">Gradas INIFED: qué normativa cumplen en México</h2>
-          <p class="text-sm text-slate-600 mb-4">Desglose completo de NTC Estructuras de Acero 2020, CFE Sismo 2015, CFE Viento 2020 y AISC 360/16 aplicados a gradas deportivas escolares.</p>
-          <div class="flex items-center gap-2 text-xs text-slate-500">
-            <span>10 min lectura</span><span>·</span><span>Abril 2026</span>
-          </div>
+      <a href="/blog/gradas-inifed-normativa-que-cumplen/" class="bf-card">
+        <img class="bf-card-img" src="/assets/img/grada-inifed-50p.png" alt="Normativa INIFED" loading="lazy">
+        <div class="bf-card-body">
+          <span class="bf-card-cat">Normativa</span>
+          <span class="bf-card-title">Gradas INIFED: qué normativa cumplen en México</span>
         </div>
       </a>
-
-      <a href="/blog/como-elegir-capacidad-grada-cancha-futbol/" class="card-article bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 block">
-        <div class="aspect-[16/9] bg-slate-200 overflow-hidden">
-          <img src="/assets/img/grada-75p-lona.webp" alt="Elegir capacidad grada cancha futbol" class="w-full h-full object-cover" loading="lazy">
-        </div>
-        <div class="p-6">
-          <span class="text-xs text-amber-brand font-semibold uppercase tracking-wider">Guía de compra</span>
-          <h2 class="text-xl text-navy-deep mt-2 mb-3">Cómo elegir la capacidad correcta de grada para tu cancha</h2>
-          <p class="text-sm text-slate-600 mb-4">Método probado para calcular aforo ideal según tipo de cancha (fútbol 7, rápido, soccer) y frecuencia de torneos.</p>
-          <div class="flex items-center gap-2 text-xs text-slate-500">
-            <span>8 min lectura</span><span>·</span><span>Abril 2026</span>
-          </div>
+      <a href="/blog/como-elegir-capacidad-grada-cancha-futbol/" class="bf-card">
+        <img class="bf-card-img" src="/assets/img/grada-75p-lona.webp" alt="Elegir capacidad de grada" loading="lazy">
+        <div class="bf-card-body">
+          <span class="bf-card-cat">Guía de compra</span>
+          <span class="bf-card-title">Cómo elegir la capacidad correcta de grada</span>
         </div>
       </a>
-
-      <a href="/blog/gradas-inifed-planos-que-incluyen/" class="card-article bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 block">
-        <div class="aspect-[16/9] bg-slate-200 overflow-hidden">
-          <img src="/assets/img/grada-35p-policarbonato.webp" alt="Gradas INIFED planos memoria cálculo" class="w-full h-full object-cover" loading="lazy">
-        </div>
-        <div class="p-6">
-          <span class="text-xs text-amber-brand font-semibold uppercase tracking-wider">Técnico</span>
-          <h2 class="text-xl text-navy-deep mt-2 mb-3">Gradas INIFED planos: qué debe incluir la memoria de cálculo</h2>
-          <p class="text-sm text-slate-600 mb-4">Componentes obligatorios de un expediente estructural firmado para obras educativas en México.</p>
-          <div class="flex items-center gap-2 text-xs text-slate-500">
-            <span>12 min lectura</span><span>·</span><span>Abril 2026</span>
-          </div>
+      <a href="/blog/gradas-inifed-planos-que-incluyen/" class="bf-card">
+        <img class="bf-card-img" src="/assets/img/grada-35p-policarbonato.webp" alt="Planos INIFED memoria de cálculo" loading="lazy">
+        <div class="bf-card-body">
+          <span class="bf-card-cat">Técnico</span>
+          <span class="bf-card-title">Gradas INIFED planos: memoria de cálculo</span>
         </div>
       </a>
     </div>
-
-    <div class="mt-16 bg-slate-50 rounded-2xl p-8 md:p-12 text-center border border-slate-100">
-      <h2 class="text-2xl md:text-3xl text-navy-deep mb-3">¿Tienes un proyecto de gradas deportivas?</h2>
-      <p class="text-slate-600 mb-6 max-w-xl mx-auto">Cotización rápida por WhatsApp. Modelos INIFED estándar con entrega en 20 días.</p>
-      <a href="https://wa.me/5218116296384?text=sportmaster.mx%20Vengo%20del%20blog%20y%20me%20interesa%20una%20grada%20INIFED." class="inline-flex items-center gap-2 bg-lime-brand text-navy-deep font-bold px-8 py-4 rounded-lg">Cotizar ahora →</a>
+    <div class="blog-ft-all">
+      <a href="/#modelos">Ver los 12 modelos de gradas →</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-navy-mid text-white py-10 border-t border-white/5 mt-10">
+<footer class="bg-navy-mid text-white py-10 border-t border-white/5">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-white/60">
-    © 2026 Sportmaster · <a href="/" class="hover:text-lime-brand">Regresar al inicio</a>
+    © 2026 Sportmaster · <a href="/" class="hover:text-lime-brand transition">Regresar al inicio</a> · <a href="https://wa.me/5218116296384" class="hover:text-lime-brand transition">WhatsApp</a>
   </div>
 </footer>
+
+<!-- Fade-in scroll -->
+<script>
+(function(){
+  if(!('IntersectionObserver' in window)){
+    document.querySelectorAll('.fade-up').forEach(el=>el.classList.add('is-visible'));
+    return;
+  }
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('is-visible');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+})();
+</script>
 
 </body>
 </html>
