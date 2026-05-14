@@ -137,6 +137,70 @@
   .article-cta-dark .btn-ghost{background:rgba(255,255,255,.08);color:#fff !important;border:1px solid rgba(255,255,255,.18);}
   .article-cta-dark .btn-ghost:hover{background:rgba(255,255,255,.14);border-color:#84CC16;color:#84CC16 !important;}
   @media (max-width:600px){.article-cta-dark{padding:28px 22px;}.article-cta-dark h3{font-size:1.3rem !important;}.article-cta-dark .btn{width:100%;justify-content:center;}}
+
+  /* --- Stat cards (4 datos clave) --- */
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 40px;}
+  .stat-card{background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px 18px;text-align:center;transition:all .25s;position:relative;overflow:hidden;}
+  .stat-card::before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:#84CC16;}
+  .stat-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(15,23,42,.08);border-color:#84CC16;}
+  .stat-num{font-family:'Archivo Black',sans-serif;font-size:1.85rem;color:#0F172A;line-height:1;letter-spacing:-0.02em;margin-bottom:6px;}
+  .stat-lbl{font-size:11px;font-weight:600;color:#64748B;line-height:1.35;text-transform:uppercase;letter-spacing:.05em;}
+  @media (max-width:700px){.stat-grid{grid-template-columns:1fr 1fr;gap:10px;}.stat-num{font-size:1.5rem;}.stat-lbl{font-size:10px;}}
+
+  /* --- Norm cards grid (8 normativas) --- */
+  .norm-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0 36px;}
+  .norm-card{background:#fff;border:1px solid #E2E8F0;border-radius:16px;padding:22px 20px 20px;display:flex;flex-direction:column;gap:10px;position:relative;transition:all .25s;}
+  .norm-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(15,23,42,.08);border-color:#84CC16;}
+  .norm-head{display:flex;align-items:center;gap:14px;}
+  .norm-num{flex-shrink:0;width:44px;height:44px;border-radius:50%;background:#84CC16;color:#0F172A;font-family:'Archivo Black',sans-serif;font-size:1.15rem;display:flex;align-items:center;justify-content:center;line-height:1;}
+  .norm-title{font-family:'Archivo Black',sans-serif;font-size:1rem;color:#0F172A;line-height:1.2;}
+  .norm-desc{font-size:.875rem;color:#475569;line-height:1.55;margin:0;}
+  .norm-badge{align-self:flex-start;display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:#F1F5F9;color:#0F172A;}
+  .norm-badge.sismo{background:#FEF3C7;color:#92400E;}
+  .norm-badge.viento{background:#DBEAFE;color:#1E40AF;}
+  .norm-badge.acero{background:#E5E7EB;color:#374151;}
+  .norm-badge.concreto{background:#FCE7F3;color:#9D174D;}
+  .norm-badge.cargas{background:#DCFCE7;color:#166534;}
+  .norm-badge.cimentacion{background:#FFEDD5;color:#9A3412;}
+  .norm-badge.codigo{background:#EDE9FE;color:#5B21B6;}
+  @media (max-width:600px){.norm-grid{grid-template-columns:1fr;gap:12px;}.norm-card{padding:18px 16px;}.norm-num{width:38px;height:38px;font-size:1rem;}.norm-title{font-size:.95rem;}}
+
+  /* --- Doc checklist (5 documentos) --- */
+  .doc-check{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0 32px;}
+  .doc-item{display:flex;gap:14px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:14px;padding:18px 18px;align-items:flex-start;transition:all .2s;}
+  .doc-item:hover{border-color:#84CC16;background:#fff;}
+  .doc-ico{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#84CC16;display:flex;align-items:center;justify-content:center;}
+  .doc-ico svg{width:20px;height:20px;color:#0F172A;}
+  .doc-body{flex:1;}
+  .doc-ttl{font-family:'Archivo Black',sans-serif;font-size:.95rem;color:#0F172A;line-height:1.2;margin-bottom:4px;}
+  .doc-sub{font-size:.8rem;color:#64748B;line-height:1.5;margin:0;}
+  @media (max-width:600px){.doc-check{grid-template-columns:1fr;gap:10px;}.doc-item{padding:14px 14px;}}
+
+  /* --- Callout lime (borde lateral) --- */
+  .callout-lime{display:flex;gap:16px;background:#F7FEE7;border-left:4px solid #84CC16;border-radius:0 14px 14px 0;padding:20px 22px;margin:28px 0;}
+  .callout-lime-ico{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#84CC16;display:flex;align-items:center;justify-content:center;}
+  .callout-lime-ico svg{width:20px;height:20px;color:#0F172A;}
+  .callout-lime-body{flex:1;}
+  .callout-lime-ttl{font-family:'Archivo Black',sans-serif;font-size:1rem;color:#0F172A;line-height:1.2;margin-bottom:6px;}
+  .callout-lime-body p{margin:0!important;font-size:.92rem!important;color:#365314!important;line-height:1.6!important;}
+  @media (max-width:600px){.callout-lime{padding:18px 16px;}}
+
+  /* --- FAQ accordion --- */
+  .faq-acc{margin:8px 0 24px;display:flex;flex-direction:column;gap:10px;}
+  .faq-acc details{background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:0;overflow:hidden;transition:all .2s;}
+  .faq-acc details[open]{border-color:#84CC16;box-shadow:0 10px 24px rgba(15,23,42,.06);}
+  .faq-acc summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:'Archivo Black',sans-serif;font-size:1rem;color:#0F172A;line-height:1.25;}
+  .faq-acc summary::-webkit-details-marker{display:none;}
+  .faq-acc summary::after{content:"+";flex-shrink:0;width:30px;height:30px;border-radius:50%;background:#F1F5F9;color:#0F172A;font-family:'Inter',sans-serif;font-size:1.35rem;font-weight:300;display:flex;align-items:center;justify-content:center;line-height:1;transition:all .2s;}
+  .faq-acc details[open] summary::after{content:"−";background:#84CC16;}
+  .faq-acc details > div{padding:0 22px 20px;}
+  .faq-acc details > div p{margin:0!important;font-size:.95rem!important;color:#334155!important;line-height:1.65!important;}
+  @media (max-width:600px){.faq-acc summary{padding:16px 18px;font-size:.92rem;}.faq-acc details > div{padding:0 18px 18px;}}
+
+  /* --- Inline figure (imágenes intercaladas) --- */
+  .inline-fig{margin:32px 0;}
+  .inline-fig img{width:100%;border-radius:16px;box-shadow:0 14px 32px rgba(15,23,42,.10);display:block;}
+  .inline-fig figcaption{margin-top:12px;font-size:.85rem;color:#64748B;line-height:1.5;text-align:center;font-style:italic;}
 </style>
 
 <!-- Article schema -->
@@ -246,6 +310,25 @@
         <a href="https://wa.me/5218116296384?text=sportmaster.mx%20Vengo%20del%20blog%20normativa.%20Quiero%20cotizar%20la%20grada%20INIFED%2050P." class="tldr-cta">Cotizar grada INIFED 50P →</a>
       </div>
 
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-num">8</div>
+          <div class="stat-lbl">Normativas obligatorias</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">450<span style="font-size:1rem;"> kg/m²</span></div>
+          <div class="stat-lbl">Carga viva categoría "e"</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">26<span style="font-size:1rem;"> pp</span></div>
+          <div class="stat-lbl">Memoria de cálculo INIFED 50P</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">$105K<span style="font-size:1rem;"> MXN</span></div>
+          <div class="stat-lbl">Precio INIFED 50P</div>
+        </div>
+      </div>
+
       <p><strong>Una grada INIFED</strong> no es simplemente una grada "bonita" o "resistente". Es una estructura que cumple con los lineamientos del <strong>Instituto Nacional de la Infraestructura Física Educativa</strong>, el organismo federal mexicano que certifica la calidad técnica, seguridad y funcionalidad de espacios educativos.</p>
 
       <p>Si eres director de escuela, funcionario de municipio, ingeniero de obra o administrador de club, y vas a comprar gradas deportivas, esta guía te ahorra reuniones y presupuestos mal orientados.</p>
@@ -276,29 +359,87 @@
 
       <p>Una <strong>grada deportiva INIFED</strong> no cumple una sola norma — cumple un cuerpo normativo completo. Aquí el desglose:</p>
 
-      <h3>1. International Building Code 2018 (IBC)</h3>
-      <p>Código internacional de referencia para edificaciones. Aplica a cargas, diseño general y detalles constructivos. En México se usa como complemento a las NTC.</p>
+      <div class="norm-grid">
+        <div class="norm-card">
+          <div class="norm-head">
+            <div class="norm-num">1</div>
+            <div class="norm-title">International Building Code 2018</div>
+          </div>
+          <p class="norm-desc">Código internacional de referencia para edificaciones. Aplica a cargas, diseño general y detalles constructivos. En México se usa como complemento a las NTC.</p>
+          <span class="norm-badge codigo">Código base</span>
+        </div>
+        <div class="norm-card">
+          <div class="norm-head">
+            <div class="norm-num">2</div>
+            <div class="norm-title">CFE Diseño por Sismo 2015</div>
+          </div>
+          <p class="norm-desc">Manual CFE para análisis sísmico. Define espectros, factores Q y R. INIFED 50P calculada con <strong>PRODISIS v4.1</strong>, Q=1.25 y R=2.</p>
+          <span class="norm-badge sismo">Sismo</span>
+        </div>
+        <div class="norm-card">
+          <div class="norm-head">
+            <div class="norm-num">3</div>
+            <div class="norm-title">CFE Diseño por Viento 2020</div>
+          </div>
+          <p class="norm-desc">Manual de Obras Civiles CFE 2020. INIFED 50P calculada con velocidad regional <strong>129 km/h</strong> y presión dinámica base <strong>48.01 kg/m²</strong>.</p>
+          <span class="norm-badge viento">Viento</span>
+        </div>
+        <div class="norm-card">
+          <div class="norm-head">
+            <div class="norm-num">4</div>
+            <div class="norm-title">NTC Criterios y Acciones 2017</div>
+          </div>
+          <p class="norm-desc">Define cargas vivas y combinaciones. Gradas aplican <strong>categoría "e": 450 kg/m²</strong> — la más alta, para lugares de reunión sin asientos individuales.</p>
+          <span class="norm-badge cargas">Cargas</span>
+        </div>
+        <div class="norm-card">
+          <div class="norm-head">
+            <div class="norm-num">5</div>
+            <div class="norm-title">NTC Estructuras de Acero 2020</div>
+          </div>
+          <p class="norm-desc">Diseño y verificación de elementos metálicos: columnas, vigas y conexiones. Verificación por compresión, esbeltez y eficiencia de trabajo, firmada por ingeniero.</p>
+          <span class="norm-badge acero">Acero</span>
+        </div>
+        <div class="norm-card">
+          <div class="norm-head">
+            <div class="norm-num">6</div>
+            <div class="norm-title">NTC Estructuras de Concreto 2021</div>
+          </div>
+          <p class="norm-desc">Aplica a dados de cimentación. INIFED 50P usa dados D-1 con concreto <strong>f'c = 250 kg/cm²</strong> y acero <strong>fy = 4,200 kg/cm²</strong>.</p>
+          <span class="norm-badge concreto">Concreto</span>
+        </div>
+        <div class="norm-card">
+          <div class="norm-head">
+            <div class="norm-num">7</div>
+            <div class="norm-title">NTC Cimentaciones 2017</div>
+          </div>
+          <p class="norm-desc">Criterios de diseño de cimentación según tipo de suelo. Proyecto debe incluir referencia a condiciones del sitio y verificación de capacidad portante.</p>
+          <span class="norm-badge cimentacion">Cimentación</span>
+        </div>
+        <div class="norm-card">
+          <div class="norm-head">
+            <div class="norm-num">8</div>
+            <div class="norm-title">AISC 360/16</div>
+          </div>
+          <p class="norm-desc">Norma del American Institute of Steel Construction, referenciada por las NTC. Complementa la verificación de elementos metálicos con criterios internacionales.</p>
+          <span class="norm-badge acero">Acero internacional</span>
+        </div>
+      </div>
 
-      <h3>2. CFE — Diseño por Sismo 2015</h3>
-      <p>Manual de la Comisión Federal de Electricidad para análisis sísmico. Define espectros de diseño, factores de comportamiento sísmico (Q) y de sobrerresistencia (R). Para gradas deportivas se aplica con el software <strong>PRODISIS v4.1</strong> en zona sísmica del sitio. Para la grada INIFED 50 personas de Sportmaster se usaron factores <strong>Q=1.25 y R=2</strong> con combinaciones bidireccionales 100/30%.</p>
+      <figure class="inline-fig">
+        <img src="/assets/img/grada-50p-inifed.webp" alt="Modelo INIFED 50P policarbonato 6mm certificado escuelas públicas" loading="lazy" width="900" height="600">
+        <figcaption>Modelo INIFED 50P · Policarbonato 6mm · El único certificado para escuelas públicas</figcaption>
+      </figure>
 
-      <h3>3. CFE — Diseño por Viento 2020</h3>
-      <p>Manual de Obras Civiles CFE 2020 para cargas de viento. Define velocidad regional, presión dinámica y factores topográficos. Nuestra grada INIFED se calcula con velocidad regional de <strong>129 km/h y presión dinámica de base 48.01 kg/m²</strong>.</p>
-
-      <h3>4. NTC Criterios y Acciones 2017</h3>
-      <p>Normas Técnicas Complementarias del Reglamento de Construcciones de la Ciudad de México. Define las cargas vivas y combinaciones de diseño. Para gradas se aplica la <strong>categoría "e": 450 kg/m²</strong> — la más alta, reservada para estadios y lugares de reunión sin asientos individuales. Además incluye carga por sismo de 350 kg/m².</p>
-
-      <h3>5. NTC Estructuras de Acero 2020</h3>
-      <p>Norma para diseño y verificación de elementos metálicos. Aplica a la estructura de acero que forma las columnas, vigas y conexiones de la grada. Requiere verificación por compresión, esbeltez y eficiencia de trabajo. El expediente del modelo INIFED 50 personas incluye estos cálculos firmados por el ingeniero responsable.</p>
-
-      <h3>6. NTC Estructuras de Concreto 2021</h3>
-      <p>Aplica a los dados de cimentación. Para la grada INIFED 50 se usan dados D-1 con concreto <strong>f'c = 250 kg/cm²</strong> y acero de refuerzo <strong>fy = 4,200 kg/cm²</strong>, verificados por momento flexionante, carga axial, esbeltez y estribos.</p>
-
-      <h3>7. NTC Cimentaciones 2017</h3>
-      <p>Define criterios de diseño de cimentación según tipo de suelo. El proyecto debe incluir estudio o referencia a las condiciones del sitio y verificación de capacidad portante.</p>
-
-      <h3>8. AISC 360/16</h3>
-      <p>Norma norteamericana del American Institute of Steel Construction, referenciada por las NTC. Complementa la verificación de elementos metálicos con criterios internacionales.</p>
+      <div class="callout-lime">
+        <div class="callout-lime-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="9" y1="13" x2="15" y2="13"></line><line x1="9" y1="17" x2="13" y2="17"></line></svg>
+        </div>
+        <div class="callout-lime-body">
+          <div class="callout-lime-ttl">Memoria de cálculo: SOLO aplica a INIFED</div>
+          <p>Una grada metálica estándar no requiere memoria firmada. La memoria de cálculo es un requisito específico para gradas que se instalan en obras con fondos públicos federales (SEP, "La Escuela es Nuestra", FONE) y para certificación INIFED.</p>
+        </div>
+      </div>
 
       <div class="wa-mid">
         <div class="wa-mid-body">
@@ -315,13 +456,43 @@
 
       <p>Cuando cotices <strong>gradas INIFED planos</strong>, el expediente técnico debe contener mínimo:</p>
 
-      <ul>
-        <li><strong>Memoria de cálculo estructural</strong> firmada por ingeniero civil con cédula profesional y preferentemente con maestría en ingeniería estructural</li>
-        <li><strong>Planos estructurales</strong> (tipo EST-101) con planta general, secciones, detalles de conexión y cuadro de datos del proyecto</li>
-        <li><strong>Reporte de verificación en software profesional</strong> (ETABS, SAP2000) con relación demanda/capacidad por elemento</li>
-        <li><strong>Ficha técnica</strong> de materiales (PTR, policarbonato, pintura, anticorrosivo)</li>
-        <li><strong>Certificados</strong> de cumplimiento INIFED, NTC y demás normas aplicables</li>
-      </ul>
+      <div class="doc-check">
+        <div class="doc-item">
+          <div class="doc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div class="doc-body">
+            <div class="doc-ttl">Memoria de cálculo estructural</div>
+            <p class="doc-sub">Firmada por ingeniero civil con cédula profesional, preferentemente con maestría en ingeniería estructural.</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div class="doc-body">
+            <div class="doc-ttl">Planos estructurales EST-101</div>
+            <p class="doc-sub">Planta general, secciones, detalles de conexión y cuadro de datos del proyecto.</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div class="doc-body">
+            <div class="doc-ttl">Reporte de verificación en software</div>
+            <p class="doc-sub">ETABS o SAP2000 con relación demanda/capacidad por elemento.</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div class="doc-body">
+            <div class="doc-ttl">Ficha técnica de materiales</div>
+            <p class="doc-sub">Especificaciones de PTR, policarbonato, pintura y anticorrosivo aplicados.</p>
+          </div>
+        </div>
+        <div class="doc-item" style="grid-column:1 / -1;">
+          <div class="doc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div class="doc-body">
+            <div class="doc-ttl">Certificados de cumplimiento</div>
+            <p class="doc-sub">INIFED, NTC y demás normas aplicables al expediente técnico de la obra.</p>
+          </div>
+        </div>
+      </div>
 
       <a href="/blog/como-elegir-capacidad-grada-cancha-futbol/" class="blog-il">
         <img src="/assets/img/grada-75p-lona.webp" alt="Cómo elegir capacidad de grada deportiva" class="blog-il-img" loading="lazy">
@@ -334,11 +505,21 @@
 
       <h2>Preguntas frecuentes</h2>
 
-      <h3>¿Toda grada metálica cumple INIFED?</h3>
-      <p>No. Una grada puede ser metálica, resistente y barata, y aun así <strong>no cumplir INIFED</strong> porque carece de memoria de cálculo firmada, análisis sísmico documentado o los factores de carga correctos. Pedir "grada metálica" y "grada INIFED" son dos compras distintas.</p>
+      <div class="faq-acc">
+        <details>
+          <summary>¿Toda grada metálica cumple INIFED?</summary>
+          <div><p>No. Una grada puede ser metálica, resistente y barata, y aun así <strong>no cumplir INIFED</strong> porque carece de memoria de cálculo firmada, análisis sísmico documentado o los factores de carga correctos. Pedir "grada metálica" y "grada INIFED" son dos compras distintas.</p></div>
+        </details>
+        <details>
+          <summary>¿Puedo certificar después una grada que ya tengo?</summary>
+          <div><p>Técnicamente sí, contratando a un ingeniero estructurista para levantar memoria post-construcción. En la práctica es más caro que haberlo hecho correctamente desde inicio, porque a veces el producto instalado no pasa la verificación y hay que reforzar.</p></div>
+        </details>
+      </div>
 
-      <h3>¿Puedo certificar después una grada que ya tengo?</h3>
-      <p>Técnicamente sí, contratando a un ingeniero estructurista para levantar memoria post-construcción. En la práctica es más caro que haberlo hecho correctamente desde inicio, porque a veces el producto instalado no pasa la verificación y hay que reforzar.</p>
+      <figure class="inline-fig">
+        <img src="/assets/img/grada-150p-galvanizada.webp" alt="Grada metálica 150 personas galvanizada — estándar no INIFED" loading="lazy" width="900" height="600">
+        <figcaption>Grada metálica estándar 150P galvanizada · Sin memoria firmada — no aplica a obra pública con fondos federales</figcaption>
+      </figure>
 
       <h2>Conclusión</h2>
 

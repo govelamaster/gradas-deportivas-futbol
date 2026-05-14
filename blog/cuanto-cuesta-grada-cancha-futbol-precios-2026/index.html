@@ -138,6 +138,118 @@
   .article-cta-dark .btn-ghost{background:rgba(255,255,255,.08);color:#fff !important;border:1px solid rgba(255,255,255,.18);}
   .article-cta-dark .btn-ghost:hover{background:rgba(255,255,255,.14);border-color:#84CC16;color:#84CC16 !important;}
   @media (max-width:600px){.article-cta-dark{padding:28px 22px;}.article-cta-dark h3{font-size:1.3rem !important;}.article-cta-dark .btn{width:100%;justify-content:center;}}
+
+  /* ====== VISUAL UPGRADE — Stat cards, pricing grid, bar chart, factor cards ====== */
+  .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0 36px;}
+  .stat-card{background:#fff;border:1px solid #E2E8F0;border-top:3px solid #84CC16;border-radius:14px;padding:18px 16px;text-align:center;transition:all .25s;}
+  .stat-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(15,23,42,.08);border-top-color:#0F172A;}
+  .stat-card .stat-num{font-family:'Archivo Black',sans-serif;font-size:28px;color:#0F172A;line-height:1;letter-spacing:-0.02em;}
+  .stat-card .stat-lbl{font-size:11px;color:#64748B;text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-top:8px;}
+  @media (max-width:600px){.stat-grid{grid-template-columns:repeat(2,1fr);gap:10px;}.stat-card .stat-num{font-size:22px;}}
+
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0 36px;}
+  .pricing-card{background:#fff;border:1px solid #E2E8F0;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:all .3s;position:relative;}
+  .pricing-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(15,23,42,.10);border-color:#0F172A;}
+  .pricing-card.tier-low{border-top:4px solid #84CC16;}
+  .pricing-card.tier-mid{border-top:4px solid #F59E0B;}
+  .pricing-card.tier-high{border-top:4px solid #0F172A;}
+  .pricing-card.featured{border:2px solid #0F172A;box-shadow:0 12px 28px rgba(15,23,42,.10);}
+  .pricing-card-badge{position:absolute;top:10px;right:10px;background:#0F172A;color:#84CC16;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:999px;z-index:2;font-family:'Archivo Black',sans-serif;}
+  .pricing-card-badge.inifed{background:#84CC16;color:#0F172A;}
+  .pricing-card-badge.flex{background:#F59E0B;color:#0F172A;}
+  .pricing-card-badge.movil{background:#3b82f6;color:#fff;}
+  .pricing-card-img{width:100%;aspect-ratio:16/10;background:#F1F5F9;object-fit:cover;}
+  .pricing-card-body{padding:14px 16px 16px;flex:1;display:flex;flex-direction:column;}
+  .pricing-card-name{font-family:'Archivo Black',sans-serif;font-size:14px;color:#0F172A;line-height:1.2;margin-bottom:6px;letter-spacing:-0.01em;}
+  .pricing-card-specs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+  .pricing-card-spec{font-size:10px;color:#64748B;background:#F8FAFC;padding:2px 7px;border-radius:6px;border:1px solid #E2E8F0;font-weight:600;}
+  .pricing-card-price{font-family:'Archivo Black',sans-serif;font-size:22px;color:#0F172A;letter-spacing:-0.02em;line-height:1;margin-top:auto;}
+  .pricing-card-price .mxn{font-size:11px;color:#64748B;font-weight:600;margin-left:4px;letter-spacing:.05em;font-family:'Inter',sans-serif;}
+  .pricing-card-iva{font-size:10px;color:#94A3B8;margin-top:4px;font-weight:500;}
+  @media (max-width:900px){.pricing-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:520px){.pricing-grid{grid-template-columns:1fr;}.pricing-card-img{aspect-ratio:21/9;}}
+
+  .bar-chart{margin:32px 0;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:16px;padding:24px 22px;}
+  .bar-chart-title{font-family:'Archivo Black',sans-serif;font-size:14px;color:#0F172A;text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px;display:flex;align-items:center;gap:8px;}
+  .bar-chart-title::before{content:"";width:24px;height:3px;background:#84CC16;border-radius:2px;}
+  .bar-row{display:grid;grid-template-columns:130px 1fr 90px;gap:12px;align-items:center;margin-bottom:9px;}
+  .bar-label{font-size:12px;color:#0F172A;font-weight:600;line-height:1.2;}
+  .bar-track{height:22px;background:#fff;border:1px solid #E2E8F0;border-radius:6px;overflow:hidden;position:relative;}
+  .bar-fill{height:100%;background:linear-gradient(90deg,#84CC16 0%,#0F172A 100%);border-radius:5px;transition:width 1s ease-out;}
+  .bar-fill.tier-low{background:linear-gradient(90deg,#84CC16 0%,#65a30d 100%);}
+  .bar-fill.tier-mid{background:linear-gradient(90deg,#F59E0B 0%,#d97706 100%);}
+  .bar-fill.tier-high{background:linear-gradient(90deg,#0F172A 0%,#1E293B 100%);}
+  .bar-value{font-family:'Archivo Black',sans-serif;font-size:13px;color:#0F172A;text-align:right;letter-spacing:-0.01em;}
+  @media (max-width:600px){.bar-row{grid-template-columns:110px 1fr 70px;gap:8px;}.bar-label{font-size:11px;}.bar-value{font-size:11px;}}
+
+  .incl-split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0 36px;}
+  .incl-box{padding:22px 20px;border-radius:14px;border:1px solid #E2E8F0;background:#fff;}
+  .incl-box.yes{border-top:3px solid #84CC16;background:#F7FEE7;}
+  .incl-box.no{border-top:3px solid #F59E0B;background:#FFFBEB;}
+  .incl-box-h{font-family:'Archivo Black',sans-serif;font-size:14px;color:#0F172A;letter-spacing:-0.01em;margin-bottom:14px;display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.06em;}
+  .incl-box-h .icon{width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .incl-box.yes .icon{background:#84CC16;color:#0F172A;}
+  .incl-box.no .icon{background:#F59E0B;color:#0F172A;}
+  .incl-list{list-style:none;margin:0;padding:0;}
+  .incl-list li{position:relative;padding:8px 0 8px 26px;font-size:13.5px;color:#334155;line-height:1.5;border-bottom:1px solid rgba(226,232,240,.6);}
+  .incl-list li:last-child{border-bottom:none;}
+  .incl-list li::before{content:"";position:absolute;left:0;top:13px;width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid #84CC16;}
+  .incl-box.yes .incl-list li::before{content:"✓";color:#0F172A;font-weight:900;font-size:11px;text-align:center;line-height:14px;}
+  .incl-box.no .incl-list li::before{content:"×";background:#fff;border-color:#F59E0B;color:#0F172A;font-weight:900;font-size:13px;text-align:center;line-height:11px;}
+  @media (max-width:700px){.incl-split{grid-template-columns:1fr;gap:12px;}}
+
+  .factor-list{display:grid;gap:14px;margin:28px 0 36px;}
+  .factor-card{display:grid;grid-template-columns:64px 1fr;gap:16px;background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:20px 22px;transition:all .25s;}
+  .factor-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(15,23,42,.07);border-color:#84CC16;}
+  .factor-num{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#0F172A 0%,#1E293B 100%);color:#84CC16;font-family:'Archivo Black',sans-serif;font-size:24px;display:flex;align-items:center;justify-content:center;letter-spacing:-0.02em;flex-shrink:0;}
+  .factor-body h4{font-family:'Archivo Black',sans-serif;font-size:16px;color:#0F172A;margin:0 0 6px;line-height:1.2;letter-spacing:-0.01em;}
+  .factor-body p{font-size:14px;color:#475569;line-height:1.55;margin:0;}
+  @media (max-width:600px){.factor-card{grid-template-columns:48px 1fr;gap:12px;padding:16px 18px;}.factor-num{width:44px;height:44px;font-size:20px;border-radius:12px;}}
+
+  .budget-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0 36px;}
+  .budget-card{background:#fff;border:1px solid #E2E8F0;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;}
+  .budget-head{padding:20px 20px 16px;border-bottom:1px solid #E2E8F0;}
+  .budget-card.low .budget-head{background:linear-gradient(135deg,#F7FEE7 0%,#fff 100%);border-top:4px solid #84CC16;}
+  .budget-card.mid .budget-head{background:linear-gradient(135deg,#FFFBEB 0%,#fff 100%);border-top:4px solid #F59E0B;}
+  .budget-card.high .budget-head{background:linear-gradient(135deg,#F1F5F9 0%,#fff 100%);border-top:4px solid #0F172A;}
+  .budget-tier{font-family:'Archivo Black',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#64748B;margin-bottom:6px;}
+  .budget-range{font-family:'Archivo Black',sans-serif;font-size:22px;color:#0F172A;line-height:1.1;letter-spacing:-0.02em;}
+  .budget-sub{font-size:12px;color:#64748B;margin-top:6px;line-height:1.4;}
+  .budget-models{padding:14px 20px 20px;list-style:none;margin:0;flex:1;display:flex;flex-direction:column;gap:8px;}
+  .budget-models li{padding:8px 0;font-size:13px;color:#334155;line-height:1.4;border-bottom:1px solid rgba(226,232,240,.6);}
+  .budget-models li:last-child{border-bottom:none;}
+  .budget-models li strong{display:block;color:#0F172A;font-weight:700;margin-bottom:2px;}
+  .budget-models li .b-price{color:#84CC16;font-family:'Archivo Black',sans-serif;font-size:12px;letter-spacing:.02em;}
+  @media (max-width:900px){.budget-grid{grid-template-columns:1fr;}}
+
+  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:24px 0 32px;}
+  .why-card{background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;transition:all .25s;}
+  .why-card:hover{border-color:#84CC16;transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,23,42,.06);}
+  .why-card h4{font-family:'Archivo Black',sans-serif;font-size:14px;color:#0F172A;margin:0;letter-spacing:-0.01em;display:flex;align-items:center;gap:8px;}
+  .why-card h4 .dot{width:8px;height:8px;border-radius:50%;background:#84CC16;flex-shrink:0;}
+  .why-card p{font-size:13px;color:#475569;line-height:1.55;margin:0;}
+  @media (max-width:600px){.why-grid{grid-template-columns:1fr;}}
+
+  .faq-acc details{background:#fff;border:1px solid #E2E8F0;border-radius:12px;margin-bottom:10px;overflow:hidden;transition:all .25s;}
+  .faq-acc details[open]{border-color:#84CC16;box-shadow:0 8px 22px rgba(15,23,42,.06);}
+  .faq-acc summary{cursor:pointer;padding:16px 22px;font-family:'Archivo Black',sans-serif;font-size:15px;color:#0F172A;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;letter-spacing:-0.01em;line-height:1.3;}
+  .faq-acc summary::-webkit-details-marker{display:none;}
+  .faq-acc summary::after{content:"+";font-size:22px;color:#84CC16;line-height:1;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;background:#F7FEE7;border-radius:6px;transition:transform .25s;flex-shrink:0;}
+  .faq-acc details[open] summary::after{content:"−";transform:rotate(0);background:#0F172A;color:#84CC16;}
+  .faq-acc .faq-body{padding:0 22px 18px;color:#475569;font-size:14px;line-height:1.65;}
+  .faq-acc .faq-body p{margin:0 0 10px;color:#475569;}
+  .faq-acc .faq-body ul{margin:8px 0 0;padding:0;list-style:none;}
+  .faq-acc .faq-body ul li{padding:6px 0 6px 18px;position:relative;font-size:13.5px;color:#475569;}
+  .faq-acc .faq-body ul li::before{content:"→";position:absolute;left:0;color:#84CC16;font-weight:700;}
+
+  .inline-fig{margin:28px 0;border-radius:14px;overflow:hidden;border:1px solid #E2E8F0;}
+  .inline-fig img{width:100%;display:block;}
+  .inline-fig figcaption{font-size:12px;color:#64748B;padding:10px 16px;background:#F8FAFC;border-top:1px solid #E2E8F0;font-style:italic;}
+
+  .highlight-strip{background:linear-gradient(135deg,#84CC16 0%,#65a30d 100%);border-radius:14px;padding:18px 24px;margin:28px 0;display:flex;align-items:center;gap:16px;color:#0F172A;}
+  .highlight-strip .hs-icon{width:42px;height:42px;background:rgba(255,255,255,.4);border-radius:12px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Archivo Black',sans-serif;font-size:18px;}
+  .highlight-strip .hs-text{font-family:'Archivo Black',sans-serif;font-size:15px;line-height:1.3;letter-spacing:-0.01em;}
+  @media (max-width:600px){.highlight-strip{flex-direction:column;text-align:center;padding:18px 20px;}}
 </style>
 
 <!-- Article schema -->
@@ -248,89 +360,225 @@
         <a href="https://wa.me/5218116296384?text=sportmaster.mx%20Vengo%20del%20blog%20de%20precios.%20Quiero%20cotizar%20una%20grada%20para%20mi%20cancha." class="tldr-cta">Cotizar tu grada por WhatsApp →</a>
       </div>
 
+      <div class="stat-grid">
+        <div class="stat-card"><div class="stat-num">12</div><div class="stat-lbl">Modelos en catálogo</div></div>
+        <div class="stat-card"><div class="stat-num">$49,500</div><div class="stat-lbl">Precio mínimo</div></div>
+        <div class="stat-card"><div class="stat-num">$245,000</div><div class="stat-lbl">Precio máximo</div></div>
+        <div class="stat-card"><div class="stat-num">12-150</div><div class="stat-lbl">Capacidad (espectadores)</div></div>
+      </div>
+
       <p>La primera pregunta que llega por WhatsApp a Sportmaster nunca falla: <strong>¿cuánto cuesta una grada para mi cancha?</strong> Y la respuesta honesta es: depende — pero no de variables ocultas, sino de tres factores claros (capacidad, material del techo y ubicación de la obra).</p>
 
       <p>Este artículo abre el catálogo de precios 2026 completo. Los doce modelos, sus capacidades, sus medidas y el precio neto que paga un cliente al confirmar pedido en planta CDMX. Sin letra chica.</p>
 
-      <h2>Tabla completa de precios 2026</h2>
+      <h2>Catálogo completo 2026 · 12 modelos</h2>
 
       <p>Estos son los <strong>precios netos de catálogo</strong>, vigentes desde enero 2026. Aplican a fabricación estándar con materiales certificados y pintura de esmalte. Capacidades verificadas en plano constructivo.</p>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Modelo</th>
-            <th>Capacidad</th>
-            <th>Material techo</th>
-            <th>Dimensiones</th>
-            <th>Precio MXN</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Gradas Móviles 12 Asientos</td><td>12 (con ruedas)</td><td>Sin techo</td><td>3 × 1.30 × 0.70 m</td><td>$49,500</td></tr>
-          <tr><td>Grada Flex 35 · Lona</td><td>35 (pádel)</td><td>Lona</td><td>5 × 1.45 × 3.00 m</td><td>$78,000</td></tr>
-          <tr><td>Grada 35 · Lona</td><td>35</td><td>Lona curvo</td><td>10 × 1.50 × 3.50 m</td><td>$78,000</td></tr>
-          <tr><td>Grada Flex 35 · Policarbonato</td><td>35 (pádel)</td><td>Policarbonato</td><td>5 × 1.45 × 3.00 m</td><td>$88,000</td></tr>
-          <tr><td>Grada 35 · Policarbonato</td><td>35</td><td>Policarbonato curvo</td><td>10 × 1.50 × 3.50 m</td><td>$88,000</td></tr>
-          <tr><td>Grada 50 · Lona</td><td>50</td><td>Lona curvo</td><td>10 × 1.50 × 3.50 m</td><td>$99,500</td></tr>
-          <tr><td><strong>Grada 50 · INIFED</strong></td><td>50</td><td>Policarbonato 6mm</td><td>10 × 1.50 × 3.50 m</td><td><strong>$105,000</strong></td></tr>
-          <tr><td>Grada 75 · Lona</td><td>75</td><td>Lona curvo</td><td>10 × 2.00 × 3.50 m</td><td>$118,000</td></tr>
-          <tr><td>Grada 75 · Policarbonato</td><td>75</td><td>Policarbonato curvo</td><td>10 × 2.00 × 3.50 m</td><td>$135,000</td></tr>
-          <tr><td>Grada 100 · Techo Recto</td><td>100</td><td>Lona recto</td><td>10 × 2.00 × 3.50 m</td><td>$138,000</td></tr>
-          <tr><td>Grada 150 · Lona</td><td>150</td><td>Lona curvo</td><td>20 × 2.00 × 3.50 m</td><td>$245,000</td></tr>
-          <tr><td>Grada 150 · Galvanizada</td><td>150</td><td>Lámina galvanizada</td><td>20 × 2.00 × 3.50 m</td><td>$245,000</td></tr>
-        </tbody>
-      </table>
+      <div class="pricing-grid">
+        <div class="pricing-card tier-low">
+          <span class="pricing-card-badge movil">Móvil · Ruedas</span>
+          <img class="pricing-card-img" src="/assets/img/gradas-moviles-12.webp" alt="Gradas móviles 12 asientos con ruedas" loading="lazy">
+          <div class="pricing-card-body">
+            <div class="pricing-card-name">Gradas Móviles 12</div>
+            <div class="pricing-card-specs"><span class="pricing-card-spec">12 personas</span><span class="pricing-card-spec">Sin techo</span><span class="pricing-card-spec">3 × 1.30 m</span></div>
+            <div class="pricing-card-price">$49,500<span class="mxn">MXN</span></div>
+            <div class="pricing-card-iva">+ IVA</div>
+          </div>
+        </div>
+        <div class="pricing-card tier-low">
+          <span class="pricing-card-badge flex">Flex · Pádel</span>
+          <img class="pricing-card-img" src="/assets/img/grada-flex-35p-lona.webp" alt="Grada Flex 35 personas techo lona para pádel" loading="lazy">
+          <div class="pricing-card-body">
+            <div class="pricing-card-name">Grada Flex 35 · Lona</div>
+            <div class="pricing-card-specs"><span class="pricing-card-spec">35 personas</span><span class="pricing-card-spec">Lona</span><span class="pricing-card-spec">5 × 1.45 m</span></div>
+            <div class="pricing-card-price">$78,000<span class="mxn">MXN</span></div>
+            <div class="pricing-card-iva">+ IVA</div>
+          </div>
+        </div>
+        <div class="pricing-card tier-low">
+          <img class="pricing-card-img" src="/assets/img/grada-35p-lona.webp" alt="Grada 35 personas techo curvo lona" loading="lazy">
+          <div class="pricing-card-body">
+            <div class="pricing-card-name">Grada 35 · Lona</div>
+            <div class="pricing-card-specs"><span class="pricing-card-spec">35 personas</span><span class="pricing-card-spec">Lona curvo</span><span class="pricing-card-spec">10 × 1.50 m</span></div>
+            <div class="pricing-card-price">$78,000<span class="mxn">MXN</span></div>
+            <div class="pricing-card-iva">+ IVA</div>
+          </div>
+        </div>
+        <div class="pricing-card tier-mid">
+          <span class="pricing-card-badge flex">Flex · Pádel</span>
+          <img class="pricing-card-img" src="/assets/img/grada-flex-35p-policarbonato.webp" alt="Grada Flex 35 personas policarbonato para pádel" loading="lazy">
+          <div class="pricing-card-body">
+            <div class="pricing-card-name">Grada Flex 35 · Policarbonato</div>
+            <div class="pricing-card-specs"><span class="pricing-card-spec">35 personas</span><span class="pricing-card-spec">Policarbonato</span><span class="pricing-card-spec">5 × 1.45 m</span></div>
+            <div class="pricing-card-price">$88,000<span class="mxn">MXN</span></div>
+            <div class="pricing-card-iva">+ IVA</div>
+          </div>
+        </div>
+        <div class="pricing-card tier-mid">
+          <img class="pricing-card-img" src="/assets/img/grada-35p-policarbonato.webp" alt="Grada 35 personas techo curvo policarbonato" loading="lazy">
+          <div class="pricing-card-body">
+            <div class="pricing-card-name">Grada 35 · Policarbonato</div>
+            <div class="pricing-card-specs"><span class="pricing-card-spec">35 personas</span><span class="pricing-card-spec">Policarbonato</span><span class="pricing-card-spec">10 × 1.50 m</span></div>
+            <div class="pricing-card-price">$88,000<span class="mxn">MXN</span></div>
+            <div class="pricing-card-iva">+ IVA</div>
+          </div>
+        </div>
+        <div class="pricing-card tier-mid">
+          <img class="pricing-card-img" src="/assets/img/grada-50p-lona.webp" alt="Grada 50 personas techo curvo lona" loading="lazy">
+          <div class="pricing-card-body">
+            <div class="pricing-card-name">Grada 50 · Lona</div>
+            <div class="pricing-card-specs"><span class="pricing-card-spec">50 personas</span><span class="pricing-card-spec">Lona curvo</span><span class="pricing-card-spec">10 × 1.50 m</span></div>
+            <div class="pricing-card-price">$99,500<span class="mxn">MXN</span></div>
+            <div class="pricing-card-iva">+ IVA</div>
+          </div>
+        </div>
+        <div class="pricing-card tier-mid featured">
+          <span class="pricing-card-badge inifed">INIFED</span>
+          <img class="pricing-card-img" src="/assets/img/grada-50p-inifed.webp" alt="Grada INIFED 50 personas policarbonato 6mm para escuela pública" loading="lazy">
+          <div class="pricing-card-body">
+            <div class="pricing-card-name">Grada 50 · INIFED</div>
+            <div class="pricing-card-specs"><span class="pricing-card-spec">50 personas</span><span class="pricing-card-spec">Policarbonato 6mm</span><span class="pricing-card-spec">Certificado</span></div>
+            <div class="pricing-card-price">$105,000<span class="mxn">MXN</span></div>
+            <div class="pricing-card-iva">+ IVA · Único certificado para escuela pública</div>
+          </div>
+        </div>
+        <div class="pricing-card tier-mid">
+          <img class="pricing-card-img" src="/assets/img/grada-75p-lona.webp" alt="Grada 75 personas techo curvo lona" loading="lazy">
+          <div class="pricing-card-body">
+            <div class="pricing-card-name">Grada 75 · Lona</div>
+            <div class="pricing-card-specs"><span class="pricing-card-spec">75 personas</span><span class="pricing-card-spec">Lona curvo</span><span class="pricing-card-spec">10 × 2.00 m</span></div>
+            <div class="pricing-card-price">$118,000<span class="mxn">MXN</span></div>
+            <div class="pricing-card-iva">+ IVA · Más vendida</div>
+          </div>
+        </div>
+        <div class="pricing-card tier-mid">
+          <img class="pricing-card-img" src="/assets/img/grada-75p-policarbonato.webp" alt="Grada 75 personas techo curvo policarbonato" loading="lazy">
+          <div class="pricing-card-body">
+            <div class="pricing-card-name">Grada 75 · Policarbonato</div>
+            <div class="pricing-card-specs"><span class="pricing-card-spec">75 personas</span><span class="pricing-card-spec">Policarbonato</span><span class="pricing-card-spec">10 × 2.00 m</span></div>
+            <div class="pricing-card-price">$135,000<span class="mxn">MXN</span></div>
+            <div class="pricing-card-iva">+ IVA</div>
+          </div>
+        </div>
+        <div class="pricing-card tier-mid">
+          <img class="pricing-card-img" src="/assets/img/grada-100p-lona.webp" alt="Grada 100 personas techo recto lona" loading="lazy">
+          <div class="pricing-card-body">
+            <div class="pricing-card-name">Grada 100 · Techo Recto</div>
+            <div class="pricing-card-specs"><span class="pricing-card-spec">100 personas</span><span class="pricing-card-spec">Lona recto</span><span class="pricing-card-spec">10 × 2.00 m</span></div>
+            <div class="pricing-card-price">$138,000<span class="mxn">MXN</span></div>
+            <div class="pricing-card-iva">+ IVA</div>
+          </div>
+        </div>
+        <div class="pricing-card tier-high">
+          <img class="pricing-card-img" src="/assets/img/grada-150p-lona.webp" alt="Grada 150 personas techo curvo lona 20 metros" loading="lazy">
+          <div class="pricing-card-body">
+            <div class="pricing-card-name">Grada 150 · Lona</div>
+            <div class="pricing-card-specs"><span class="pricing-card-spec">150 personas</span><span class="pricing-card-spec">Lona curvo</span><span class="pricing-card-spec">20 × 2.00 m</span></div>
+            <div class="pricing-card-price">$245,000<span class="mxn">MXN</span></div>
+            <div class="pricing-card-iva">+ IVA</div>
+          </div>
+        </div>
+        <div class="pricing-card tier-high">
+          <img class="pricing-card-img" src="/assets/img/grada-150p-galvanizada.webp" alt="Grada 150 personas lámina galvanizada para climas extremos" loading="lazy">
+          <div class="pricing-card-body">
+            <div class="pricing-card-name">Grada 150 · Galvanizada</div>
+            <div class="pricing-card-specs"><span class="pricing-card-spec">150 personas</span><span class="pricing-card-spec">Lám. galvanizada</span><span class="pricing-card-spec">20 × 2.00 m</span></div>
+            <div class="pricing-card-price">$245,000<span class="mxn">MXN</span></div>
+            <div class="pricing-card-iva">+ IVA · Resistencia extrema</div>
+          </div>
+        </div>
+      </div>
 
-      <p>Todos los precios son <strong>más IVA del 16%</strong>, no incluyen flete desde planta CDMX ni instalación en sitio. La fabricación toma entre 10 y 18 días hábiles según modelo y temporada.</p>
+      <div class="bar-chart">
+        <div class="bar-chart-title">Comparativa visual de precios (MXN)</div>
+        <div class="bar-row"><div class="bar-label">Móviles 12</div><div class="bar-track"><div class="bar-fill tier-low" style="width:20%"></div></div><div class="bar-value">$49.5K</div></div>
+        <div class="bar-row"><div class="bar-label">Flex/35 · Lona</div><div class="bar-track"><div class="bar-fill tier-low" style="width:32%"></div></div><div class="bar-value">$78K</div></div>
+        <div class="bar-row"><div class="bar-label">Flex/35 · Poli</div><div class="bar-track"><div class="bar-fill tier-mid" style="width:36%"></div></div><div class="bar-value">$88K</div></div>
+        <div class="bar-row"><div class="bar-label">50 · Lona</div><div class="bar-track"><div class="bar-fill tier-mid" style="width:41%"></div></div><div class="bar-value">$99.5K</div></div>
+        <div class="bar-row"><div class="bar-label">50 · INIFED</div><div class="bar-track"><div class="bar-fill tier-mid" style="width:43%"></div></div><div class="bar-value">$105K</div></div>
+        <div class="bar-row"><div class="bar-label">75 · Lona</div><div class="bar-track"><div class="bar-fill tier-mid" style="width:48%"></div></div><div class="bar-value">$118K</div></div>
+        <div class="bar-row"><div class="bar-label">75 · Poli</div><div class="bar-track"><div class="bar-fill tier-mid" style="width:55%"></div></div><div class="bar-value">$135K</div></div>
+        <div class="bar-row"><div class="bar-label">100 · Recto</div><div class="bar-track"><div class="bar-fill tier-mid" style="width:56%"></div></div><div class="bar-value">$138K</div></div>
+        <div class="bar-row"><div class="bar-label">150 · Lona</div><div class="bar-track"><div class="bar-fill tier-high" style="width:100%"></div></div><div class="bar-value">$245K</div></div>
+        <div class="bar-row"><div class="bar-label">150 · Galvan.</div><div class="bar-track"><div class="bar-fill tier-high" style="width:100%"></div></div><div class="bar-value">$245K</div></div>
+      </div>
+
+      <div class="highlight-strip">
+        <div class="hs-icon">!</div>
+        <div class="hs-text">Todos los precios son <strong>+ IVA 16%</strong> y NO incluyen flete ni instalación. Fabricación 10–18 días hábiles según modelo y temporada.</div>
+      </div>
 
       <h2>Qué incluye el precio y qué NO</h2>
 
       <p>Antes de comparar con otro proveedor, conviene saber exactamente qué te entrega Sportmaster por la cifra del catálogo. Es el detalle donde muchas cotizaciones aparentemente más baratas terminan saliendo más caras.</p>
 
-      <p><strong>El precio sí incluye:</strong></p>
-      <ul>
-        <li>Estructura completa en PTR (perfil tubular rectangular) calibre certificado, ensamblada en planta</li>
-        <li>Recubrimiento anticorrosivo de fondo + pintura de esmalte (color estándar verde, amarillo, azul, gris o blanco)</li>
-        <li>Techo en lona, policarbonato o lámina galvanizada según modelo elegido</li>
-        <li>Ficha técnica en PDF con dimensiones, materiales y especificaciones</li>
-        <li>Garantía escrita por estructura y acabado</li>
-        <li>Embalaje seguro para tránsito en camión</li>
-      </ul>
-
-      <p><strong>El precio NO incluye:</strong></p>
-      <ul>
-        <li>IVA (16% adicional)</li>
-        <li>Flete a la obra (se cotiza por destino)</li>
-        <li>Maniobra de instalación en sitio</li>
-        <li>Dados de concreto de cimentación (los hace el cliente con sus albañiles o se cotizan aparte)</li>
-        <li>Memoria de cálculo firmada por ingeniero (solo incluida en modelo INIFED)</li>
-        <li>Personalizaciones: colores especiales, logo serigrafiado en techo, asientos individuales</li>
-      </ul>
+      <div class="incl-split">
+        <div class="incl-box yes">
+          <div class="incl-box-h"><span class="icon">✓</span>Incluye en el precio</div>
+          <ul class="incl-list">
+            <li>Estructura completa en PTR ensamblada en planta</li>
+            <li>Recubrimiento anticorrosivo + pintura de esmalte (color estándar)</li>
+            <li>Techo en lona, policarbonato o lámina galvanizada según modelo</li>
+            <li>Ficha técnica en PDF con dimensiones y especificaciones</li>
+            <li>Garantía escrita por estructura y acabado</li>
+            <li>Embalaje seguro para tránsito en camión</li>
+          </ul>
+        </div>
+        <div class="incl-box no">
+          <div class="incl-box-h"><span class="icon">×</span>NO incluye</div>
+          <ul class="incl-list">
+            <li>IVA (16% adicional al precio de catálogo)</li>
+            <li>Flete a la obra (se cotiza por destino desde CDMX)</li>
+            <li>Maniobra de instalación en sitio</li>
+            <li>Dados de concreto de cimentación</li>
+            <li>Memoria de cálculo firmada (solo incluida en modelo INIFED)</li>
+            <li>Personalizaciones: colores especiales, logo en techo, asientos individuales</li>
+          </ul>
+        </div>
+      </div>
 
       <h2>Los 5 factores que afectan el costo final</h2>
 
       <p>Si comparas dos cotizaciones del mismo "tamaño" de grada y ves una diferencia grande, casi siempre la explicación está en uno de estos cinco puntos. Vale la pena pedir el desglose.</p>
 
-      <h3>1. Capacidad (más espectadores = más material)</h3>
-      <p>El factor más obvio: cuantos más asientos, más metros lineales de PTR, más superficie de techo y más placas de cimentación. El salto de capacidad <strong>no es lineal</strong>: una grada de 50 personas no cuesta 50% más que una de 35, porque la estructura base ya está optimizada. Donde sí salta el precio es de 75 a 150 personas, porque cambian a doble módulo (de 10 a 20 metros de largo).</p>
-
-      <h3>2. Material del techo (lona vs policarbonato vs galvanizada)</h3>
-      <p>El techo es el componente que más mueve el precio entre dos gradas del mismo aforo. Cada material tiene su uso:</p>
-      <ul>
-        <li><strong>Lona PVC reforzado:</strong> la opción más económica y la más vendida. Aguanta 8-10 años a la intemperie. Buena para canchas privadas, clubes y obras con presupuesto ajustado.</li>
-        <li><strong>Policarbonato 6 mm:</strong> traslúcido, deja pasar luz natural, resiste impactos de granizo y UV. Se elige para escuelas, INIFED y proyectos donde se quiere visibilidad superior. Sube el precio entre 12% y 16%.</li>
-        <li><strong>Lámina galvanizada:</strong> la más resistente a viento extremo y a vandalismo. Se prefiere en municipios, espacios públicos sin vigilancia y zonas costeras. Mismo precio que lona en formato 150 personas porque compensa el calibre.</li>
-      </ul>
-
-      <h3>3. Ubicación de la obra (flete varía $5,000-$25,000 MXN)</h3>
-      <p>Sportmaster fabrica en Monterrey, Nuevo León. Desde ahí se factura el flete según distancia: <strong>$5,000-$10,000 MXN</strong> al norte del país (Coahuila, Tamaulipas, Chihuahua, Sinaloa), <strong>$12,000-$18,000 MXN</strong> al centro (CDMX, Querétaro, Guadalajara, Bajío) y <strong>$18,000-$25,000 MXN</strong> al sureste (Yucatán, Chiapas, Oaxaca, Quintana Roo). En modelos grandes de 150 personas se usa camión torton y eso bordea el extremo superior del rango.</p>
-
-      <h3>4. Instalación (depende de acceso del camión y si requiere dados nuevos)</h3>
-      <p>La instalación promedio toma 3-5 días con cuadrilla de 3-4 personas. El cliente puede contratar a nuestra cuadrilla viajera (sube el costo entre $15,000 y $40,000 MXN según modelo y distancia) o usar albañiles locales que sigan los planos. Si la obra requiere abrir y colar dados nuevos de concreto, hay que sumar entre $1,500 y $3,500 MXN por dado (cada grada usa entre 6 y 12 dados).</p>
-
-      <h3>5. Personalización (color, logo, certificación INIFED extra)</h3>
-      <p>Los colores estándar no suben el precio. Si el cliente pide colores institucionales fuera de catálogo (RAL específico, tonos pantone exactos) se suma entre $3,000 y $8,000 MXN por el cambio de tanda en pintura. Un logo serigrafiado en la lona del techo cuesta entre $4,500 y $9,000 MXN según tamaño. Y certificación INIFED post-hoc (sobre un modelo estándar) sube entre $15,000 y $22,000 MXN porque implica memoria firmada por estructurista externo.</p>
+      <div class="factor-list">
+        <div class="factor-card">
+          <div class="factor-num">1</div>
+          <div class="factor-body">
+            <h4>Capacidad · más espectadores = más material</h4>
+            <p>El factor más obvio: más asientos, más metros lineales de estructura, más superficie de techo y más dados de cimentación. El salto NO es lineal: una grada de 50p no cuesta 50% más que una de 35p porque la base ya está optimizada. Donde sí salta el precio es de 75p a 150p, porque cambia a doble módulo (10 m → 20 m de largo).</p>
+          </div>
+        </div>
+        <div class="factor-card">
+          <div class="factor-num">2</div>
+          <div class="factor-body">
+            <h4>Material del techo · lona vs policarbonato vs galvanizada</h4>
+            <p>El componente que más mueve el precio entre dos gradas del mismo aforo. <strong>Lona PVC:</strong> la más económica y vendida; ideal para canchas privadas y clubes. <strong>Policarbonato:</strong> traslúcido, resiste granizo y UV; elegido para escuelas e INIFED. <strong>Galvanizada:</strong> la más resistente a viento extremo y vandalismo; preferida para municipios y zonas costeras.</p>
+          </div>
+        </div>
+        <div class="factor-card">
+          <div class="factor-num">3</div>
+          <div class="factor-body">
+            <h4>Ubicación · flete desde planta CDMX</h4>
+            <p>Sportmaster fabrica en <strong>CDMX</strong>. El flete se calcula por zona del país desde ahí: Valle de México $5K–$8K · Bajío $8K–$12K · Occidente $12K–$18K · Norte $18K–$25K · Sureste $18K–$25K. Se cotiza en firme con dirección exacta y modelo. En modelos de 150p se usa camión torton y eso bordea el extremo superior del rango.</p>
+          </div>
+        </div>
+        <div class="factor-card">
+          <div class="factor-num">4</div>
+          <div class="factor-body">
+            <h4>Instalación · acceso del camión y dados de concreto</h4>
+            <p>La instalación promedio toma 3–5 días con cuadrilla de 3–4 personas. El cliente puede contratar cuadrilla viajera Sportmaster o usar albañiles locales que sigan los planos. Si la obra requiere abrir y colar dados nuevos de concreto, se cotiza aparte: cada grada usa entre 6 y 12 dados según modelo.</p>
+          </div>
+        </div>
+        <div class="factor-card">
+          <div class="factor-num">5</div>
+          <div class="factor-body">
+            <h4>Personalización · color, logo y certificación</h4>
+            <p>Los colores estándar (verde, amarillo, azul, gris, blanco) NO suben el precio. Si pides colores institucionales fuera de catálogo (RAL/Pantone específico) hay un cambio de tanda en pintura. Logo serigrafiado en la lona del techo se cotiza por tamaño. Y certificación INIFED post-hoc (sobre un modelo estándar) se cotiza aparte porque implica memoria firmada por estructurista externo.</p>
+          </div>
+        </div>
+      </div>
 
       <a href="/blog/como-elegir-capacidad-grada-cancha-futbol/" class="blog-il">
         <img src="/assets/img/grada-75p-lona.webp" alt="Cómo elegir la capacidad correcta de grada" class="blog-il-img" loading="lazy">
@@ -345,31 +593,46 @@
 
       <p>Si llegaste a este artículo con un presupuesto en mente, esta sección es para ti. Agrupamos los modelos por rango y explicamos cuándo conviene cada uno.</p>
 
-      <h3>Presupuesto bajo (menos de $80,000 MXN)</h3>
-      <p>El rango más solicitado por canchas privadas pequeñas, club de barrio y academias en arranque. Los modelos que caben aquí:</p>
-      <ul>
-        <li><strong>Gradas Móviles 12 Asientos — $49,500 MXN.</strong> Llevables con ruedas, ideales para academias que arman torneos puntuales y necesitan mover graderías entre canchas. Sin techo, pero compactas y robustas.</li>
-        <li><strong>Grada Flex 35 Lona — $78,000 MXN.</strong> Diseñada para encajar al lado de una cancha de pádel (5 m de largo). También funciona en canchas chicas de fútbol 5.</li>
-        <li><strong>Grada 35 Lona — $78,000 MXN.</strong> El formato estándar de 10 m, ideal para fútbol 7 amateur, escuelas privadas pequeñas y centros deportivos comunitarios.</li>
-      </ul>
-
-      <h3>Presupuesto medio ($80,000 a $150,000 MXN)</h3>
-      <p>El rango más popular: cubre el 70% de las ventas. Aquí entran clubes consolidados, escuelas privadas medianas, municipios y obras INIFED.</p>
-      <ul>
-        <li><strong>Grada 50 Lona — $99,500 MXN.</strong> La más vendida en el rango medio. Aforo cómodo para fútbol 7 con torneos juveniles y partidos categoría adulta.</li>
-        <li><strong>Grada INIFED 50 — $105,000 MXN.</strong> Obligatoria para escuelas públicas con fondos federales. Memoria de cálculo firmada, planos EST-101 y cumplimiento NTC.</li>
-        <li><strong>Grada 75 Lona — $118,000 MXN.</strong> El sweet spot precio/capacidad. Ideal para fútbol 7 con público amplio, fútbol 11 amateur y eventos de torneo.</li>
-        <li><strong>Grada 75 Policarbonato — $135,000 MXN.</strong> Para escuelas premium, clubes deportivos privados y proyectos donde se busca techumbre traslúcida con luz natural.</li>
-        <li><strong>Grada 100 Techo Recto — $138,000 MXN.</strong> Configuración con techo recto en lugar de curvo, para arquitecturas que requieren ese perfil específico (ligas semipro, hoteles, condominios).</li>
-      </ul>
-
-      <h3>Presupuesto alto (más de $150,000 MXN)</h3>
-      <p>Aquí entran proyectos grandes: complejos deportivos completos, ligas semiprofesionales, universidades, centros municipales con dos canchas.</p>
-      <ul>
-        <li><strong>Grada 150 Lona — $245,000 MXN.</strong> Doble módulo de 20 metros, capacidad para tribuna principal de cancha de fútbol 11.</li>
-        <li><strong>Grada 150 Galvanizada — $245,000 MXN.</strong> Misma capacidad pero con techumbre en lámina galvanizada para zonas de viento extremo o vandalismo alto.</li>
-        <li><strong>Complejo de varias gradas:</strong> muchos clientes con presupuestos arriba de $400,000 MXN combinan dos o tres gradas (por ejemplo 75 + 75 enfrentadas) para crear tribuna doble. El descuento por volumen va del 5% al 10%.</li>
-      </ul>
+      <div class="budget-grid">
+        <div class="budget-card low">
+          <div class="budget-head">
+            <div class="budget-tier">Presupuesto bajo</div>
+            <div class="budget-range">&lt; $80,000 MXN</div>
+            <p class="budget-sub">Canchas privadas pequeñas · clubes de barrio · academias en arranque</p>
+          </div>
+          <ul class="budget-models">
+            <li><strong>Gradas Móviles 12</strong><span class="b-price">$49,500 MXN</span> Con ruedas, sin techo. Mueves entre canchas para torneos puntuales.</li>
+            <li><strong>Grada Flex 35 · Lona</strong><span class="b-price">$78,000 MXN</span> 5 m de largo, encaja al lado de pádel y fútbol 5.</li>
+            <li><strong>Grada 35 · Lona</strong><span class="b-price">$78,000 MXN</span> Formato estándar de 10 m para fútbol 7 amateur.</li>
+          </ul>
+        </div>
+        <div class="budget-card mid">
+          <div class="budget-head">
+            <div class="budget-tier">Presupuesto medio · más popular</div>
+            <div class="budget-range">$80K – $150K MXN</div>
+            <p class="budget-sub">Clubes consolidados · escuelas privadas medianas · municipios · obras INIFED</p>
+          </div>
+          <ul class="budget-models">
+            <li><strong>Grada 50 · Lona</strong><span class="b-price">$99,500 MXN</span> La más vendida del rango medio.</li>
+            <li><strong>Grada INIFED 50</strong><span class="b-price">$105,000 MXN</span> Obligatoria para escuelas públicas con fondos federales.</li>
+            <li><strong>Grada 75 · Lona</strong><span class="b-price">$118,000 MXN</span> Sweet spot precio/capacidad.</li>
+            <li><strong>Grada 75 · Policarbonato</strong><span class="b-price">$135,000 MXN</span> Para escuelas premium y clubes privados.</li>
+            <li><strong>Grada 100 · Recto</strong><span class="b-price">$138,000 MXN</span> Configuración con techo recto.</li>
+          </ul>
+        </div>
+        <div class="budget-card high">
+          <div class="budget-head">
+            <div class="budget-tier">Presupuesto alto</div>
+            <div class="budget-range">&gt; $150,000 MXN</div>
+            <p class="budget-sub">Complejos deportivos · ligas semipro · universidades · centros municipales</p>
+          </div>
+          <ul class="budget-models">
+            <li><strong>Grada 150 · Lona</strong><span class="b-price">$245,000 MXN</span> Doble módulo 20 m, tribuna principal F11.</li>
+            <li><strong>Grada 150 · Galvanizada</strong><span class="b-price">$245,000 MXN</span> Misma capacidad, techo de lámina para clima extremo.</li>
+            <li><strong>Complejo combinado</strong><span class="b-price">desde $400K MXN</span> 2 ó 3 gradas enfrentadas para tribuna doble.</li>
+          </ul>
+        </div>
+      </div>
 
       <div class="wa-mid">
         <div class="wa-mid-body">
@@ -386,17 +649,24 @@
 
       <p>Es la pregunta recurrente: <em>"vi una grada de 50 personas en $75,000, ¿por qué la suya cuesta $99,500?"</em>. La respuesta corta es que el aforo nominal no es el único parámetro que define una grada. Hay cuatro puntos donde se mueve el costo real.</p>
 
-      <h3>Calidad de materiales y acabados</h3>
-      <p>La calidad del acero estructural, del policarbonato y del acabado anticorrosivo + pintura de esmalte impacta directamente la durabilidad de la grada a la intemperie. Las diferencias entre un material certificado y uno genérico no se ven en la fotografía, pero sí cuando llueve cinco años seguidos.</p>
-
-      <h3>Ingeniería (solo aplica a gradas INIFED)</h3>
-      <p>Únicamente las gradas <strong>INIFED</strong> requieren memoria de cálculo estructural firmada por ingeniero civil titulado y verificación en software profesional. Para obra pública (INIFED, SEP, FONE, "La Escuela es Nuestra") esta documentación es obligatoria y la auditoría rechaza la entrega sin ella. Para obra privada estándar no se requiere — por eso el modelo INIFED 50P cuesta más que la versión estándar del mismo aforo.</p>
-
-      <h3>Fabricación (taller propio vs subcontratado)</h3>
-      <p>Sportmaster fabrica en taller propio en CDMX con cuadrillas en planta. Eso permite controlar calidad de soldadura, geometría y acabado. Los proveedores que subcontratan fabricación pierden control del proceso y los acabados varían entre lotes. Cuando una grada llega torcida o con soldaduras visibles, el problema viene de ahí.</p>
-
-      <h3>Garantía (escrita vs verbal)</h3>
-      <p>Una garantía verbal no es garantía. Pedir por escrito el alcance (estructura, pintura, techo) y la duración es la mejor protección. Si el proveedor evita ponerlo en la factura, la diferencia de precio se explica sola.</p>
+      <div class="why-grid">
+        <div class="why-card">
+          <h4><span class="dot"></span>Calidad de materiales y acabados</h4>
+          <p>Acero estructural, policarbonato y acabado anticorrosivo + pintura de esmalte. Un material certificado vs genérico no se ve en la foto — pero sí cuando llueve cinco años seguidos.</p>
+        </div>
+        <div class="why-card">
+          <h4><span class="dot"></span>Ingeniería (solo aplica a INIFED)</h4>
+          <p>Únicamente las gradas <strong>INIFED</strong> requieren memoria de cálculo firmada por ingeniero. Para obra privada estándar NO se requiere — por eso INIFED cuesta más que la versión estándar del mismo aforo.</p>
+        </div>
+        <div class="why-card">
+          <h4><span class="dot"></span>Fabricación · taller propio vs subcontratado</h4>
+          <p>Sportmaster fabrica en taller propio en <strong>CDMX</strong> con cuadrillas en planta. Eso controla calidad de soldadura, geometría y acabado. Quien subcontrata pierde control del proceso y los acabados varían entre lotes.</p>
+        </div>
+        <div class="why-card">
+          <h4><span class="dot"></span>Garantía · escrita vs verbal</h4>
+          <p>Una garantía verbal NO es garantía. Pedir por escrito el alcance (estructura, pintura, techo) y la duración es la mejor protección. Si el proveedor evita ponerlo en factura, la diferencia de precio se explica sola.</p>
+        </div>
+      </div>
 
       <a href="/blog/gradas-inifed-normativa-que-cumplen/" class="blog-il">
         <img src="/assets/img/grada-inifed-50p.png" alt="Gradas INIFED normativa que cumplen en México" class="blog-il-img" loading="lazy">
@@ -409,22 +679,34 @@
 
       <h2>Preguntas frecuentes</h2>
 
-      <h3>¿Por qué tu grada de 35 personas cuesta lo mismo que la Flex 35 de pádel?</h3>
-      <p>Ambas tienen la misma capacidad (35 espectadores) y la misma estructura de PTR con techo curvo, pero cambian las dimensiones: la versión pádel mide <strong>5 metros</strong> de largo para encajar al costado de una cancha de pádel, mientras la estándar mide <strong>10 metros</strong> para canchas de fútbol. El acero usado es similar en peso, por eso el precio coincide: <strong>$78,000 MXN</strong> en lona y <strong>$88,000 MXN</strong> en policarbonato. Lo que cambia es la geometría, no el costo de manufactura.</p>
-
-      <h3>¿Cuánto cuesta el flete aproximado?</h3>
-      <p>El flete se cotiza por distancia desde <strong>planta CDMX</strong> al destino final, en firme al confirmar dirección exacta y modelo. Como referencia aproximada por zona del país:</p>
-      <ul>
-        <li><strong>Valle de México y Estado de México:</strong> $5,000–$8,000 MXN</li>
-        <li><strong>Bajío y centro</strong> (Querétaro, Hidalgo, Puebla, Tlaxcala, Morelos): $8,000–$12,000 MXN</li>
-        <li><strong>Occidente y costa central</strong> (Jalisco, Michoacán, Veracruz, Guerrero): $12,000–$18,000 MXN</li>
-        <li><strong>Norte</strong> (Nuevo León, Coahuila, Tamaulipas, Chihuahua, Sonora, BCS): $18,000–$25,000 MXN</li>
-        <li><strong>Sureste</strong> (Yucatán, Quintana Roo, Chiapas, Tabasco, Oaxaca): $18,000–$25,000 MXN</li>
-      </ul>
-      <p>El flete corre por cuenta del cliente y se factura aparte.</p>
-
-      <h3>¿Los precios de 2026 incluyen el IVA?</h3>
-      <p>No. Todos los precios del catálogo son <strong>más IVA del 16%</strong>. Tampoco incluyen flete ni instalación, que se cotizan aparte. Para obra pública emitimos factura con desglose completo (estructura, fletes, maniobra) según necesite el área administrativa.</p>
+      <div class="faq-acc">
+        <details>
+          <summary>¿Por qué tu grada de 35 personas cuesta lo mismo que la Flex 35 de pádel?</summary>
+          <div class="faq-body">
+            <p>Ambas tienen la misma capacidad (35 espectadores) y la misma estructura con techo curvo, pero cambian las dimensiones: la versión pádel mide <strong>5 metros</strong> de largo para encajar al costado de una cancha de pádel, mientras la estándar mide <strong>10 metros</strong> para canchas de fútbol. El acero usado es similar en peso, por eso el precio coincide: <strong>$78,000 MXN</strong> en lona y <strong>$88,000 MXN</strong> en policarbonato. Lo que cambia es la geometría, no el costo de manufactura.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Cuánto cuesta el flete aproximado?</summary>
+          <div class="faq-body">
+            <p>El flete se cotiza por distancia desde <strong>planta CDMX</strong> al destino final, en firme al confirmar dirección exacta y modelo. Como referencia aproximada por zona del país:</p>
+            <ul>
+              <li><strong>Valle de México y EdoMex:</strong> $5,000 – $8,000 MXN</li>
+              <li><strong>Bajío y centro</strong> (QRO, HGO, PUE, TLAX, MOR): $8,000 – $12,000 MXN</li>
+              <li><strong>Occidente y costa central</strong> (JAL, MICH, VER, GRO): $12,000 – $18,000 MXN</li>
+              <li><strong>Norte</strong> (NL, COA, TAM, CHIH, SON, BCS): $18,000 – $25,000 MXN</li>
+              <li><strong>Sureste</strong> (YUC, QR, CHIS, TAB, OAX): $18,000 – $25,000 MXN</li>
+            </ul>
+            <p>El flete corre por cuenta del cliente y se factura aparte.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Los precios de 2026 incluyen el IVA?</summary>
+          <div class="faq-body">
+            <p>No. Todos los precios del catálogo son <strong>más IVA del 16%</strong>. Tampoco incluyen flete ni instalación, que se cotizan aparte. Para obra pública emitimos factura con desglose completo (estructura, fletes, maniobra) según necesite el área administrativa.</p>
+          </div>
+        </details>
+      </div>
 
       <h2>Conclusión</h2>
 
