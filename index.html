@@ -349,47 +349,200 @@ footer{background:#060B17;color:rgba(255,255,255,0.65);padding:4rem 1.5rem 2rem;
   .proof-inner{gap:1.25rem}
   .proof-num{font-size:1.85rem}
 }
+
+/* ======================================================
+   HERO V2 — Specs Olga (Sportmaster premium)
+   ====================================================== */
+:root{
+  --sm-green:#67C52E;
+  --sm-green-hover:#5AB027;
+  --sm-text:#09111F;
+  --sm-subtle:#4D5562;
+  --sm-stat-label:#5D6470;
+}
+
+/* NAVBAR V2 */
+.nav-v2{position:fixed;top:0;left:0;right:0;z-index:200;height:88px;background:rgba(255,255,255,.86);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,0,0,.04)}
+.nav-v2-in{max-width:1440px;height:88px;margin:0 auto;padding:0 56px;display:flex;align-items:center;justify-content:space-between;gap:32px}
+.nav-v2-logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
+.nav-v2-logo img{height:38px;width:auto;display:block}
+.nav-v2-logo-text{display:flex;flex-direction:column;line-height:1}
+.nav-v2-logo-name{font-family:'Archivo Black',sans-serif;font-size:18px;color:var(--sm-text);letter-spacing:-.01em}
+.nav-v2-logo-tag{font-size:9px;font-weight:700;letter-spacing:.16em;color:var(--sm-green);text-transform:uppercase;margin-top:3px}
+.nav-v2-links{display:flex;align-items:center;gap:36px}
+.nav-v2-links a{font-size:14px;font-weight:700;letter-spacing:.04em;color:var(--sm-text);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-v2-links a:hover{color:var(--sm-green)}
+.nav-v2-cta{display:inline-flex;align-items:center;gap:10px;background:var(--sm-green);color:#fff;font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:14px 24px;border-radius:14px;text-decoration:none;box-shadow:0 10px 30px rgba(103,197,46,.22);transition:all .2s;white-space:nowrap}
+.nav-v2-cta:hover{background:var(--sm-green-hover);transform:translateY(-1px);box-shadow:0 14px 36px rgba(103,197,46,.32)}
+.nav-v2-cta svg{width:16px;height:16px;flex-shrink:0}
+@media(max-width:1024px){.nav-v2-in{padding:0 24px;gap:16px}.nav-v2-links{display:none}}
+
+/* HERO V2 */
+.hero-v2{position:relative;min-height:100vh;padding:110px 56px 0;max-width:1440px;margin:0 auto;display:grid;grid-template-columns:42% 58%;align-items:start;overflow:visible}
+.hero-v2-text{padding:36px 48px 60px 0;display:flex;flex-direction:column;justify-content:center;min-height:calc(100vh - 110px)}
+.hero-v2-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--sm-green);margin-bottom:28px;align-self:flex-start}
+.hero-v2-eyebrow::before{content:"●";font-size:8px;color:var(--sm-green)}
+.hero-v2-headline{font-family:'Archivo Black',sans-serif;font-size:clamp(46px,5.4vw,76px);line-height:1.02;letter-spacing:-.035em;color:var(--sm-text);margin-bottom:26px;font-weight:900}
+.hero-v2-headline .acento{color:var(--sm-green)}
+.hero-v2-sub{font-size:21px;line-height:1.6;font-weight:450;color:var(--sm-subtle);max-width:620px;margin-bottom:34px}
+.hero-v2-ctas{display:flex;gap:14px;align-items:center;margin-bottom:34px;flex-wrap:wrap}
+.hero-v2-btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--sm-green);color:#fff;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:18px 28px;border-radius:16px;text-decoration:none;box-shadow:0 10px 30px rgba(103,197,46,.22);transition:all .2s}
+.hero-v2-btn-primary:hover{background:var(--sm-green-hover);transform:translateY(-2px);box-shadow:0 14px 38px rgba(103,197,46,.32)}
+.hero-v2-btn-primary svg{width:18px;height:18px;flex-shrink:0}
+.hero-v2-btn-secondary{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.82);border:1px solid rgba(0,0,0,.08);color:var(--sm-text);font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;padding:18px 28px;border-radius:16px;text-decoration:none;transition:all .2s}
+.hero-v2-btn-secondary:hover{background:#fff;transform:translateY(-1px);box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.hero-v2-btn-secondary svg{width:16px;height:16px}
+.hero-v2-features{display:flex;gap:38px;flex-wrap:wrap;margin-top:8px}
+.hero-v2-feat{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;max-width:84px}
+.hero-v2-feat-icon{width:28px;height:28px;color:var(--sm-green);flex-shrink:0}
+.hero-v2-feat-icon svg{width:28px;height:28px;stroke-width:1.8;stroke:var(--sm-green);fill:none;stroke-linecap:round;stroke-linejoin:round}
+.hero-v2-feat-label{font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--sm-text);text-transform:uppercase;line-height:1.25}
+.hero-v2-img-wrap{position:relative;align-self:stretch;min-height:calc(100vh - 110px);overflow:visible}
+.hero-v2-img{position:absolute;top:0;left:0;width:115%;height:100%;object-fit:cover;object-position:center right;border-radius:0}
+
+/* Hero stats card glass (abajo del hero, absolute bottom) */
+.hero-v2-stats{position:absolute;left:56px;right:56px;bottom:60px;z-index:5;background:rgba(255,255,255,.86);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:28px;padding:34px 44px;box-shadow:0 30px 60px rgba(0,0,0,.08);display:grid;grid-template-columns:repeat(5,1fr);gap:32px;align-items:center}
+.hero-v2-stat{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
+.hero-v2-stat:not(:last-child)::after{content:"";position:absolute;right:-16px;top:50%;transform:translateY(-50%);width:1px;height:48px;background:rgba(0,0,0,.06)}
+.hero-v2-stat-num{font-family:'Archivo Black',sans-serif;font-size:52px;font-weight:900;letter-spacing:-.04em;color:var(--sm-green);line-height:1}
+.hero-v2-stat-num.text{font-size:42px}
+.hero-v2-stat-divider{width:24px;height:2px;background:var(--sm-green);margin:8px 0;border-radius:2px}
+.hero-v2-stat-label{font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--sm-stat-label);text-transform:uppercase;line-height:1.3}
+
+/* Hero scroll arrow */
+.hero-v2-scroll{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);z-index:6;width:38px;height:38px;background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.06);animation:scrollBounce 2s ease-in-out infinite}
+.hero-v2-scroll svg{width:18px;height:18px;color:var(--sm-text)}
+@keyframes scrollBounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+/* RESPONSIVE HERO V2 */
+@media(max-width:1100px){
+  .hero-v2{padding:110px 32px 0;grid-template-columns:48% 52%}
+  .hero-v2-text{padding:24px 28px 60px 0}
+  .hero-v2-stats{left:32px;right:32px;padding:26px 28px;gap:18px}
+  .hero-v2-stat-num{font-size:42px}
+  .hero-v2-stat-num.text{font-size:32px}
+  .hero-v2-stat-label{font-size:11px}
+}
+@media(max-width:880px){
+  .hero-v2{padding:104px 20px 40px;grid-template-columns:1fr;min-height:auto}
+  .hero-v2-text{padding:0;min-height:auto}
+  .hero-v2-headline{font-size:clamp(38px,8.5vw,52px)}
+  .hero-v2-sub{font-size:17px}
+  .hero-v2-img-wrap{min-height:340px;margin-top:32px;border-radius:24px;overflow:hidden}
+  .hero-v2-img{position:relative;width:100%;height:340px}
+  .hero-v2-features{gap:22px;justify-content:space-between}
+  .hero-v2-feat{max-width:64px;gap:6px}
+  .hero-v2-feat-label{font-size:10px}
+  .hero-v2-stats{position:relative;left:auto;right:auto;bottom:auto;margin-top:24px;grid-template-columns:repeat(2,1fr);gap:24px;padding:22px}
+  .hero-v2-stat:not(:last-child)::after{display:none}
+  .hero-v2-stat:nth-child(5){grid-column:1/-1}
+  .hero-v2-scroll{display:none}
+}
+@media(max-width:480px){
+  .hero-v2-ctas{flex-direction:column;align-items:stretch}
+  .hero-v2-btn-primary,.hero-v2-btn-secondary{justify-content:center}
+}
 </style>
 </head>
 <body>
 
-<!-- Nav -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="/" class="logo" aria-label="Sportmaster — Gradas de Fútbol Metálicas"><img src="/assets/logo-sportmaster.webp" alt="Logo Sportmaster México" width="160" height="42" onerror="this.style.display='none';this.parentElement.innerHTML='<span class=\'logo-fallback\'>SPORT<span>MASTER</span></span>'"></a>
-    <div class="nav-links">
+<!-- NAVBAR V2 -->
+<nav class="nav-v2">
+  <div class="nav-v2-in">
+    <a href="/" class="nav-v2-logo" aria-label="Sportmaster Gradas Deportivas">
+      <img src="/assets/logo-sportmaster.webp" alt="Logo Sportmaster">
+    </a>
+    <div class="nav-v2-links">
       <a href="#top3">Top 3</a>
       <a href="#catalogo">Catálogo</a>
       <a href="#inifed">INIFED</a>
+      <a href="#nosotros">Nosotros</a>
       <a href="/blog/">Blog</a>
       <a href="#faq">FAQ</a>
-      <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20una%20grada%20deportiva" class="btn btn-primary">Cotizar</a>
     </div>
+    <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20una%20grada%20deportiva" class="nav-v2-cta" target="_blank" rel="noopener">
+      Cotizar
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.458-1.495A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+    </a>
   </div>
 </nav>
 
-<!-- Hero -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-badge">Fábrica directa · 17 años · 500+ proyectos en México</div>
-    <h1>Gradas de Fútbol Metálicas <span class="acento">con Techo</span>,<br>para Cancha o Estadio</h1>
-    <p class="hero-sub">Fabricamos gradas deportivas de 35 a 150 personas con medidas certificadas INIFED. Acero galvanizado para exteriores · 17 años fabricando en México · 500+ proyectos entregados en 32 estados.</p>
-    <div class="hero-cta">
-      <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20una%20grada%20deportiva%20para%20mi%20cancha" class="btn btn-primary">Cotizar por WhatsApp</a>
-      <a href="#top3" class="btn btn-outline">Ver top 3 modelos</a>
+<!-- HERO V2 -->
+<section class="hero-v2">
+  <div class="hero-v2-text">
+    <div class="hero-v2-eyebrow">Fábrica directa · 17 años · 500+ proyectos en México</div>
+    <h1 class="hero-v2-headline">Gradas que<br>hacen que tu<br><span class="acento">cancha</span> se vea<br>profesional.</h1>
+    <p class="hero-v2-sub">Diseñamos y fabricamos gradas deportivas de 35 a 150 personas con medidas certificadas INIFED.<br><br>Calidad que se nota.<br>Durabilidad que permanece.</p>
+    <div class="hero-v2-ctas">
+      <a href="https://wa.me/5218116296384?text=Hola!%20Quiero%20cotizar%20una%20grada%20deportiva%20para%20mi%20cancha" class="hero-v2-btn-primary" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.458-1.495A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+        Cotizar por WhatsApp
+      </a>
+      <a href="#top3" class="hero-v2-btn-secondary">
+        Ver modelos
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="hero-v2-features">
+      <div class="hero-v2-feat">
+        <span class="hero-v2-feat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <span class="hero-v2-feat-label">35 a 150<br>personas</span>
+      </div>
+      <div class="hero-v2-feat">
+        <span class="hero-v2-feat-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        <span class="hero-v2-feat-label">Acero<br>galvanizado</span>
+      </div>
+      <div class="hero-v2-feat">
+        <span class="hero-v2-feat-icon"><svg viewBox="0 0 24 24"><path d="M3 12l2-2 7-7 7 7 2 2"/><path d="M5 12v9h14v-9"/></svg></span>
+        <span class="hero-v2-feat-label">Techos<br>resistentes</span>
+      </div>
+      <div class="hero-v2-feat">
+        <span class="hero-v2-feat-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-7h6v7"/></svg></span>
+        <span class="hero-v2-feat-label">Fabricado<br>en México</span>
+      </div>
+      <div class="hero-v2-feat">
+        <span class="hero-v2-feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/><path d="M2 12h4M18 12h4"/></svg></span>
+        <span class="hero-v2-feat-label">Instalación<br>nacional</span>
+      </div>
     </div>
   </div>
-</section>
-
-<!-- Social proof bar -->
-<section class="proof-bar" style="padding:2.25rem 1.5rem">
-  <div class="proof-inner">
-    <div class="proof-item"><div class="proof-num">17+</div><div class="proof-lbl">Años fabricando</div></div>
-    <div class="proof-item"><div class="proof-num">500+</div><div class="proof-lbl">Proyectos entregados</div></div>
-    <div class="proof-item"><div class="proof-num">32</div><div class="proof-lbl">Estados con obras</div></div>
-    <div class="proof-item"><div class="proof-num">&lt;1h</div><div class="proof-lbl">Respuesta WhatsApp</div></div>
-    <div class="proof-item"><div class="proof-num">INIFED</div><div class="proof-lbl">Modelo certificado</div></div>
+  <div class="hero-v2-img-wrap">
+    <img src="/assets/img/grada-150p-lona.webp" alt="Grada de fútbol metálica Sportmaster con techo curvo blanco — capacidad 150 personas para estadio profesional" class="hero-v2-img" loading="eager" fetchpriority="high">
   </div>
+
+  <!-- Stats card glass abajo -->
+  <div class="hero-v2-stats">
+    <div class="hero-v2-stat">
+      <div class="hero-v2-stat-num">17+</div>
+      <div class="hero-v2-stat-divider"></div>
+      <div class="hero-v2-stat-label">Años<br>fabricando</div>
+    </div>
+    <div class="hero-v2-stat">
+      <div class="hero-v2-stat-num">500+</div>
+      <div class="hero-v2-stat-divider"></div>
+      <div class="hero-v2-stat-label">Proyectos<br>entregados</div>
+    </div>
+    <div class="hero-v2-stat">
+      <div class="hero-v2-stat-num">32</div>
+      <div class="hero-v2-stat-divider"></div>
+      <div class="hero-v2-stat-label">Estados<br>con obras</div>
+    </div>
+    <div class="hero-v2-stat">
+      <div class="hero-v2-stat-num">&lt;1H</div>
+      <div class="hero-v2-stat-divider"></div>
+      <div class="hero-v2-stat-label">Respuesta<br>WhatsApp</div>
+    </div>
+    <div class="hero-v2-stat">
+      <div class="hero-v2-stat-num text">INIFED</div>
+      <div class="hero-v2-stat-divider"></div>
+      <div class="hero-v2-stat-label">Modelo<br>certificado</div>
+    </div>
+  </div>
+
+  <!-- Scroll arrow -->
+  <a href="#top3" class="hero-v2-scroll" aria-label="Scroll a modelos">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+  </a>
 </section>
 
 <!-- Top 3 más vendidos -->
