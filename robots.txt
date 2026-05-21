@@ -1,10 +1,103 @@
+# Sportmaster — Gradas Deportivas | robots.txt
+# Last updated: 2026-05-21
+
+# ============================================
+# DEFAULT — todos los bots
+# ============================================
 User-agent: *
 Allow: /
+Disallow: /assets/img/*.bak
+Disallow: /assets/img/*.OLD-*
 
-# PDFs técnicos indexables
+# ============================================
+# GOOGLE — sin restricciones
+# ============================================
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+# ============================================
+# BING — sin restricciones (importante para indexación rápida)
+# ============================================
+User-agent: bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: msnbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+# ============================================
+# IA BOTS (LLMs) — permitidos para citaciones
+# ============================================
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# ============================================
+# OTROS BUSCADORES
+# ============================================
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# ============================================
+# CONTENIDO INDEXABLE EXPLÍCITO
+# ============================================
 Allow: /docs/
-
-# LLMs & AI
 Allow: /llms.txt
+Allow: /sitemap.xml
+Allow: /manifest.webmanifest
 
+# ============================================
+# SITEMAP
+# ============================================
 Sitemap: https://gradasdefutbol.mx/sitemap.xml
+
+# Host preference (algunos bots lo usan)
+Host: gradasdefutbol.mx
