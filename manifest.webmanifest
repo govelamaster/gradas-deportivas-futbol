@@ -1,0 +1,33 @@
+{
+  "name": "Sportmaster Gradas Deportivas",
+  "short_name": "Sportmaster",
+  "description": "Fabricante mexicano de gradas metálicas con techo. 17 años en México, 500+ proyectos entregados en 32 estados.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#67C52E",
+  "lang": "es-MX",
+  "dir": "ltr",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/logo-sportmaster.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/logo-sportmaster.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "shopping"]
+}
