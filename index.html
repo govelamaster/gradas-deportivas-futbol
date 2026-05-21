@@ -42,7 +42,7 @@
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50ojIa1ZL7.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50ojIYa1ZL7.woff2" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Archivo+Black&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <!-- Preload LCP assets (hero image + logo) -->
 <link rel="preload" as="image" href="/assets/img/grada-150p-lona.webp" fetchpriority="high">
@@ -164,8 +164,16 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans
 img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 
-/* Display font for hero + section titles */
-.display{font-family:'Archivo Black','Inter',sans-serif;font-weight:900;letter-spacing:-0.02em;line-height:1.05}
+/* Display font global — Inter 900 tight (NYC premium consistente con hero) */
+.display{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-weight:900;letter-spacing:-0.045em;line-height:1.0;font-feature-settings:'ss01','ss02','cv11'}
+
+/* HEADINGS GLOBAL — unifica tipografía con hero V2 */
+h1,h2,h3,h4{font-feature-settings:'ss01','ss02','cv11'}
+.section-title{font-family:'Inter',-apple-system,sans-serif!important;font-weight:900!important;letter-spacing:-0.045em!important;line-height:1.02!important}
+.section-eyebrow{background:#eafbef!important;color:#0a7a2e!important;border:1px solid rgba(10,122,46,0.18)!important}
+.top3-precio-num,.precio-valor,.proof-num,.top3-rank{font-family:'Inter',-apple-system,sans-serif;font-weight:900;letter-spacing:-0.045em}
+.top3-body h3,.grada-nombre{font-family:'Inter',-apple-system,sans-serif;font-weight:800;letter-spacing:-0.02em}
+.beneficio h3,.inifed-title{font-family:'Inter',-apple-system,sans-serif;font-weight:900;letter-spacing:-0.035em;line-height:1.1}
 
 /* Nav */
 .nav{position:sticky;top:0;z-index:100;background:rgba(15,23,42,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);padding:1rem 0}
@@ -173,7 +181,7 @@ a{color:inherit;text-decoration:none}
 .logo{display:inline-flex;align-items:center;background:#fff;padding:6px 14px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.12);transition:transform .2s}
 .logo:hover{transform:translateY(-1px)}
 .logo img{height:32px;width:auto;display:block}
-.logo-fallback{font-family:'Archivo Black',sans-serif;font-size:1.4rem;color:var(--blanco);letter-spacing:-0.02em}
+.logo-fallback{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:1.4rem;color:var(--blanco);letter-spacing:-0.02em}
 .logo-fallback span{color:var(--verde-sm)}
 .nav-links{display:flex;gap:2rem;align-items:center}
 .nav-links a{color:rgba(255,255,255,0.75);font-weight:500;font-size:0.95rem;transition:color .2s}
@@ -200,7 +208,7 @@ a{color:inherit;text-decoration:none}
 .hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);padding:0.55rem 1.1rem;border-radius:100px;font-size:0.85rem;font-weight:600;margin-bottom:1.5rem;backdrop-filter:blur(12px);color:var(--blanco)}
 .hero-badge::before{content:'';width:8px;height:8px;background:var(--lime);border-radius:50%;animation:pulse 2s infinite;box-shadow:0 0 12px var(--lime)}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-.hero h1{font-family:'Archivo Black',sans-serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:900;line-height:0.98;letter-spacing:-0.03em;margin-bottom:1.5rem;max-width:16ch}
+.hero h1{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:900;line-height:0.98;letter-spacing:-0.03em;margin-bottom:1.5rem;max-width:16ch}
 .hero h1 .acento{color:var(--naranja)}
 .hero-sub{font-size:clamp(1.05rem,1.5vw,1.25rem);color:rgba(255,255,255,0.85);max-width:62ch;margin-bottom:2.5rem;font-weight:400;line-height:1.55}
 .hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
@@ -210,7 +218,7 @@ a{color:inherit;text-decoration:none}
 .proof-bar{background:var(--negro-suave);color:var(--blanco);padding:2.25rem 1.5rem;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)}
 .proof-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem;text-align:center}
 .proof-item{display:flex;flex-direction:column;align-items:center;gap:0.25rem}
-.proof-num{font-family:'Archivo Black',sans-serif;font-size:2.25rem;color:var(--lime);line-height:1}
+.proof-num{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:2.25rem;color:var(--lime);line-height:1}
 .proof-lbl{font-size:0.85rem;color:rgba(255,255,255,0.7);font-weight:500;letter-spacing:0.02em}
 
 /* Secciones base */
@@ -218,7 +226,7 @@ section{padding:5rem 1.5rem}
 .container{max-width:1280px;margin:0 auto}
 .section-header{text-align:center;max-width:780px;margin:0 auto 3.5rem}
 .section-eyebrow{display:inline-block;font-size:0.8rem;font-weight:700;color:var(--naranja);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.9rem;padding:0.3rem 0.9rem;background:rgba(255,87,34,0.1);border-radius:100px}
-.section-title{font-family:'Archivo Black',sans-serif;font-size:clamp(1.85rem,3.75vw,2.85rem);color:var(--texto);line-height:1.1;letter-spacing:-0.02em;margin-bottom:1rem}
+.section-title{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:clamp(1.85rem,3.75vw,2.85rem);color:var(--texto);line-height:1.1;letter-spacing:-0.02em;margin-bottom:1rem}
 .section-sub{font-size:1.05rem;color:var(--texto-suave);max-width:65ch;margin:0 auto}
 
 /* Top 3 destacados */
@@ -227,14 +235,14 @@ section{padding:5rem 1.5rem}
 @media(max-width:900px){.top3-grid{grid-template-columns:1fr}}
 .top3-card{background:var(--blanco);border-radius:16px;overflow:hidden;box-shadow:var(--sombra);transition:all .3s;position:relative;display:flex;flex-direction:column}
 .top3-card:hover{transform:translateY(-6px);box-shadow:var(--sombra-hover)}
-.top3-rank{position:absolute;top:1.1rem;left:1.1rem;width:44px;height:44px;background:var(--negro);color:var(--lime);font-family:'Archivo Black',sans-serif;font-size:1.2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:2;box-shadow:0 4px 12px rgba(0,0,0,0.25)}
+.top3-rank{position:absolute;top:1.1rem;left:1.1rem;width:44px;height:44px;background:var(--negro);color:var(--lime);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:1.2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:2;box-shadow:0 4px 12px rgba(0,0,0,0.25)}
 .top3-img{aspect-ratio:4/3;background:var(--negro-suave);overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;color:var(--lime);font-weight:700;font-size:0.9rem}
 .top3-img img{width:100%;height:100%;object-fit:cover}
 .top3-body{padding:1.75rem 1.5rem;flex:1;display:flex;flex-direction:column}
 .top3-body h3{font-family:'Inter',-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;font-size:1.22rem;font-weight:600;color:var(--texto);line-height:1.18;margin-bottom:0.5rem;letter-spacing:-0.024em;font-feature-settings:'ss01','cv11','cv05';font-optical-sizing:auto;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .top3-tag{display:inline-block;font-size:0.7rem;font-weight:700;color:var(--negro);background:var(--lime);padding:0.2rem 0.6rem;border-radius:4px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.8rem;align-self:flex-start}
 .top3-precio{display:flex;align-items:baseline;gap:0.5rem;margin:1rem 0 1.25rem}
-.top3-precio-num{font-family:'Archivo Black',sans-serif;font-size:1.85rem;color:var(--texto);letter-spacing:-0.02em}
+.top3-precio-num{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:1.85rem;color:var(--texto);letter-spacing:-0.02em}
 .top3-precio-mxn{font-size:0.9rem;color:var(--texto-suave);font-weight:600}
 .top3-leyenda{font-size:0.75rem;color:var(--texto-suave);margin-bottom:1.25rem}
 .top3-features{list-style:none;margin-bottom:1.5rem;font-size:0.88rem}
@@ -247,9 +255,14 @@ section{padding:5rem 1.5rem}
 .beneficios{background:var(--blanco)}
 .beneficios-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
 .beneficio{background:var(--blanco);padding:2rem;border-radius:var(--radio);border:1px solid var(--gris-linea);transition:all .3s}
+.beneficios-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:880px){.beneficios-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.beneficios-grid{grid-template-columns:1fr}}
 .beneficio:hover{transform:translateY(-4px);box-shadow:var(--sombra);border-color:var(--naranja)}
-.beneficio-icon{width:52px;height:52px;background:var(--negro);color:var(--lime);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1rem;font-family:'Archivo Black',sans-serif;font-weight:900}
-.beneficio h3{font-family:'Archivo Black',sans-serif;font-size:1.1rem;margin-bottom:0.5rem;color:var(--texto);letter-spacing:-0.01em}
+.beneficio-icon{width:52px;height:52px;background:#eafbef;color:#0a7a2e;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;border:1px solid rgba(10,122,46,0.12);transition:all .3s}
+.beneficio:hover .beneficio-icon{background:#0a7a2e;color:#fff;transform:scale(1.05) rotate(-3deg)}
+.beneficio-icon svg{width:26px;height:26px;stroke-width:1.8;stroke:currentColor;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.beneficio h3{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:1.1rem;margin-bottom:0.5rem;color:var(--texto);letter-spacing:-0.01em}
 .beneficio p{color:var(--texto-suave);font-size:0.95rem}
 
 /* Catalogo completo */
@@ -272,8 +285,8 @@ section{padding:5rem 1.5rem}
 .spec-row{display:flex;align-items:center;gap:0.4rem}
 .spec-lbl{color:var(--texto-suave);font-weight:600;font-size:0.78rem}
 .spec-val{color:var(--texto);font-weight:800}
-.grada-precio{margin:0.5rem 0 1.25rem;padding:0.85rem 1rem;background:linear-gradient(135deg,var(--lime) 0%,#F59E0B 100%);border-radius:10px}
-.precio-valor{font-family:'Archivo Black',sans-serif;font-size:1.55rem;color:var(--negro);letter-spacing:-0.02em;line-height:1}
+.grada-precio{margin:0.5rem 0 1.25rem;padding:0.95rem 1.1rem;background:linear-gradient(135deg,#0a7a2e 0%,#10b341 100%);border-radius:12px;box-shadow:0 4px 14px rgba(10,122,46,0.18)}
+.precio-valor{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:1.55rem;color:var(--negro);letter-spacing:-0.02em;line-height:1}
 .precio-leyenda{font-size:0.72rem;color:rgba(15,23,42,0.75);margin-top:0.35rem;font-weight:600}
 .grada-actions{display:flex;gap:0.5rem;margin-top:auto}
 .grada-actions .btn{flex:1;padding:0.7rem 0.9rem;font-size:0.85rem}
@@ -286,7 +299,7 @@ section{padding:5rem 1.5rem}
 .inifed-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;position:relative;z-index:1}
 @media(max-width:900px){.inifed-grid{grid-template-columns:1fr}}
 .inifed-tag{display:inline-block;background:var(--lime);color:var(--negro);padding:0.45rem 1rem;border-radius:6px;font-size:0.75rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.25rem}
-.inifed-title{font-family:'Archivo Black',sans-serif;font-size:clamp(1.6rem,3vw,2.25rem);color:var(--blanco);line-height:1.15;letter-spacing:-0.02em;margin-bottom:1.25rem}
+.inifed-title{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:clamp(1.6rem,3vw,2.25rem);color:var(--blanco);line-height:1.15;letter-spacing:-0.02em;margin-bottom:1.25rem}
 .inifed-body{color:rgba(255,255,255,0.8);font-size:1rem;margin-bottom:1.75rem;line-height:1.65}
 .inifed-features{list-style:none;margin-bottom:2rem}
 .inifed-features li{padding:0.7rem 0;border-bottom:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:0.75rem;font-size:0.95rem;color:rgba(255,255,255,0.9)}
@@ -294,11 +307,11 @@ section{padding:5rem 1.5rem}
 .inifed-features li::before{content:'✓';width:26px;height:26px;background:var(--lime);color:var(--negro);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:0.8rem;flex-shrink:0}
 .inifed-card{background:var(--negro-suave);padding:2rem;border-radius:16px;border:1px solid rgba(255,255,255,0.1)}
 .inifed-card-lbl{font-size:0.8rem;color:rgba(255,255,255,0.6);font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem}
-.inifed-card-price{font-family:'Archivo Black',sans-serif;font-size:2.75rem;color:var(--lime);letter-spacing:-0.02em;line-height:1}
+.inifed-card-price{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:2.75rem;color:var(--lime);letter-spacing:-0.02em;line-height:1}
 .inifed-card-leyenda{font-size:0.85rem;color:rgba(255,255,255,0.6);margin-top:0.5rem}
 .inifed-card-specs{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1)}
 .inifed-card-specs .k{font-size:0.72rem;color:rgba(255,255,255,0.55);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.3rem}
-.inifed-card-specs .v{font-family:'Archivo Black',sans-serif;font-size:0.95rem;color:var(--blanco)}
+.inifed-card-specs .v{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:0.95rem;color:var(--blanco)}
 
 /* Testimoniales */
 .testimonios{background:var(--gris-bg)}
@@ -307,7 +320,7 @@ section{padding:5rem 1.5rem}
 .testimonio-stars{color:var(--lime);font-size:1rem;margin-bottom:1rem;letter-spacing:0.15em}
 .testimonio-quote{font-size:1.05rem;color:var(--texto);line-height:1.6;margin-bottom:1.5rem;font-weight:500}
 .testimonio-author{display:flex;align-items:center;gap:0.9rem}
-.testimonio-avatar{width:46px;height:46px;border-radius:50%;background:var(--negro);color:var(--lime);display:flex;align-items:center;justify-content:center;font-family:'Archivo Black',sans-serif;font-size:1rem;flex-shrink:0}
+.testimonio-avatar{width:46px;height:46px;border-radius:50%;background:var(--negro);color:var(--lime);display:flex;align-items:center;justify-content:center;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:1rem;flex-shrink:0}
 .testimonio-info strong{display:block;font-weight:800;font-size:0.95rem;color:var(--texto)}
 .testimonio-info span{font-size:0.82rem;color:var(--texto-suave)}
 
@@ -318,7 +331,7 @@ details{background:var(--gris-bg);border:1px solid var(--gris-linea);border-radi
 details[open]{background:var(--blanco);border-color:var(--naranja);box-shadow:var(--sombra)}
 summary{font-weight:700;font-size:1rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--texto)}
 summary::-webkit-details-marker{display:none}
-summary::after{content:'+';font-size:1.5rem;color:var(--naranja);font-weight:400;transition:transform .2s;font-family:'Archivo Black',sans-serif}
+summary::after{content:'+';font-size:1.5rem;color:var(--naranja);font-weight:400;transition:transform .2s;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif}
 details[open] summary::after{content:'−'}
 details p{margin-top:1rem;color:var(--texto-suave);line-height:1.7}
 details strong{color:var(--texto)}
@@ -327,7 +340,7 @@ details strong{color:var(--texto)}
 .cta-final-wrap{padding:3rem 1.5rem}
 .cta-final{background:var(--negro);color:var(--blanco);text-align:center;padding:5rem 2rem;border-radius:24px;margin:0 auto;max-width:1200px;position:relative;overflow:hidden}
 .cta-final::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 0%,rgba(255,87,34,0.25) 0%,transparent 55%),radial-gradient(circle at 70% 100%,rgba(234,179,8,0.18) 0%,transparent 50%);pointer-events:none}
-.cta-final h2{font-family:'Archivo Black',sans-serif;font-size:clamp(1.85rem,3.75vw,2.75rem);line-height:1.1;letter-spacing:-0.02em;margin-bottom:1.25rem;position:relative;z-index:1}
+.cta-final h2{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:clamp(1.85rem,3.75vw,2.75rem);line-height:1.1;letter-spacing:-0.02em;margin-bottom:1.25rem;position:relative;z-index:1}
 .cta-final h2 .acento{color:var(--naranja)}
 .cta-final p{color:rgba(255,255,255,0.8);font-size:1.1rem;max-width:55ch;margin:0 auto 2.5rem;position:relative;z-index:1}
 .cta-final-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
@@ -339,7 +352,7 @@ footer{background:#060B17;color:rgba(255,255,255,0.65);padding:4rem 1.5rem 2rem;
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
 .footer-brand .logo{color:var(--blanco);font-size:1.5rem;margin-bottom:1rem;display:block}
 .footer-brand p{max-width:35ch;line-height:1.65}
-.footer-col h4{color:var(--blanco);font-family:'Archivo Black',sans-serif;margin-bottom:1.25rem;font-size:0.9rem;letter-spacing:0.03em}
+.footer-col h4{color:var(--blanco);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;margin-bottom:1.25rem;font-size:0.9rem;letter-spacing:0.03em}
 .footer-col ul{list-style:none}
 .footer-col li{margin-bottom:0.65rem}
 .footer-col a{color:rgba(255,255,255,0.55);transition:color .2s;font-size:0.9rem}
@@ -382,7 +395,7 @@ footer{background:#060B17;color:rgba(255,255,255,0.65);padding:4rem 1.5rem 2rem;
 .nav-v2-logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}
 .nav-v2-logo img{height:38px;width:auto;display:block}
 .nav-v2-logo-text{display:flex;flex-direction:column;line-height:1}
-.nav-v2-logo-name{font-family:'Archivo Black',sans-serif;font-size:18px;color:var(--sm-text);letter-spacing:-.01em}
+.nav-v2-logo-name{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:18px;color:var(--sm-text);letter-spacing:-.01em}
 .nav-v2-logo-tag{font-size:9px;font-weight:700;letter-spacing:.16em;color:var(--sm-green);text-transform:uppercase;margin-top:3px}
 .nav-v2-links{display:flex;align-items:center;gap:36px}
 .nav-v2-links a{font-size:14px;font-weight:700;letter-spacing:.04em;color:var(--sm-text);text-decoration:none;text-transform:uppercase;transition:color .2s}
@@ -690,12 +703,36 @@ footer{background:#060B17;color:rgba(255,255,255,0.65);padding:4rem 1.5rem 2rem;
       <h2 class="section-title">Gradas metálicas que duran 20 años. Sin letra pequeña.</h2>
     </div>
     <div class="beneficios-grid">
-      <div class="beneficio"><div class="beneficio-icon">17</div><h3>Años fabricando</h3><p>Más de 17 años diseñando e instalando gradas para canchas de fútbol, polideportivos y clubes en todo México.</p></div>
-      <div class="beneficio"><div class="beneficio-icon">✓</div><h3>Garantía escrita</h3><p>Todas las gradas incluyen garantía contra defectos de fabricación y tratamiento anticorrosivo completo.</p></div>
-      <div class="beneficio"><div class="beneficio-icon">MX</div><h3>Envío nacional</h3><p>Enviamos gradas a toda la República Mexicana. Cotización de flete según destino final de la obra.</p></div>
-      <div class="beneficio"><div class="beneficio-icon">⚡</div><h3>Respuesta &lt;1h</h3><p>Te enviamos cotización formal por WhatsApp en menos de 1 hora en horario comercial.</p></div>
-      <div class="beneficio"><div class="beneficio-icon">🎨</div><h3>Color a elegir</h3><p>Pintura de esmalte en el color de tu club o institución. Sin cargo adicional.</p></div>
-      <div class="beneficio"><div class="beneficio-icon">$</div><h3>Factura fiscal</h3><p>Empresa legalmente constituida. Emitimos factura por todas nuestras ventas B2B y gobierno.</p></div>
+      <div class="beneficio">
+        <div class="beneficio-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10"/><polyline points="12 6 12 12 16 14"/><path d="M22 4l-10 10-4-4"/></svg></div>
+        <h3>17+ años fabricando</h3>
+        <p>Más de 17 años diseñando e instalando gradas para canchas de fútbol, polideportivos y clubes en todo México.</p>
+      </div>
+      <div class="beneficio">
+        <div class="beneficio-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+        <h3>Garantía escrita</h3>
+        <p>Todas las gradas incluyen garantía contra defectos de fabricación y tratamiento anticorrosivo completo.</p>
+      </div>
+      <div class="beneficio">
+        <div class="beneficio-icon"><svg viewBox="0 0 24 24"><path d="M16 3h5v5M21 3l-9 9M8 21H3v-5M3 21l9-9"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <h3>Envío a 32 estados</h3>
+        <p>Enviamos gradas a toda la República Mexicana. Cotización de flete según destino final de la obra.</p>
+      </div>
+      <div class="beneficio">
+        <div class="beneficio-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3>Respuesta &lt; 1 hora</h3>
+        <p>Te enviamos cotización formal por WhatsApp en menos de 1 hora en horario comercial.</p>
+      </div>
+      <div class="beneficio">
+        <div class="beneficio-icon"><svg viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c1.4 0 2.5-1.1 2.5-2.5 0-.6-.3-1.2-.7-1.7-.4-.4-.7-1-.7-1.6 0-1.4 1.1-2.5 2.5-2.5H17c2.8 0 5-2.2 5-5 0-4.4-4.5-8-10-8z"/></svg></div>
+        <h3>Color personalizable</h3>
+        <p>Pintura electrostática en el color de tu club o institución sin cargo adicional. Catálogo RAL completo.</p>
+      </div>
+      <div class="beneficio">
+        <div class="beneficio-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="14" x2="13" y2="14"/></svg></div>
+        <h3>Factura fiscal CFDI</h3>
+        <p>Empresa legalmente constituida. Emitimos factura por todas nuestras ventas B2B y gobierno.</p>
+      </div>
     </div>
   </div>
 </section>
