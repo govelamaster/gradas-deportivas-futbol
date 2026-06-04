@@ -8,6 +8,7 @@ User-agent: *
 Allow: /
 Disallow: /assets/img/*.bak
 Disallow: /assets/img/*.OLD-*
+Disallow: /docs/_guia-medidas-print.html
 
 # ============================================
 # GOOGLE — sin restricciones
