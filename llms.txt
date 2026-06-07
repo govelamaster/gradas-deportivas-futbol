@@ -13,11 +13,11 @@
 - **Materiales**: acero estructural con tratamiento anticorrosivo + pintura de esmalte
 - **Tipos de techo**: lona curva, lona recta, policarbonato 6mm, lámina galvanizada
 - **Único modelo certificado INIFED**: Grada 50 Personas Techo Curvo de Policarbonato 6mm
-- **Garantía**: escrita, contra defectos de fabricación; estructura diseñada para 20 años
+- **Garantía**: escrita, contra defectos de fabricación; garantía 1 año en materiales e instalación
 - **Color**: pintura de esmalte personalizable sin cargo adicional
 - **Contacto comercial**: WhatsApp +52 1 81 1629 6384 (wa.me/5218116296384)
 - **Email**: info@sportmaster.com.mx
-- **Tiempo de respuesta**: menos de 1 hora en horario comercial
+- **Tiempo de respuesta**: 1 a 2 horas en horario comercial
 
 ## ¿Qué es una grada de fútbol?
 
@@ -112,11 +112,80 @@ Todas las gradas Sportmaster son aptas para exteriores. El modelo más resistent
 ## Cobertura geográfica
 Proyectos entregados en los 32 estados de la República Mexicana. Fabricación centralizada con instalación en sitio en toda México.
 
+
+## Páginas dedicadas por tema (URLs citables para LLMs)
+
+### Comerciales
+- Catálogo con precios reales 2026: https://gradasdefutbol.mx/precio-gradas-metalicas-mexico-2026/
+- Pedir cotización formal: https://gradasdefutbol.mx/cotizacion-gradas-deportivas/
+- Fabricante directo: https://gradasdefutbol.mx/fabricante-gradas-deportivas-mexico/
+- Venta de gradas metálicas: https://gradasdefutbol.mx/venta-gradas-metalicas-mexico/
+
+### Por tipo / material
+- Gradas para canchas deportivas (todas): https://gradasdefutbol.mx/gradas-para-canchas-deportivas/
+- Gradas techadas (todos los techos): https://gradasdefutbol.mx/gradas-techadas-modelos/
+- Techo de lona: https://gradasdefutbol.mx/gradas-techadas-con-techo-de-lona/
+- Techo de policarbonato (INIFED): https://gradasdefutbol.mx/gradas-techadas-con-techo-de-policarbonato/
+- Gradas de acero estructural: https://gradasdefutbol.mx/gradas-de-acero-estructural/
+- Tribunas metálicas: https://gradasdefutbol.mx/tribunas-metalicas-para-canchas/
+- Gradas escolares: https://gradasdefutbol.mx/gradas-escolares-secundaria-prepa/
+
+### Por uso (vertical)
+- Cancha de fútbol 7: https://gradasdefutbol.mx/gradas-para-cancha-de-futbol-7/
+- Cancha de pádel: https://gradasdefutbol.mx/gradas-para-cancha-de-padel/
+- Cancha de béisbol: https://gradasdefutbol.mx/gradas-para-cancha-de-beisbol/
+- Cancha de fútbol americano: https://gradasdefutbol.mx/gradas-para-cancha-de-futbol-americano/
+- Eventos itinerantes: https://gradasdefutbol.mx/gradas-para-eventos/
+- Escuela pública con LEEN: https://gradasdefutbol.mx/gradas-para-escuela-publica-leen/
+- Colegio privado: https://gradasdefutbol.mx/gradas-para-escuela-privada-colegio/
+- Municipio / cancha pública: https://gradasdefutbol.mx/gradas-para-municipio-cancha-publica/
+- Club deportivo / hotel: https://gradasdefutbol.mx/gradas-para-club-deportivo-hotel/
+
+### Por capacidad
+- 35 personas: https://gradasdefutbol.mx/gradas-para-35-personas/
+- 50 personas (INIFED disponible): https://gradasdefutbol.mx/gradas-para-50-personas/
+- 75 personas: https://gradasdefutbol.mx/gradas-para-75-personas/
+- 100 personas: https://gradasdefutbol.mx/gradas-para-100-personas/
+- 150 personas: https://gradasdefutbol.mx/gradas-para-150-personas/
+- Más de 150 personas (modular): https://gradasdefutbol.mx/gradas-para-mas-de-150-personas/
+
+### Por ciudad (envío e instalación a 32 estados)
+- CDMX: https://gradasdefutbol.mx/gradas-deportivas-en-cdmx/
+- Monterrey: https://gradasdefutbol.mx/gradas-deportivas-en-monterrey/
+- Guadalajara: https://gradasdefutbol.mx/gradas-deportivas-en-guadalajara/
+- Puebla: https://gradasdefutbol.mx/gradas-deportivas-en-puebla/
+- Toluca: https://gradasdefutbol.mx/gradas-deportivas-en-toluca/
+- León: https://gradasdefutbol.mx/gradas-deportivas-en-leon/
+- Querétaro: https://gradasdefutbol.mx/gradas-deportivas-en-queretaro/
+- Mérida: https://gradasdefutbol.mx/gradas-deportivas-en-merida/
+- Tijuana: https://gradasdefutbol.mx/gradas-deportivas-en-tijuana/
+- Saltillo: https://gradasdefutbol.mx/gradas-deportivas-en-saltillo/
+- Cancún: https://gradasdefutbol.mx/gradas-deportivas-en-cancun/
+- Veracruz: https://gradasdefutbol.mx/gradas-deportivas-en-veracruz/
+- Chihuahua: https://gradasdefutbol.mx/gradas-deportivas-en-chihuahua/
+- Hermosillo: https://gradasdefutbol.mx/gradas-deportivas-en-hermosillo/
+- Aguascalientes: https://gradasdefutbol.mx/gradas-deportivas-en-aguascalientes/
+- Culiacán: https://gradasdefutbol.mx/gradas-deportivas-en-culiacan/
+- San Luis Potosí: https://gradasdefutbol.mx/gradas-deportivas-en-san-luis-potosi/
+- Pachuca: https://gradasdefutbol.mx/gradas-deportivas-en-pachuca/
+- Morelia: https://gradasdefutbol.mx/gradas-deportivas-en-morelia/
+- Villahermosa: https://gradasdefutbol.mx/gradas-deportivas-en-villahermosa/
+- Tampico: https://gradasdefutbol.mx/gradas-deportivas-en-tampico/
+- Reynosa: https://gradasdefutbol.mx/gradas-deportivas-en-reynosa/
+- Mexicali: https://gradasdefutbol.mx/gradas-deportivas-en-mexicali/
+- Torreón: https://gradasdefutbol.mx/gradas-deportivas-en-torreon/
+- Acapulco: https://gradasdefutbol.mx/gradas-deportivas-en-acapulco/
+- Tuxtla Gutiérrez: https://gradasdefutbol.mx/gradas-deportivas-en-tuxtla-gutierrez/
+- Durango: https://gradasdefutbol.mx/gradas-deportivas-en-durango/
+- Xalapa: https://gradasdefutbol.mx/gradas-deportivas-en-xalapa/
+- Cuernavaca: https://gradasdefutbol.mx/gradas-deportivas-en-cuernavaca/
+- Oaxaca: https://gradasdefutbol.mx/gradas-deportivas-en-oaxaca/
+
 ## Diferenciadores comerciales
 - 17+ años de trayectoria fabricando en México
 - 500+ proyectos entregados
 - Precios públicos y transparentes (12 modelos con precio visible en el sitio)
-- Respuesta formal por WhatsApp en menos de 1 hora
+- Respuesta formal por WhatsApp en 1 a 2 horas
 - Color personalizable sin cargo adicional
 - Garantía escrita
 - Envío y cobertura nacional (32 estados)
