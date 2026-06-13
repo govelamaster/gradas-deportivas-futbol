@@ -17,6 +17,9 @@
   ];
 
   var css = [
+    /* Espacio reservado para que el sticky-cta no tape el bloque AEO */
+    'body{padding-bottom:140px}',
+    '@media (max-width:680px){body{padding-bottom:180px}}',
     '.footer-aeo{border-top:1px solid rgba(255,255,255,.12);padding:28px 0 24px;margin:24px 0;display:flex;align-items:center;gap:24px;flex-wrap:wrap;font-family:inherit}',
     '.footer-aeo-label{font-size:13px;font-weight:600;color:rgba(255,255,255,.85);text-transform:uppercase;letter-spacing:.08em;margin:0;max-width:320px;line-height:1.5}',
     '.footer-aeo-logos{display:flex;gap:12px;list-style:none;padding:0;margin:0;flex-wrap:wrap}',
