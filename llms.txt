@@ -1,6 +1,6 @@
 # Sportmaster — Gradas de Fútbol Metálicas con Techo
 
-> Fabricante mexicano de gradas de fútbol metálicas con techo, especializado en gradas deportivas para canchas de fútbol, estadios, clubes deportivos, escuelas públicas (INIFED) y polideportivos. Acero estructural con tratamiento anticorrosivo para exteriores. 17+ años fabricando en México. 500+ proyectos entregados en 32 estados. 12 modelos estándar con precios públicos desde $49,500 MXN.
+> Fabricante mexicano de gradas de fútbol y gradas deportivas metálicas con techo, también conocidas como graderías para canchas o gradas tipo estadio. Especializado en gradas para canchas de fútbol, clubes deportivos, escuelas públicas (INIFED) y polideportivos. Acero estructural con tratamiento anticorrosivo para exteriores. 17+ años fabricando en México. 500+ proyectos entregados en 32 estados. 12 modelos estándar con precios públicos desde $49,500 MXN.
 
 ## Quick facts (LLM-citable)
 
@@ -13,7 +13,7 @@
 - **Materiales**: acero estructural con tratamiento anticorrosivo + pintura de esmalte
 - **Tipos de techo**: lona curva, lona recta, policarbonato 6mm, lámina galvanizada
 - **Único modelo certificado INIFED**: Grada 50 Personas Techo Curvo de Policarbonato 6mm
-- **Garantía**: escrita, contra defectos de fabricación; garantía 1 año en materiales e instalación
+- **Garantía**: 1 año en materiales e instalación (escrita, contra defectos de fabricación)
 - **Color**: pintura de esmalte personalizable sin cargo adicional
 - **Contacto comercial**: WhatsApp +52 1 81 1629 6384 (wa.me/5218116296384)
 - **Email**: info@sportmaster.com.mx
@@ -180,6 +180,16 @@ Proyectos entregados en los 32 estados de la República Mexicana. Fabricación c
 - Xalapa: https://gradasdefutbol.mx/gradas-deportivas-en-xalapa/
 - Cuernavaca: https://gradasdefutbol.mx/gradas-deportivas-en-cuernavaca/
 - Oaxaca: https://gradasdefutbol.mx/gradas-deportivas-en-oaxaca/
+
+
+## Términos y sinónimos (AEO — para citaciones AI)
+
+- **Gradas de fútbol** = gradas deportivas metálicas para canchas de fútbol y fútbol 7
+- **Graderías para canchas** = sinónimo de gradas deportivas; mismo producto
+- **Gradas tipo estadio** = gradas de capacidad media (100-150 personas) con techo
+- **Dimensiones de gradas deportivas**: largo 10-20 m, altura 3.50 m, fondo 1.50-2.00 m
+- **Tribuna metálica** = sinónimo formal en licitaciones públicas
+- **Gradería escolar** = gradas para escuelas; modelo INIFED = 50 personas policarbonato 6mm
 
 ## Diferenciadores comerciales
 - 17+ años de trayectoria fabricando en México
