@@ -16,7 +16,7 @@ Producción: https://gradasdefutbol.mx (Cloudflare Worker auto-deploy desde main
 - Naranja CTA: #F57C00
 - Font: Inter (400-900) desde Google Fonts
 - Logo: SPORT (verde) + MASTER (naranja)
-- WhatsApp: +52 1 81 1629 6384 (wa.me/5218116296384)
+- WhatsApp: +52 81 1629 6384 (wa.me/528116296384)
 - Email corporativo: info@sportmaster.com.mx
 
 ## Business rules (NO NEGOCIABLES)
